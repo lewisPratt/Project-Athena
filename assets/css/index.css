@@ -136,7 +136,7 @@ header {
   margin-bottom: 20px;
 }
 
-#mission-statement-content {
+#mission-statement-content{
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -207,7 +207,7 @@ header {
   flex-direction: column;
   align-items: center;
   background: #000000;
-  border-radius:10px 10px 0 0;
+  border-radius: 10px 10px 0 0;
 }
 
 #video-playback-toggle-button {
@@ -232,7 +232,7 @@ header {
   text-transform: uppercase;
   font-family: "Aldrich", "Verdana", sans-serif;
   text-decoration: none;
-  margin: 10px 0 ;
+  margin: 10px 0;
 }
 
 #video-playback-toggle-button.pressed-control {
@@ -243,15 +243,15 @@ header {
 
 #controls-feedback-overlay {
   position: absolute;
-  display:flex;
-  left:0;
-  top:0;
+  display: flex;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   z-index: 2;
   /* transition: opacity 3s ease-in-out; */
   opacity: 0;
-  background-color: rgba(0, 0, 0, 0.7);   
+  background-color: rgba(0, 0, 0, 0.7);
   justify-content: center;
   align-items: center;
 
@@ -260,14 +260,19 @@ header {
 .overlay-animation {
   animation: video-overlay 1.2s;
 }
-#overlay-skip-text{
+
+#overlay-skip-text {
   font-family: "Aldrich", "Verdana", sans-serif;
-  font-size:300%;
+  font-size: 300%;
 }
-#volume-plus, #volume-minus, #skip-text{
+
+#volume-plus,
+#volume-minus,
+#skip-text {
   font-family: "Aldrich", "Verdana", sans-serif;
-  font-size:300%;
+  font-size: 300%;
 }
+
 @keyframes video-overlay {
   0% {
     opacity: 0
@@ -294,7 +299,9 @@ header {
   z-index: 2;
   transition: 1s;
 }
-
+#kennedy-button{
+  z-index:2;
+}
 .slide-out {
   transform: translateX(-100%);
   opacity: 0;
@@ -331,41 +338,37 @@ header {
 
 #sagan-quote {
   padding-top: 1px;
-  background-image: url("../images/launch.jpg");
+  background-image: url("../images/earth-sliver.jpg");
   background-color: black;
   background-size: cover;
   color: white;
-  height: 88svh;
+  height: 80svh;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  background-position-x: center;
+  background-position-y:100px;
+  
+}
+#sagan-quote-content {
+  margin-top:100px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90%;
+}
+#sagan-quote-content>h2{
+  margin-bottom:20px;
+  
+}
+#sagan-quote-content>p{
+  margin-top:50px;
+  text-align: center ;
 }
 
-#sagan-quote-title {
-  width: 50%;
-  background-color: rgba(0, 0, 0, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0);
-  border-radius: 10px;
-  padding: 25px;
-  transition: 1s;
-  text-align: center;
-}
-
-#launch-countdown {
-  font-family: "Aldrich", "Verdana", sans-serif;
-  color: white;
-
-  text-align: center;
-  padding: 0 15px;
-  font-size: 0.7rem;
-  line-height: 1.2rem;
-}
-
-#launch-countdown #countdown-text {
-  font-size: 1rem;
-}
 
 .scroll-arrow {
   text-align: center;
@@ -387,8 +390,14 @@ header {
   width: 50px;
 }
 
-.scroll-up {
-  transform: rotate(180deg);
+#footer-up-arrow.scroll-arrow{
+  display:flex;
+  justify-content: center;
+  position:relative;
+  left:0;
+}
+#footer-up-arrow img{
+  max-width:50px;
 }
 
 @keyframes slideArrow {
@@ -407,9 +416,26 @@ header {
   }
 }
 
-@media only screen and (max-width: 400px) {
-  #construction-image {
-    max-width: 200%;
-    margin-left: -50%;
-  }
+@media only screen and (min-width: 768px) {
+  #sagan-quote-content {
+  margin-top:0;
+ 
+  max-width: 50%;
+}
+#sagan-quote-content>p{
+  margin-top:50px;
+  text-align: center ;
+}
+#sagan-quote{
+  justify-content: center;
+}
+
+}
+@media only screen and (min-width: 1440px) {
+
+#sagan-quote{
+  
+  background-position-y:-100px ;
+}
+
 }
