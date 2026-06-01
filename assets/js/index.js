@@ -7,7 +7,7 @@ const videoOverlay = document.getElementById("controls-feedback-overlay");
 const volumePlus = document.getElementById("volume-plus");
 const volumeMinus = document.getElementById("volume-minus");
 const skipText = document.getElementById("skip-text");
-
+const historyButton = document.getElementById("kennedy-button");
 const skipLength = 10;
 const overlayContents = [volumePlus, volumeMinus, skipText];
 
@@ -37,8 +37,10 @@ function toggleVideo() {
     panelVideo.volume = 0.2;
     if(kennedyText.classList.contains("slide-in")){
       kennedyText.classList.remove("slide-in");
+      historyButton.classList.toggle("slide-in");
+
     }
-    
+    historyButton.classList.toggle("slide-out");
     kennedyText.classList.toggle("slide-out");
     videoControls.classList.toggle("hidden");
     document.getElementById("play-icon").classList.toggle("hidden-element");
@@ -55,6 +57,8 @@ function toggleVideo() {
     videoControls.classList.toggle("hidden");
     kennedyText.classList.toggle("slide-out");
     kennedyText.classList.toggle("slide-in");
+    historyButton.classList.toggle("slide-out");
+    historyButton.classList.toggle("slide-in");
 
     document.getElementById("play-icon").classList.toggle("hidden-element");
     document.getElementById("stop-icon").classList.toggle("hidden-element");
@@ -164,34 +168,34 @@ panelVideo.addEventListener("pause", () => {
 });
 
 
-https://www.w3schools.com/howto/howto_js_countdown.asp
-// Set the date we're counting down to
-var countDownDate = new Date("Jan 5, 2028 15:37:25").getTime();
+// https://www.w3schools.com/howto/howto_js_countdown.asp
+// // Set the date we're counting down to
+// var countDownDate = new Date("Jan 5, 2028 15:37:25").getTime();
 
-// Update the count down every 1 second
-var x = setInterval(function () {
+// // Update the count down every 1 second
+// var x = setInterval(function () {
 
-  // Get today's date and time
-  var now = new Date().getTime();
+//   // Get today's date and time
+//   var now = new Date().getTime();
 
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
+//   // Find the distance between now and the count down date
+//   var distance = countDownDate - now;
 
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+//   // Time calculations for days, hours, minutes and seconds
+//   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+//   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+//   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+//   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // Display the result in the element with id="demo"
-  document.getElementById("countdown-text").innerHTML = days + " days,<br>" + hours + " hours,<br>"
-    + minutes + " minutes,<br>" + seconds + " seconds.";
+//   // Display the result in the element with id="demo"
+//   document.getElementById("countdown-text").innerHTML = days + " days,<br>" + hours + " hours,<br>"
+//     + minutes + " minutes,<br>" + seconds + " seconds.";
 
 
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("countdown-text").innerHTML = "EXPIRED";
-  }
-}, 1000);
+//   // If the count down is finished, write some text
+//   if (distance < 0) {
+//     clearInterval(x);
+//     document.getElementById("countdown-text").innerHTML = "EXPIRED";
+//   }
+// }, 1000);
 

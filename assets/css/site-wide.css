@@ -263,6 +263,7 @@ footer li {
   nav {
     align-items: baseline;
     justify-content: space-between;
+    padding: 20px 20px 0 20px;
   }
 
   #navigation {
@@ -286,6 +287,7 @@ footer li {
     text-align: left;
     border-bottom: unset;
     display: inline-block;
+    padding:0 5px;
 
   }
 
