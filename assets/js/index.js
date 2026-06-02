@@ -1,6 +1,6 @@
 
 const kennedyText = document.getElementById("kennedy-reference-content");
-const kennedyBox = document.getElementById("kennedy-box");
+const kennedyBox = document.getElementById("panel-one");
 const videoControls = document.getElementById("video-controls");
 const panelVideo = document.getElementById("kennedy-video");
 const videoOverlay = document.getElementById("controls-feedback-overlay");
@@ -48,7 +48,7 @@ function toggleVideo() {
     //add in feedback class to show button was pressed
     document.getElementById("video-playback-toggle-button").classList.toggle("pressed-control");
     //optional scroll to code. scrolls the viewport to have the video panel fill the screen when play is pressed.
-    scrollToPanel("kennedy-box");
+    scrollToPanel("panel-one");
 
     panelVideo.play();
    
@@ -150,6 +150,10 @@ panelVideo.addEventListener("click", () => {
     toggleVideo();
   }
 });
+
+document.getElementById("base-one-location-circle").addEventListener("click", () => {
+  scrollToPanel("athena-base-text");
+})
 
 //skips forward skipLength seconds in the video when clicked.
 document.getElementById("skip-forward").addEventListener("click", skipForward);
