@@ -37,6 +37,7 @@ main {
 
 p {
   font-family: "Aldrich", "Verdana", sans-serif;
+  line-height:1.5rem;
 }
 
 blockquote {

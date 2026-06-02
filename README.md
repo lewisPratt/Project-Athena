@@ -3,16 +3,25 @@
 
 ## Description
 
-A static website for a private aerospace company seeking to raise awareness of their brand, goals and attract new employees. 
-
-The webiste has two primary goals
-
-- Communicate the business goals, history and culture.
-- Provide a point of entry for intrested users looking to work with Athena.
+A static website for a private aerospace company seeking to raise awareness of their brand, goals and attract new employees.
 
 Built utilising HTML, CSS and Javascript to present a professional, responsive and modern experience.
 
+## Project Goals
+
+- To communicate to the user, the goals of the company in a succinct manner.
+- To provide a history of the company, and insight into the motivations for it's formation.
+- To atttract new talent and provide a route for interested applicants to submit their information and be considered for a job at the company.  
+- To act as a hub for the company to display it's media, such as launch videos and images.
+
+## CTAs
+
+The website has clear calls to action (CTA), prompting the user to be aware of and access the areas of the website that most align with the business goals of the company.
+
+Each CTA is a styled button, with clearly defined characteristics and wording.
+
 ## Key Features
+
 - Flex-box structured responsive html pages with key viewport breakpoints. 
 - CSS animations used to highlight key areas and enhance visual appeal. 
 - Home page detailing goals of the company.
@@ -27,4 +36,5 @@ Built utilising HTML, CSS and Javascript to present a professional, responsive a
 - Consistent styling across the site.
 
 ## Usage
+
 To view this project, clone the repository to your machine and visit the index.html file in your browser of choice. 

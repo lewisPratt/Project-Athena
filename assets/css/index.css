@@ -105,7 +105,6 @@ header {
   background: #0000007d;
   padding: 5px;
   border-radius: 2px;
-  line-height: .8rem;
 }
 
 #base-one-location>div:hover,
@@ -312,19 +311,6 @@ header {
   transform: translateX(0);
   opacity: 1;
 }
-
-#mission-statement>#mission-statement-title p,
-#sagan-quote>#sagan-quote-title p {
-  line-height: 1.5rem;
-  font-size: 1rem;
-}
-
-#mission-statement>#mission-statement-title:hover,
-#kennedy-box>#kennedy-reference:hover,
-#sagan-quote>#sagan-quote-title:hover {
-  border: 1px solid rgba(255, 255, 255, 0.8);
-}
-
 .hidden-element {
   display: none;
 }
@@ -342,7 +328,7 @@ header {
   background-color: black;
   background-size: cover;
   color: white;
-  height: 80svh;
+  min-height: 80svh;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -371,7 +357,12 @@ header {
   background-color:rgba(0, 0, 0, 0.46);
   padding:10px;
 }
+#motivation-paragraph .button-class{
+  max-width:200px;
+  margin-left:auto;
+  margin-right:auto;
 
+}
 .scroll-arrow {
   text-align: center;
   position: absolute;
@@ -420,7 +411,7 @@ header {
   #sagan-quote-content {
   margin-top:0;
  
-  max-width: 50%;
+  max-width: 60%;
 }
 #sagan-quote-content>p{
   margin-top:50px;
