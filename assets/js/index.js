@@ -1,6 +1,7 @@
 
 const kennedyText = document.getElementById("kennedy-reference-content");
 const kennedyBox = document.getElementById("panel-one");
+const kennedyPicture = document.getElementById("kennedy-picture");
 const videoControls = document.getElementById("video-controls");
 const panelVideo = document.getElementById("kennedy-video");
 const videoOverlay = document.getElementById("controls-feedback-overlay");
@@ -10,6 +11,9 @@ const skipText = document.getElementById("skip-text");
 const historyButton = document.getElementById("kennedy-button");
 const skipLength = 10;
 const overlayContents = [volumePlus, volumeMinus, skipText];
+//bootstrap tooltips initialization
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
 let videoState;
 const observerOptions = {
@@ -23,7 +27,7 @@ const observer = new IntersectionObserver((entries) => {
     if (!entry.isIntersecting && videoState == true) {
       console.log(videoState);
       toggleVideo()
-    } 
+    }
   })
 
 }, observerOptions);
@@ -35,13 +39,17 @@ function toggleVideo() {
   if (panelVideo.paused) {
     panelVideo.muted = false;
     panelVideo.volume = 0.2;
-    if(kennedyText.classList.contains("slide-in")){
-      kennedyText.classList.remove("slide-in");
-      historyButton.classList.toggle("slide-in");
+    if (kennedyText.classList.contains("slide-in-x")) {
+      kennedyText.classList.remove("slide-in-x");
+      historyButton.classList.toggle("slide-in-x");
+      kennedyPicture.classList.toggle("slide-in-y");
+
 
     }
-    historyButton.classList.toggle("slide-out");
-    kennedyText.classList.toggle("slide-out");
+    historyButton.classList.toggle("slide-out-x");
+    kennedyText.classList.toggle("slide-out-x");
+    kennedyPicture.classList.toggle("slide-out-y");
+
     videoControls.classList.toggle("hidden");
     document.getElementById("play-icon").classList.toggle("hidden-element");
     document.getElementById("stop-icon").classList.toggle("hidden-element");
@@ -51,14 +59,16 @@ function toggleVideo() {
     scrollToPanel("panel-one");
 
     panelVideo.play();
-   
+
   } else {
     panelVideo.pause();
     videoControls.classList.toggle("hidden");
-    kennedyText.classList.toggle("slide-out");
-    kennedyText.classList.toggle("slide-in");
-    historyButton.classList.toggle("slide-out");
-    historyButton.classList.toggle("slide-in");
+    kennedyText.classList.toggle("slide-out-x");
+    kennedyText.classList.toggle("slide-in-x");
+    historyButton.classList.toggle("slide-out-x");
+    historyButton.classList.toggle("slide-in-x");
+    kennedyPicture.classList.toggle("slide-out-y");
+    kennedyPicture.classList.toggle("slide-in-y");
 
     document.getElementById("play-icon").classList.toggle("hidden-element");
     document.getElementById("stop-icon").classList.toggle("hidden-element");
@@ -154,7 +164,9 @@ panelVideo.addEventListener("click", () => {
 document.getElementById("base-one-location-circle").addEventListener("click", () => {
   scrollToPanel("athena-base-text");
 })
-
+document.getElementById("base-two-location-circle").addEventListener("click", () => {
+  scrollToPanel("athena-crucible-text");
+})
 //skips forward skipLength seconds in the video when clicked.
 document.getElementById("skip-forward").addEventListener("click", skipForward);
 //toggles the play state of the video when the play/pause button is clicked.

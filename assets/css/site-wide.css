@@ -3,6 +3,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  color:#F4F4F4;
 }
 
 body {
@@ -10,7 +11,6 @@ body {
   padding: 0px;
   min-height: 100vh;
   background-color: black;
-  color: white;
   display: flex;
   flex-direction: column;
   font-family: "Aldrich", "Verdana", sans-serif;
@@ -24,7 +24,6 @@ h4,
 h5 {
   font-family: "Aldrich", "Verdana", sans-serif;
   text-transform: uppercase;
-  color: white;
 }
 
 h2 {
@@ -37,10 +36,13 @@ main {
 }
 
 p {
-  font-family: "Aldrich", "Verdana", sans-serif;
+  font-family: "Montserrat", "Verdana", sans-serif;
   line-height:1.5rem;
+  font-weight: 300;
 }
-
+a {
+  color:#F4F4F4;
+}
 blockquote {
   font-family: "Work Sans", "Verdana", sans-serif;
   font-size: 1rem;
@@ -49,7 +51,6 @@ blockquote {
 blockquote>footer {
   background: none;
   text-align: right;
-  color: white;
 }
 
 input[type="text"],
@@ -64,13 +65,12 @@ textarea {
 
 nav {
   background-color: rgba(0, 0, 0,.7);
-  color: white;
   position: fixed;
   width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 3;
+  z-index: 80;
   font-family: "Aldrich", "Verdana", sans-serif;
   text-transform: uppercase;
   padding: 20px 20px;
@@ -94,6 +94,7 @@ nav>a {
 }
 #navigation>ul {
   list-style: none;
+  margin-bottom:0;
 }
 
 #navigation a {
@@ -202,7 +203,6 @@ footer li {
   display: block;
   padding: 10px;
   text-decoration: none;
-  color: white;
   border: 1px solid white;
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0);
@@ -216,7 +216,7 @@ footer li {
 }
 
 .button-class:visited {
-  color: white;
+  color: #F4F4F4;
 }
 
 .button-class:hover {
