@@ -155,7 +155,7 @@ header {
 #line {
   margin-top: 50px;
   position: absolute;
-  height: 1600px;
+  height: 100%;
   width: 2px;
   background-color: white;
   left: 50%;
@@ -204,12 +204,20 @@ header {
   position: absolute;
   z-index: 2;
   animation-name: moveBlip;
-  animation-duration: 15s;
+  animation-duration: 9s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in;
 }
+#moving-blip-two{
+  animation-delay: 2400ms;
+}
 
-
+#moving-blip-three{
+  animation-delay: 4400ms;
+}
+#moving-blip-four{
+  animation-delay: 6400ms;
+}
 
 @keyframes moveBlip {
   0% {
@@ -217,7 +225,7 @@ header {
   }
 
   90% {
-    top: 1600px;
+    top: 100%;
     opacity: 1;
   }
 
