@@ -1,4 +1,3 @@
-
 header {
   background-image: url("../images/large-moon.jpg");
   background-color: black;
@@ -297,14 +296,15 @@ header {
   z-index: 4;
   transition: 1.8s;
 }
-#kennedy-picture{
+
+#kennedy-picture {
   position: absolute;
-  z-index:3;
-  width:100%;
-  height:100%;
-  background-image:url("../images/kennedy.jpg");
-  background-position:center;
-  background-size:cover;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/kennedy.jpg");
+  background-position: center;
+  background-size: cover;
   transition: .9s;
 }
 
@@ -317,6 +317,7 @@ header {
   transform: translateX(0);
   opacity: 1;
 }
+
 .slide-out-y {
   transform: translateY(-100%);
   opacity: 0;
@@ -425,6 +426,35 @@ header {
 
 }
 
+.info-panel {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  transition:1s;
+}
+#athena-base-image .info-panel{
+  right:-50%;
+    text-align: left;
+
+}
+#athena-base-image:hover .info-panel{
+  right:0;
+}
+#athena-crucible-image .info-panel{
+  left:-50%;
+  text-align:right;
+}
+#athena-crucible-image:hover .info-panel{
+  left:0;
+}
+.info-panel>p{
+  color:black;
+}
 #panel-three img {
   max-width: 100%;
 }
@@ -439,7 +469,7 @@ header {
 
 #athena-base-text {
   order: 0;
-  padding-top:90px;
+  padding-top: 90px;
 
 }
 
@@ -455,7 +485,7 @@ header {
 
 #athena-crucible-text {
   order: 2;
-    padding-top:90px;
+  padding-top: 90px;
 
 }
 
@@ -464,6 +494,7 @@ header {
   background: url("../images/mining-site.jpg") #000000;
   background-size: cover;
   background-position: center;
+  position:relative;
 }
 
 .phase-text {
@@ -531,14 +562,15 @@ header {
 
   #athena-crucible-text {
     order: 3;
-    padding-top:0;
+    padding-top: 0;
   }
 
   #athena-crucible-image {
     order: 2;
   }
-  #arrow-five{
-    display:none;
+
+  #arrow-five {
+    display: none;
   }
 }
 
