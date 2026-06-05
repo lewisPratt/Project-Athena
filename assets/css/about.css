@@ -6,7 +6,7 @@ header {
   /* small view port unit used to ensure that the hero image is visible and first panel 
   is always visible when loading the page on mobile devices.  */
   height: 60svh;
-  background-position: top;
+  background-position: center;
   z-index: 1;
   display: flex;
   justify-content: center;
@@ -19,7 +19,7 @@ header {
 }
 
 #header-title h1 {
-  font-size: 400%;
+  font-size: 4rem;
   margin-bottom: 10px;
 }
 
@@ -35,14 +35,7 @@ header {
   font-style: normal;
 }
 
-#mission {
-  padding: 10% 2%;
-  max-width: 90%;
-  text-align: center;
-  animation-name: fadeIn;
-  animation-duration: 1s;
-  animation-timeline: view(block 60% 0%);
-}
+
 
 .text-content p {
   line-height: 1.5rem;
@@ -101,25 +94,13 @@ header {
   border: 3px solid red;
 }
 
-
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1.0;
-  }
-}
-
 #blip-column {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
-  gap: 200px;
   width: 90%;
-  z-index: 5
+  z-index: 5;
+  position: relative;
 }
 
 .timeline-container {
@@ -135,8 +116,9 @@ header {
   text-align: center;
   animation-name: fadeIn;
   animation-timeline: view();
-  animation-range: 0% cover 50%;
+  animation-range: cover 0% cover 50%;
   animation-fill-mode: both;
+  margin-top: 200px;
 }
 
 .timeline-container>h2 {
@@ -153,14 +135,12 @@ header {
 
 
 #line {
-  margin-top: 50px;
   position: absolute;
-  height: 100%;
+  height: 95%;
   width: 2px;
   background-color: white;
   left: 50%;
-  right: 50%;
-  z-index:0;
+  z-index: 0;
 }
 
 #start-blip {
@@ -174,6 +154,10 @@ header {
   top: 0;
   border: 2px solid white;
   z-index: 4;
+  animation-name: pulse;
+  animation-iteration-count: infinite;
+  animation-duration: 2.3s;
+  transform-origin: center;
 }
 
 #start-blip:hover {
@@ -208,15 +192,48 @@ header {
   animation-iteration-count: infinite;
   animation-timing-function: ease-in;
 }
-#moving-blip-two{
+
+#moving-blip-two {
   animation-delay: 2400ms;
 }
 
-#moving-blip-three{
+#moving-blip-three {
   animation-delay: 4400ms;
 }
-#moving-blip-four{
+
+#moving-blip-four {
   animation-delay: 6400ms;
+}
+
+#header-reveal {
+  height: 200px;
+  width: 100%;
+}
+
+#about-intro {
+  background-color: black;
+  z-index: 5;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#mission {
+  margin-top: 100px;
+  max-width: 90%;
+  text-align: center;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-timeline: view();
+  animation-range: cover 0% cover 50%;
+  animation-fill-mode: both;
+}
+
+#mission>h2 {
+  font-size: 3rem;
+  line-height: 3rem;
+  margin-bottom: 50px;
 }
 
 @keyframes moveBlip {
@@ -231,5 +248,48 @@ header {
 
   100% {
     opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+
+  50% {
+    transform: translateX(-50%) scale(1.1);
+  }
+
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1.0;
+  }
+}
+@media (min-width:375px) {
+  #header-title>h1 {
+    font-size: 5rem;
+  }
+}
+
+@media (min-width:425px) {
+  #header-title>h1 {
+    font-size: 6rem;
+  }
+}
+
+@media (min-width:768px) {
+  #blip-column {
+    max-width: 50%;
+  }
+  #header-title>h1 {
+    font-size: 8rem;
   }
 }
