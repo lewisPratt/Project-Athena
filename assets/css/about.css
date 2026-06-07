@@ -27,20 +27,93 @@ header {
 
 #founder-quote {
   line-height: 1.5rem;
+  margin-bottom: 100px;
   font-style: italic;
 }
 
+
 #founder-quote>span {
-  font-size: 0.8rem;
-  font-style: normal;
+  font-size: 0.6rem;
+  font-style: italic;
 }
 
+#history-detail {
+  text-align: center;
+  max-width: 90%;
+  margin-bottom: 100px;
+}
 
+#history-detail p {
+  margin: 20px 0;
+}
 
 .text-content p {
   line-height: 1.5rem;
 }
 
+#portraits-container {
+  display: flex;
+  padding-top: 30px;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: start;
+  z-index: 5;
+  position: relative;
+  justify-content: space-around;
+  margin-top: 100px;
+  background-color: black;
+}
+
+#founders-title {
+  width: 90%;
+  animation-timeline: view();
+  animation-range: cover 0% cover 70%;
+  animation-fill-mode: both;
+  animation-name: fadeInSide;
+}
+
+#portraits-container>div {
+  background-color: #000000;
+  border: 1px solid white;
+  margin-bottom: 50px;
+  width: 80%;
+  will-change: opacity, transform;
+
+}
+
+.card,
+.card img {
+  border-radius: 0;
+}
+
+.card h2 {
+  color: #dedede;
+}
+
+.card p {
+  font-size: .8rem;
+}
+
+#portrait-one,
+#portrait-two,
+#portrait-three {
+  animation-timeline: view();
+  animation-fill-mode: both;
+  animation-name: slideUp;
+
+}
+
+#portrait-one {
+  animation-range: cover 0% cover 50%;
+}
+
+#portrait-two {
+  animation-range: cover 10% cover 50%;
+}
+
+#portrait-three {
+  animation-range: cover 20% cover 50%;
+}
 
 .image-content {
   max-width: 90%;
@@ -106,7 +179,7 @@ header {
 .timeline-container {
   display: flex;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   padding: 30px 20%;
   position: relative;
   border: 1px solid white;
@@ -114,11 +187,12 @@ header {
   background-color: #000000;
   font-size: 80%;
   text-align: center;
-  animation-name: fadeIn;
+  animation-name: fadeInSide;
   animation-timeline: view();
   animation-range: cover 0% cover 50%;
   animation-fill-mode: both;
   margin-top: 200px;
+  will-change: opacity, transform;
 }
 
 .timeline-container>h2 {
@@ -141,6 +215,7 @@ header {
   background-color: white;
   left: 50%;
   z-index: 0;
+  transform: translateX(-50%)
 }
 
 #start-blip {
@@ -219,6 +294,7 @@ header {
   justify-content: center;
 }
 
+
 #mission {
   margin-top: 100px;
   max-width: 90%;
@@ -226,7 +302,7 @@ header {
   animation-name: fadeIn;
   animation-duration: 1s;
   animation-timeline: view();
-  animation-range: cover 0% cover 50%;
+  animation-range: cover 0% cover 70%;
   animation-fill-mode: both;
 }
 
@@ -264,15 +340,42 @@ header {
     transform: translateX(-50%) scale(1);
   }
 }
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
+    transform: translateY(100px)
   }
 
   100% {
     opacity: 1.0;
+    transform: translateY(0)
   }
 }
+
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%)
+  }
+
+  100% {
+    transform: translateY(0)
+  }
+}
+@keyframes fadeInSide {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%)
+  }
+
+  100% {
+    opacity: 1.0;
+    transform: translateX(0)
+  }
+}
+
+
 @media (min-width:375px) {
   #header-title>h1 {
     font-size: 5rem;
@@ -289,6 +392,12 @@ header {
   #blip-column {
     max-width: 50%;
   }
+
+  #portraits-container>div {
+
+    width: 30%;
+  }
+
   #header-title>h1 {
     font-size: 8rem;
   }
