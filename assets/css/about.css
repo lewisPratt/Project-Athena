@@ -12,7 +12,13 @@ header {
   justify-content: center;
   align-items: end;
 }
+q {
+  font-style: italic;
+  font-size: 1.2rem;
+  font-weight: 100;
 
+  
+}
 #header-title {
   position: fixed;
   text-align: center;
@@ -22,18 +28,14 @@ header {
   font-size: 4rem;
   margin-bottom: 10px;
 }
+#mission #founder-quote {
+  margin: 50px 0;
+  padding:20px;
+  border: 1px solid white;
 
-
-
-#founder-quote {
-  line-height: 1.5rem;
-  margin-bottom: 100px;
-  font-style: italic;
 }
-
-
-#founder-quote>span {
-  font-size: 0.6rem;
+#founder-quote-citation {
+  font-size: 0.8rem;
   font-style: italic;
 }
 
@@ -41,6 +43,7 @@ header {
   text-align: center;
   max-width: 90%;
   margin-bottom: 100px;
+
 }
 
 #history-detail p {
@@ -292,8 +295,23 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
-
+#about-links{
+  background-color:#000000;
+  position: relative;
+  z-index: 5;
+  padding:100px 0;
+}
+#about-link-container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin:auto;
+  
+}
 
 #mission {
   margin-top: 100px;
@@ -302,7 +320,7 @@ header {
   animation-name: fadeIn;
   animation-duration: 1s;
   animation-timeline: view();
-  animation-range: cover 0% cover 70%;
+  animation-range: cover 0% cover 40%;
   animation-fill-mode: both;
 }
 
@@ -310,6 +328,10 @@ header {
   font-size: 3rem;
   line-height: 3rem;
   margin-bottom: 50px;
+  text-align: left;
+}
+#mission>p{
+  margin-bottom:20px;
 }
 
 @keyframes moveBlip {
@@ -392,7 +414,13 @@ header {
   #blip-column {
     max-width: 50%;
   }
-
+  #history-detail {
+    max-width: 50%;
+  }
+#about-link-container {
+    justify-content: space-evenly;
+    width:50%;
+  }
   #portraits-container>div {
 
     width: 30%;
@@ -400,5 +428,10 @@ header {
 
   #header-title>h1 {
     font-size: 8rem;
+  }
+}
+@media (min-width:1024px) {
+  #mission {
+    width: 50%;
   }
 }
