@@ -21,6 +21,7 @@ form {
 #contact-form-section {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 #contact-success-section {

@@ -1,596 +1,552 @@
+/* =====================
+   HEADER
+===================== */
 header {
-  background-image: url("../images/large-moon.jpg");
-  background-color: black;
-  background-size: cover;
-  /* small view port unit used to ensure that the hero image is visible and first panel 
-  is always visible when loading the page on mobile devices.  */
-  height: 100svh;
-  padding-top: 1px;
-  background-position: center;
-  position: relative;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  flex-direction: row;
-  padding: 0 5%;
-}
-
-#header-title>h1 {
-  font-size: 3.5rem;
-  margin-bottom: 0;
-  line-height: 60px;
-}
-
-#header-title>h3 {
-  line-height: 20px;
-  font-size: .8rem;
+    background-image: url("../images/large-moon.jpg");
+    background-color: black;
+    background-size: cover;
+    height: 100svh;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-direction: row;
+    padding: 0 5%;
 }
 
 #header-title {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 100px;
-  width: 288px;
-  flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 100px;
+    width: 288px;
+    flex: 1;
+}
+
+#header-title > h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0;
+    line-height: 60px;
+}
+
+#header-title > h3 {
+    line-height: 20px;
+    font-size: .8rem;
 }
 
 #header-title p,
 #panel-two p,
 #panel-one p {
-  text-align: left;
-  font-size: 100%;
-  width: 100%;
-  margin-top: 10px;
+    text-align: left;
+    font-size: 100%;
+    width: 100%;
+    margin-top: 10px;
 }
 
-#quote-author {
-  font-size: .8rem;
-  text-align: left;
-}
-
+/* =====================
+   BASE LOCATION
+===================== */
 #base-location-container {
-  width: 200px;
-  position: absolute;
-  height: 200px;
-  bottom: 50%;
+    width: 200px;
+    position: absolute;
+    height: 200px;
+    bottom: 50%;
 }
 
 #base-one-location {
-  position: absolute;
-  top: 130px;
-  left: 70px;
-
+    position: absolute;
+    top: 130px;
+    left: 70px;
 }
 
 #base-two-location {
-  position: absolute;
-  right: 40px;
-  top: 10px;
-  text-align: right;
+    position: absolute;
+    right: 40px;
+    top: 10px;
+    text-align: right;
 }
 
 #base-one-location-circle,
 #base-two-location-circle {
-  transform-origin: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, .3);
-  border: 1px dashed white;
-  animation: rotateLocator 12s infinite linear;
-  transition: .8s;
-  cursor: pointer;
-
-}
-
-.base-details {
-  position: absolute;
-  width: max-content;
-  margin-top: 8px;
-  background: #0000007d;
-  padding: 5px;
-  border-radius: 2px;
-  left: 50%;
-  translate: -50% 0;
-}
-
-.base-details p {
-  font-size: .6rem;
-  line-height:.8rem;
+    transform-origin: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .3);
+    border: 1px dashed white;
+    animation: rotateLocator 12s infinite linear;
+    transition: .8s;
+    cursor: pointer;
 }
 
 #base-one-location-circle:hover,
 #base-two-location-circle:hover {
-  scale: 1.5;
+    scale: 1.5;
+}
+
+.base-details {
+    position: absolute;
+    width: max-content;
+    margin-top: 8px;
+    background: #0000007d;
+    padding: 5px;
+    border-radius: 2px;
+    left: 50%;
+    translate: -50% 0;
+}
+
+.base-details p {
+    font-size: .6rem;
+    line-height: .8rem;
 }
 
 @keyframes rotateLocator {
-  0% {
-    transform: rotateZ(0deg);
-  }
-
-  100% {
-    transform: rotateZ(360deg);
-  }
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
 }
 
-#construction-image {
-
-  max-width: 100%;
-
-}
-
-.image-div {
-  align-self: center;
-  width: 100%;
-  z-index: 0;
-  margin-bottom: 20px;
-}
-
-#panel-two-content {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 100px;
-  width: fit-content;
-  background: #000000;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.46) 76%, rgba(0, 0, 0, 0) 100%);
-}
-
-#panel-two {
-  background-image: url("../images/moon-construction.jpg");
-  background-position: center top;
-  background-color: black;
-  background-size: cover;
-  height: 100svh;
-  background-repeat: no-repeat;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: end;
-  overflow: hidden;
-}
-
-
-#panel-two h2,
-#kennedy-reference-content h2 {
-  font-size: 250%;
-  line-height: 40px;
-}
-
-#panel-one {
-  background-color: black;
-  height: 100svh;
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  justify-content: end;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-#kennedy-video {
-  position: absolute;
-  min-height: 100%;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-  object-fit: cover;
-}
-
-#kennedy-video-button-container {
-  z-index: 4;
-  position: absolute;
-  right: 15px;
-  bottom: 15px;
-  transition: 1s;
-  /* background: linear-gradient(240deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.46) 76%, rgba(0, 0, 0, 0) 100%); */
-
-}
-
-#video-controls {
-  z-index: 4;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #000000;
-  border-radius: 10px 10px 0 0;
-}
-
-#video-playback-toggle-button {
-  padding: 15px;
-  font-size: 120%;
-  border: 2px solid white;
-  border-radius: 5px;
-  background: #000000;
-}
-
-.video-control-class {
-  display: block;
-  padding: 10px;
-  text-decoration: none;
-  border: 1px solid white;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0);
-  transition: 0.6s;
-  text-align: center;
-  font-size: 1rem;
-  text-transform: uppercase;
-  font-family: "Aldrich", "Verdana", sans-serif;
-  text-decoration: none;
-  margin: 10px 0;
-}
-
-#video-playback-toggle-button.pressed-control {
-  background-color: rgba(255, 255, 255, 1);
-  color: black;
-  border: 1px solid white;
-}
-
-#controls-feedback-overlay {
-  position: absolute;
-  display: flex;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  /* transition: opacity 3s ease-in-out; */
-  opacity: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  justify-content: center;
-  align-items: center;
-
-}
-
-.overlay-animation {
-  animation: video-overlay 1.2s;
-}
-
-#overlay-skip-text {
-  font-family: "Aldrich", "Verdana", sans-serif;
-  font-size: 300%;
-}
-
-#volume-plus,
-#volume-minus,
-#skip-text {
-  font-family: "Aldrich", "Verdana", sans-serif;
-  font-size: 300%;
-}
-
-@keyframes video-overlay {
-  0% {
-    opacity: 0
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-#kennedy-reference-content {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 100px;
-  width: fit-content;
-  background: #000000;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.46) 76%, rgba(0, 0, 0, 0) 100%);
-  z-index: 4;
-  transition: 1s;
-}
-
-#kennedy-button {
-  z-index: 4;
-  transition: 1.8s;
-}
-
-#kennedy-picture {
-  position: absolute;
-  z-index: 3;
-  width: 100%;
-  height: 100%;
-  background-image: url("../images/kennedy.jpg");
-  background-position: center;
-  background-size: cover;
-  transition: .9s;
-}
-
-.slide-out-x {
-  transform: translateX(-100%);
-  opacity: 0;
-}
-
-.slide-in-x {
-  transform: translateX(0);
-  opacity: 1;
-}
-
-.slide-out-y {
-  transform: translateY(-100%);
-  opacity: 0;
-}
-
-.slide-in-y {
-  transform: translateY(0);
-  opacity: 1;
-}
-
-
-.hidden-element {
-  display: none;
-}
-
-#video-controls.hidden {
-  display: none;
-}
-
-.visible-element {
-  display: block;
-}
-
-#panel-four {
-  background-image: url("../images/earth-sliver.jpg");
-  background-color: black;
-  background-size: cover;
-  min-height: 88svh;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-position-x: center;
-  background-position-y: 100px;
-}
-
-#panel-four-content {
-  margin-top: 100px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 90%;
-}
-
-#panel-four-content>h2 {
-  margin-bottom: 20px;
-
-}
-
-#panel-four-content>p {
-  margin-top: 50px;
-  text-align: center;
-}
-
-#motivation-paragraph {
-  background-color: rgba(0, 0, 0, 0.46);
-  padding: 10px;
-}
-
-#motivation-paragraph .button-class {
-  max-width: 200px;
-  margin-left: auto;
-  margin-right: auto;
-
-}
-
+/* =====================
+   SCROLL ARROWS
+===================== */
 .scroll-arrow {
-  text-align: center;
-  position: absolute;
-  bottom: 0;
-  left: 50px;
-  margin: auto;
-  padding: 20px 0;
-  animation-name: slideArrow;
-  animation-iteration-count: infinite;
-  animation-duration: 2s;
-  cursor: pointer;
-  z-index: 70;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    margin: auto;
+    padding: 20px 0;
+    animation-name: slideArrow;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    cursor: pointer;
+    z-index: 70;
 }
 
-.scroll-arrow>img {
-  width: 50px;
-}
-
-#panel-three {
-  background-color: black;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  position: relative;
-
-}
-
-#panel-three .base-info {
-
-  flex-basis: 100%;
-  height: 50svh;
-  font-weight: bold;
-  text-align: center;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-
-.info-panel {
-  background-color: white;
-  color: black;
-  padding: 10px;
-  height: 100%;
-  width: 50%;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  transition: 1s;
-}
-
-#athena-base-image .info-panel {
-  right: -50%;
-  text-align: left;
-
-}
-
-#athena-base-image:hover .info-panel {
-  right: 0;
-}
-
-#athena-crucible-image .info-panel {
-  left: -50%;
-  text-align: right;
-}
-
-#athena-crucible-image:hover .info-panel {
-  left: 0;
-}
-
-.info-panel>p {
-  color: black;
-}
-
-#panel-three img {
-  max-width: 100%;
-}
-
-#panel-three h3 {
-  font-size: 300%;
-}
-
-#panel-three article {
-  padding: 20px;
-}
-
-#athena-base-text {
-  order: 0;
-  padding-top: 90px;
-
-}
-
-#athena-base-image {
-  order: 1;
-  background: url("../images/athena-base.jpg") #000000;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-
-
-
-#athena-crucible-text {
-  order: 2;
-  padding-top: 90px;
-
-}
-
-#athena-crucible-image {
-  order: 3;
-  background: url("../images/mining-site.jpg") #000000;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-
-.phase-text {
-  margin-bottom: 10px;
-  font-style: italic;
-  font-size: 80%;
-  font-weight: 100;
+.scroll-arrow > img {
+    width: 50px;
 }
 
 #footer-up-arrow.scroll-arrow {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  left: 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 0;
 }
 
 #footer-up-arrow img {
-  max-width: 50px;
+    max-width: 50px;
 }
 
 @keyframes slideArrow {
-  0% {
-    bottom: 5px;
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  100% {
-    bottom: 0;
-    opacity: 0;
-  }
+    0% {
+        bottom: 5px;
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        bottom: 0;
+        opacity: 0;
+    }
 }
 
-@media (min-width: 768px) {
-  #header-title>h1 {
-    font-size: 5rem;
-    line-height: 5rem;
-  }
+/* =====================
+   PANEL ONE (KENNEDY)
+===================== */
+#panel-one {
+    background-color: black;
+    height: 100svh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    align-items: flex-start;
+}
 
-  #panel-four-content {
-    margin-top: 0;
-    max-width: 60%;
-  }
+#kennedy-video {
+    position: absolute;
+    min-height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    object-fit: cover;
+}
 
-  #panel-four-content>p {
+#kennedy-picture {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/kennedy.jpg");
+    background-position: center;
+    background-size: cover;
+    transition: .9s;
+}
+
+#kennedy-reference-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 100px;
+    width: fit-content;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.46) 76%, rgba(0, 0, 0, 0) 100%);
+    z-index: 4;
+    transition: 1s;
+}
+
+#kennedy-reference-content h2 {
+    font-size: 250%;
+    line-height: 40px;
+}
+
+#kennedy-button {
+    z-index: 4;
+    transition: 1.8s;
+}
+
+#kennedy-video-button-container {
+    z-index: 4;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    transition: 1s;
+}
+
+#video-controls {
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #000000;
+    border-radius: 10px 10px 0 0;
+}
+
+#video-playback-toggle-button {
+    padding: 15px;
+    font-size: 120%;
+    border: 2px solid white;
+    border-radius: 5px;
+    background: #000000;
+}
+
+#video-playback-toggle-button.pressed-control {
+    background-color: rgba(255, 255, 255, 1);
+    color: black;
+    border: 1px solid white;
+}
+
+.video-control-class {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0);
+    transition: 0.6s;
+    text-align: center;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-family: "Aldrich", "Verdana", sans-serif;
+    margin: 10px 0;
+}
+
+#video-controls.hidden {
+    display: none;
+}
+
+#controls-feedback-overlay {
+    position: absolute;
+    display: flex;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-animation {
+    animation: video-overlay 1.2s;
+}
+
+#skip-text,
+#volume-plus,
+#volume-minus {
+    font-family: "Aldrich", "Verdana", sans-serif;
+    font-size: 300%;
+}
+
+@keyframes video-overlay {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* =====================
+   PANEL TWO
+===================== */
+#panel-two {
+    background-image: url("../images/moon-construction.jpg");
+    background-position: center top;
+    background-color: black;
+    background-size: cover;
+    height: 100svh;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: end;
+    overflow: hidden;
+}
+
+#panel-two h2 {
+    font-size: 250%;
+    line-height: 40px;
+}
+
+#panel-two-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 100px;
+    width: fit-content;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.46) 76%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* =====================
+   PANEL THREE
+===================== */
+#panel-three {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+#panel-three .base-info {
+    flex-basis: 100%;
+    height: 50svh;
+    font-weight: bold;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#panel-three img {
+    max-width: 100%;
+}
+
+#panel-three h3 {
+    font-size: 300%;
+}
+
+#panel-three article {
+    padding: 20px;
+}
+
+#athena-base-text {
+    order: 0;
+    padding-top: 90px;
+}
+
+#athena-base-image {
+    order: 1;
+    background: url("../images/athena-base.jpg") #000000;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#athena-crucible-text {
+    order: 2;
+    padding-top: 90px;
+}
+
+#athena-crucible-image {
+    order: 3;
+    background: url("../images/mining-site.jpg") #000000;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.info-panel {
+    background-color: white;
+    color: black;
+    padding: 10px;
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    transition: 1s;
+}
+
+.info-panel > p {
+    color: black;
+}
+
+#athena-base-image .info-panel {
+    right: -50%;
+    text-align: left;
+}
+
+#athena-base-image:hover .info-panel {
+    right: 0;
+}
+
+#athena-crucible-image .info-panel {
+    left: -50%;
+    text-align: right;
+}
+
+#athena-crucible-image:hover .info-panel {
+    left: 0;
+}
+
+.phase-text {
+    margin-bottom: 10px;
+    font-style: italic;
+    font-size: 80%;
+    font-weight: 100;
+}
+
+/* =====================
+   PANEL FOUR
+===================== */
+#panel-four {
+    background-image: url("../images/earth-sliver.jpg");
+    background-color: black;
+    background-size: cover;
+    min-height: 88svh;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-position-x: center;
+    background-position-y: 100px;
+}
+
+#panel-four-content {
+    margin-top: 100px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 90%;
+}
+
+#panel-four-content > h2 {
+    margin-bottom: 20px;
+}
+
+#panel-four-content > p {
     margin-top: 50px;
     text-align: center;
-  }
-
-  #panel-four {
-    justify-content: center;
-  }
-
-
-  #panel-three .base-info {
-    flex-basis: 50%;
-  }
-
-  #athena-base-text {
-    order: 0;
-    padding-top: 0;
-  }
-
-  #athena-base-image {
-    order: 1;
-  }
-
-  #athena-crucible-text {
-    order: 3;
-    padding-top: 0;
-  }
-
-  #athena-crucible-image {
-    order: 2;
-  }
-
-  #arrow-five {
-    display: none;
-  }
 }
 
+/* =====================
+   UTILITY CLASSES
+===================== */
+.hidden-element {
+    display: none;
+}
+
+.visible-element {
+    display: block;
+}
+
+.slide-out-x {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.slide-in-x {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.slide-out-y {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.slide-in-y {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* =====================
+   MEDIA QUERIES
+===================== */
+@media (min-width: 768px) {
+    #header-title > h1 {
+        font-size: 5rem;
+        line-height: 5rem;
+    }
+
+    #panel-four-content {
+        margin-top: 0;
+        max-width: 60%;
+    }
+
+    #panel-four-content > p {
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    #panel-four {
+        justify-content: center;
+    }
+
+    #panel-three .base-info {
+        flex-basis: 50%;
+    }
+
+    #athena-base-text {
+        order: 0;
+        padding-top: 0;
+    }
+
+    #athena-base-image {
+        order: 1;
+    }
+
+    #athena-crucible-text {
+        order: 3;
+        padding-top: 0;
+    }
+
+    #athena-crucible-image {
+        order: 2;
+    }
+
+    #arrow-five {
+        display: none;
+    }
+}
 
 @media (min-width: 1440px) {
-
-  #panel-four {
-
-    background-position-y: -100px;
-  }
-
-
+    #panel-four {
+        background-position-y: -100px;
+    }
 }
