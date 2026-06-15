@@ -28,9 +28,9 @@ window.addEventListener("keydown", (event) => {
 });
 
 
-window.addEventListener("scroll", () => {
-    if (!lightBox.classList.contains("hidden")) {
-        closeLightbox();
-    }
-});
+// window.addEventListener("scroll", () => {
+//     if (!lightBox.classList.contains("hidden")) {
+//         closeLightbox();
+//     }
+// });
 

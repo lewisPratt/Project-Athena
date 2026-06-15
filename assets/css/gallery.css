@@ -24,7 +24,7 @@ header {
    GALLERY
 ===================== */
 #gallery-container {
-    column-count: 1;
+    column-count: 2;
     gap:0;
 }
 
