@@ -17,7 +17,7 @@ header {
 }
 
 #header-title>h1 {
-  font-size: 350%;
+  font-size: 3.5rem;
   margin-bottom: 0;
   line-height: 60px;
 }
@@ -59,26 +59,20 @@ header {
 
 #base-one-location {
   position: absolute;
-  top: 120px;
-  left: 50px;
+  top: 130px;
+  left: 70px;
 
 }
 
 #base-two-location {
   position: absolute;
   right: 40px;
-  top: 50px;
+  top: 10px;
   text-align: right;
 }
 
-#base-one-location span,
-#base-two-location span {
-  font-size: .8rem;
-  font-style: italic;
-}
-
-#base-one-location>div,
-#base-two-location>div {
+#base-one-location-circle,
+#base-two-location-circle {
   transform-origin: center;
   width: 30px;
   height: 30px;
@@ -91,19 +85,24 @@ header {
 
 }
 
-#base-one-location>p,
-#base-two-location>p {
-  font-size: .5rem;
+.base-details {
   position: absolute;
   width: max-content;
   margin-top: 8px;
   background: #0000007d;
   padding: 5px;
   border-radius: 2px;
+  left: 50%;
+  translate: -50% 0;
 }
 
-#base-one-location>div:hover,
-#base-two-location>div:hover {
+.base-details p {
+  font-size: .6rem;
+  line-height:.8rem;
+}
+
+#base-one-location-circle:hover,
+#base-two-location-circle:hover {
   scale: 1.5;
 }
 
@@ -435,26 +434,32 @@ header {
   position: absolute;
   display: flex;
   align-items: center;
-  transition:1s;
+  transition: 1s;
 }
-#athena-base-image .info-panel{
-  right:-50%;
-    text-align: left;
+
+#athena-base-image .info-panel {
+  right: -50%;
+  text-align: left;
 
 }
-#athena-base-image:hover .info-panel{
-  right:0;
+
+#athena-base-image:hover .info-panel {
+  right: 0;
 }
-#athena-crucible-image .info-panel{
-  left:-50%;
-  text-align:right;
+
+#athena-crucible-image .info-panel {
+  left: -50%;
+  text-align: right;
 }
-#athena-crucible-image:hover .info-panel{
-  left:0;
+
+#athena-crucible-image:hover .info-panel {
+  left: 0;
 }
-.info-panel>p{
-  color:black;
+
+.info-panel>p {
+  color: black;
 }
+
 #panel-three img {
   max-width: 100%;
 }
@@ -494,7 +499,7 @@ header {
   background: url("../images/mining-site.jpg") #000000;
   background-size: cover;
   background-position: center;
-  position:relative;
+  position: relative;
 }
 
 .phase-text {
@@ -532,6 +537,11 @@ header {
 }
 
 @media (min-width: 768px) {
+  #header-title>h1 {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+
   #panel-four-content {
     margin-top: 0;
     max-width: 60%;

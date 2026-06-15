@@ -6,7 +6,7 @@ header {
     width: 100%;
     height: auto;
     transition: transform 0.3s ease-in-out;
-    display:block;
+    display: block;
 
 }
 
@@ -19,14 +19,30 @@ header {
 .image-container:hover .image-desc {
     translate: 0 -100%;
 }
-.image-container:hover .enlarge-image{
+
+.image-container:hover .enlarge-image {
     display: block;
 }
+
 #gallery-container {
-    column-count: 2;
+    column-count: 1;
     gap: 0;
 }
-
+header{
+    height:80svh;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+#header-title{
+    text-align: left;
+    width:90%;
+}
+#header-title h1{
+    font-size:4rem;
+}
 
 
 #lightbox {
@@ -59,7 +75,7 @@ header {
     top: 10px;
     color: white;
     cursor: pointer;
-    display:none;
+    display: none;
 }
 
 .image-container {
@@ -85,6 +101,9 @@ header {
 @media (min-width: 768px) {
     #gallery-container {
         column-count: 3;
-        padding: 20px;
+        padding: 20px 20px 100px 20px;
+    }
+    #header-title h1{
+        font-size:7rem;
     }
 }
