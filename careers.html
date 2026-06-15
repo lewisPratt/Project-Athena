@@ -16,6 +16,8 @@
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <script src="https://kit.fontawesome.com/6f68c772bb.js" crossorigin="anonymous" defer></script>
+  
+  <script src="assets/js/careers.js" defer></script>
   <script src="assets/js/site-wide.js" defer></script>
 
   <!-- image link https://images.nasa.gov/details/art002e012632 -->
@@ -41,65 +43,96 @@
       <i class="fa-solid fa-bars"></i>
     </div>
   </nav>
+  <div id="lightbox" class="hidden">
+    <div id="application-form">
+      <h2>Let's take some details.</h2>
+      <form id="job-form" action="" method="post">
+        <input type="email" name="email" placeholder="Email Address" required aria-required="true" >
+        <input type="text" name="name" placeholder="Name" required aria-required="true" >
+        <label id="file-upload-label" for="cv-upload">Upload CV</label>
+        <input type="file" name="cv" id="cv-upload" placeholder="Upload cv" accept=".pdf,.doc,.docx" required
+          aria-required="true" >
+       <select name="position" required aria-required="true">
+          <option value="" disabled selected>Select Position</option>
+          <option value="Advanced Aerospace Pilot">Advanced Aerospace Pilot</option>
+          <option value="Chief Technical Engineer">Chief Technical Engineer</option>
+          <option value="Launch Complex Maintenance Tech">Launch Complex Maintenance Tech</option>
+          <option value="Fabrication Technician">Fabrication Technician</option>
+          <option value="Astronaut & Flight Researcher">Astronaut & Flight Researcher</option>
+          <option value="Flight Training Officer">Flight Training Officer</option>
+        </select>
+        <input type="submit" value="Send" >
+      </form>
+    </div>
+    <div id="thank-you" class="hidden"></div>
+  </div>
   <header id="careers-top">
     <div id="header-title">
-      <h1>Start Your Journey</h1>
+      <h1>Be a part of history.</h1>
       <p>Join our team and help shape the future of space exploration.</p>
     </div>
   </header>
   <main id="main-content-container">
     <section id="careers-container">
       <div class="careers-card">
-        <img src="assets/images/careers/careers-1.webp" alt="Software Engineer" />
-        <h2>Software Engineer</h2>
-        <p>Develop and maintain software systems for our space missions.</p>
-        <a class="button-class" href="contact.html">Apply Now</a>
+        <div class="img-container">
+          <img src="assets/images/careers/careers-1.webp" alt="A test pilot sitting in a jet" />
+        </div>
+        <h2>Advanced Aerospace Pilot</h2>
+        <p>Test cutting edge flight technology, shaping the future of aviation.</p>
+        <span data-position="Advanced Aerospace Pilot" class="button-class apply-button" href="contact.html">Apply Now</span>
       </div>
       <div class="careers-card">
-        <img src="assets/images/careers/careers-2.webp" alt="Software Engineer" />
-        <h2>Software Engineer</h2>
-        <p>Develop and maintain software systems for our space missions.</p>
-        <a class="button-class" href="contact.html">Apply Now</a>
+        <div class="img-container">
+          <img src="assets/images/careers/careers-2.webp"
+            alt="Two men looking at a poster of the space shuttle launching. One man pointing at a detail on the shuttle." />
+        </div>
+        <h2>Chief Technical Engineer</h2>
+        <p>Design the flight systems that will take Athena to the Moon and beyond.</p>
+        <span data-position="Chief Technical Engineer" class="button-class apply-button" href="contact.html">Apply Now</span>
       </div>
       <div class="careers-card">
-        <img src="assets/images/careers/careers-3.webp" alt="Software Engineer" />
-        <h2>Software Engineer</h2>
-        <p>Develop and maintain software systems for our space missions.</p>
-        <a class="button-class" href="contact.html">Apply Now</a>
+        <div class="img-container">
+          <img src="assets/images/careers/careers-3.webp"
+            alt="a male and female sitting in a golf buggy style transport vehichle inside a warehouse. " />
+        </div>
+        <h2>Launch Complex Maintenance Tech</h2>
+        <p>To get to the moon, our launch site needs to be in optimal condition.</p>
+        <span data-position="Launch Complex Maintenance Tech" class="button-class apply-button" href="contact.html">Apply Now</span>
       </div>
       <div class="careers-card">
-        <img src="assets/images/careers/careers-4.webp" alt="Software Engineer" />
-        <h2>Software Engineer</h2>
-        <p>Develop and maintain software systems for our space missions.</p>
-        <a class="button-class" href="contact.html">Apply Now</a>
+        <div class="img-container">
+          <img src="assets/images/careers/careers-4.webp"
+            alt="Two men wearing face coverings, working on a large metal object inside of a warehouse." />
+        </div>
+        <h2>Fabrication Technician</h2>
+        <p>Construct and assemble the components that will make up our spacecraft.</p>
+        <span data-position="Fabrication Technician" class="button-class apply-button" href="contact.html">Apply Now</span>
       </div>
       <div class="careers-card">
-        <img src="assets/images/careers/careers-5.webp" alt="Software Engineer" />
-        <h2>Software Engineer</h2>
-        <p>Develop and maintain software systems for our space missions.</p>
-        <a class="button-class" href="contact.html">Apply Now</a>
+        <div class="img-container">
+          <img src="assets/images/careers/careers-5.webp"
+            alt="A man in a space vehicle, using a sealed chamber to open a sample container." />
+        </div>
+        <h2>Astronaut & Flight Researcher</h2>
+        <p>Conduct research and participate in space missions.</p>
+        <span data-position="Astronaut & Flight Researcher" class="button-class apply-button" href="contact.html">Apply Now</span>
       </div>
       <div class="careers-card">
-        <img src="assets/images/careers/careers-6.webp" alt="Software Engineer" />
-        <h2>Software Engineer</h2>
-        <p>Develop and maintain software systems for our space missions.</p>
-        <a class="button-class" href="contact.html">Apply Now</a>
+        <div class="img-container">
+          <img src="assets/images/careers/careers-6.webp"
+            alt="Two men with face coverings working in a warehouse next to a large spherical metal object." />
+        </div>
+        <h2>Flight Training Officer</h2>
+        <p>Be part of the team that prepares our astronauts for space missions.</p>
+        <span data-position="Flight Training Officer" class="button-class apply-button" href="contact.html">Apply Now</span>
       </div>
 
 
 
 
     </section>
-    <form action="contact-success.html" method="post">
-      <input type="email" name="email" placeholder="Email Address" required aria-required="true" />
-      <input type="text" name="name" placeholder="Name" required aria-required="true" />
-      <label id="file-upload-label" for="cv-upload">Upload CV</label>
-      <input type="file" name="cv" id="cv-upload" placeholder="Upload cv" accept=".pdf,.doc,.docx" required
-        aria-required="true" />
-      <textarea name="contact-content" placeholder="What would you like to say?" required
-        aria-required="true"></textarea>
-      <input type="submit" value="Send" />
-    </form>
+
     </section>
   </main>
 
