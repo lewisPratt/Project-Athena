@@ -1,11 +1,27 @@
 header {
-  padding: 150px 5% 0 5%;
-  text-align: center;
-  text-wrap: pretty;
+  padding-top: 100px;
+
 }
 
-header > p {
-  line-height: 1.5rem;
+#header-title {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-basis: content;
+  padding-left: 40px;
+}
+
+#header-title h1 {
+  font-size: 4rem;
+}
+
+#main-content-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 form {
@@ -16,25 +32,29 @@ form {
   padding: 30px 0;
   align-content: center;
   gap: 20px;
-  width: 60%;
+  width:80%;
 }
+
 #contact-form-section {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-basis: content;
 }
 
 #contact-success-section {
   margin-top: 50px;
   gap: 25px;
 }
+
 input[type="text"],
 input[type="email"],
 textarea {
-  height: 35px;
+  height: 50px;
   width: 100%;
   margin: 20px 0;
   transition: 0.4s;
+  color:black;
 }
 
 input[type="text"]:hover,
@@ -73,17 +93,15 @@ input[type="submit"]:hover {
   cursor: pointer;
 }
 
-main {
-  background-image: url("../images/moon-curve.jpg");
-  background-size: cover;
-  background-position-y: -15%;
-  background-position-x: 50%;
-  background-repeat: no-repeat;
-}
+main {}
 
 .contact-success-button {
   width: 250px !important;
 }
 
-@media only screen and (max-width: 600px) {
+
+@media (min-width:768px) {
+  #main-content-container {
+    align-items: center;
+  }
 }
