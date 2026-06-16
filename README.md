@@ -139,6 +139,11 @@ To run the project locally:
 
 * The `prefers-reduced-motion` CSS media query has been used where animations are present, ensuring users with vestibular conditions can access and use the site comfortably.
 
+* To adhere to accessibility conventions, a distinction was made between the types of links used on each page. These distinctions allow assitive technology to provide more context aroudn the type of link that is being focussed.
+  * Any link/clickable element that takes the user to a different page uses an `<a>` tag.
+
+  * Any link/clickable element that performs an action on the same page uses a `<button>` element. E.g. scrolling to a different part of the page, toggling the play state of video media.
+
 ---
 
 ## Challenges & Problem Solving
