@@ -11,6 +11,7 @@ Live site: [Athena Home Page](https://lewispratt.github.io/Project-Athena/)
 A static website for a fictional private aerospace company seeking to raise awareness of their brand, their goals, and attract new employees.
 
 ---
+
 ## Table of Contents
 
 * [Technologies Used](#technologies-used)
@@ -37,7 +38,6 @@ A static website for a fictional private aerospace company seeking to raise awar
 * HTML5
 * CSS3
 * JavaScript (Vanilla)
-* Bootstrap 5
 * Google Fonts
 * Font Awesome Icons
 
@@ -75,7 +75,6 @@ Inspiration was taken from the SpaceX website, focusing on a minimal yet visuall
 
 * **Home** — details the goals of the company
 * **About** — a visual history of Athena
-their interest in joining Athena
 * **Contact** — allows visitors to submit their details and receive confirmation their message was sent
 * **Gallery** — features images that align with Athena's mission statement
 * **Launch** — displays future and past rocket launch videos
@@ -95,6 +94,21 @@ their interest in joining Athena
 * A max-width of 1440px has been applied to all full-width containers, ensuring the layout remains controlled on high resolution displays.
 * Font Awesome icons have been used throughout, with custom graphics created in Affinity Designer where needed.
 * Some images have been edited to add a smooth transition between the image and the black background.
+
+## Deployment
+
+This project was deployed using GitHub Pages. The steps taken were:
+
+1. Push all project files to a GitHub repository
+2. Navigate to the repository **Settings** tab
+3. Select **Pages** from the left hand menu
+4. Under **Branch**, select `main` and click **Save**
+5. GitHub Pages will publish the site and provide a live URL
+
+To run the project locally:
+
+1. Clone the repository: `git clone https://github.com/lewispratt/Project-Athena.git`
+2. Open `index.html` in your browser — no build step or dependencies required
 
 ### Layout
 
