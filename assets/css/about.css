@@ -7,7 +7,7 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   height: 60svh;
-  background-position: center;
+  background-position: top;
   z-index: 1;
   display: flex;
   justify-content: center;
