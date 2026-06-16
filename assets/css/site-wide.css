@@ -159,7 +159,12 @@ nav li:hover {
 a.active-link::before {
     content: "> ";
 }
-
+nav h3{
+    font-size: .6rem;
+    letter-spacing: 9px;
+    text-align: center;
+    margin-top: -6px;
+}
 /* =====================
    BUTTONS
 ===================== */
@@ -280,11 +285,13 @@ footer p{
 
 @media only screen and (min-width: 1024px) {
     nav {
-        align-items: baseline;
+        align-items: end;
         justify-content: space-between;
-        padding: 20px 20px 0 20px;
+        padding: 0 20px;
     }
-
+    #nav-logo{
+        margin:10px 0;
+    }
     #navigation {
         width: unset;
         position: static;

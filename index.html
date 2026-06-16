@@ -28,8 +28,9 @@
 
 <body>
     <nav>
-        <a href="index.html">
+        <a id="nav-logo" href="index.html">
             <h2>Athena</h2>
+            <h3>Aerospace</h3>
         </a>
         <div id="navigation">
             <ul>
@@ -51,9 +52,9 @@
 
             <div id="base-location-container">
                 <div id="base-one-location">
-                    <div id="base-one-location-circle">
+                    <button id="base-one-location-circle">
                         <!--circle indicator-->
-                    </div>
+                    </button>
                     <div class="base-details">
                         <h4>Humboldtianum Basin</h4>
                         <p>Athena-1 Lunar Base Camp.</p>
@@ -61,9 +62,9 @@
                     </div>
                 </div>
                 <div id="base-two-location">
-                    <div id="base-two-location-circle">
+                    <button id="base-two-location-circle">
                         <!--circle indicator-->
-                    </div>
+                    </button>
                     <div class="base-details">
                         <h4>Athena Crucible</h4>
                         <p>Priority Excavation Basin.</p>
@@ -76,8 +77,8 @@
                 <p>The moon is our closest neighbour, yet we know so little about it. </p>
                 <p>ATHENA is here to change that.</p>
             </article>
-            <div id="arrow-one" class="scroll-arrow" data-next-panel="panel-one"><img
-                    src="assets/images/scroll-arrow-opaque.png"> </div>
+            <button class="scroll-arrow-button"><img id="arrow-one" class="scroll-arrow" data-next-panel="panel-one"
+                    src="assets/images/scroll-arrow-opaque.png" alt="Scroll to next section"> </button>
         </header>
 
         <section id="panel-one">
@@ -90,18 +91,19 @@
 
             <div id="kennedy-video-button-container">
                 <div id="video-controls" class="hidden">
-                    <div id="volume-up" class="video-control-class"> <i class="fa-solid fa-volume-up"></i></div>
-                    <div id="volume-down" class="video-control-class"><i class="fa-solid fa-volume-down"></i></div>
-                    <div id="skip-forward" class="video-control-class"> <i
-                            class="fa-solid fa-clock-rotate-left fa-flip-horizontal"></i></div>
+                    <button id="volume-up" class="video-control-class"> <i class="fa-solid fa-volume-up"></i></button>
+                    <button id="volume-down" class="video-control-class"><i
+                            class="fa-solid fa-volume-down"></i></button>
+                    <button id="skip-forward" class="video-control-class"> <i
+                            class="fa-solid fa-clock-rotate-left fa-flip-horizontal"></i></button>
                 </div>
-                <div id="video-playback-toggle-button">
+                <button id="video-playback-toggle-button">
                     <span id="play-icon" class="fa-solid fa-play"></span>
                     <span id="stop-icon" class="fa-solid fa-pause hidden-element"></span>
-                </div>
+                </button>
             </div>
-            <div id="kennedy-button"><a href="about.html" class="button-class">Our History<i
-                        class="fa-solid fa-arrow-right"></i></a></div>
+            <a href="about.html" id="kennedy-button" class="button-class">Our History<i
+                    class="fa-solid fa-arrow-right"></i></a>
 
             <article id="kennedy-reference-content">
                 <h2>Meeting the challenge set in 1961.</h2>
@@ -116,16 +118,16 @@
                 <source src="assets/videos/kennedy.mp4" type="video/mp4">
                 Your browser doesn't support the HTML5 video tag. Please update your browser or use an alternative.
             </video>
-            <div id="arrow-three" class="scroll-arrow" data-next-panel="panel-two"><img
-                    src="assets/images/scroll-arrow.png">
-            </div>
+            <button class="scroll-arrow-button"><img id="arrow-three" class="scroll-arrow" data-next-panel="panel-two"
+                    src="assets/images/scroll-arrow.png" alt="Scroll to next section"></button>
+
 
         </section>
 
         <section id="panel-two">
 
-            <div id="gallery-button"><a href="gallery.html" class="button-class">Athena Gallery <i
-                        class="fa-solid fa-arrow-right"></i></a></div>
+            <a href="gallery.html" id="gallery-button" class="button-class">Athena Gallery <i
+                    class="fa-solid fa-arrow-right"></i></a>
             <article id="panel-two-content">
                 <h2>Taking the next leap, for all mankind.</h2>
                 <p>We plan to have a permanent base on the moon by 2028.</p>
@@ -134,8 +136,8 @@
                 </p>
             </article>
 
-            <div id="arrow-two" class="scroll-arrow" data-next-panel="panel-three"><img
-                    src="assets/images/scroll-arrow-opaque.png">
+            <button class="scroll-arrow-button"><img id="arrow-two" class="scroll-arrow" data-next-panel="panel-three"
+                    src="assets/images/scroll-arrow.png" alt="Scroll to next section"></button>
             </div>
 
         </section>
@@ -145,11 +147,13 @@
 
             <div class="base-info" id="athena-base-image">
                 <div class="info-panel">
-                    <p>The main habitation module consists of living quarters, sanitation facilities, social spaces and exercise areas.</p>
+                    <p>The main habitation module consists of living quarters, sanitation facilities, social spaces and
+                        exercise areas.</p>
                 </div>
-                <div id="arrow-five" class="scroll-arrow" data-next-panel="athena-crucible-text"><img
-                        src="assets/images/scroll-arrow.png">
-                </div>
+                <button class="scroll-arrow-button"><img id="arrow-five" class="scroll-arrow" data-next-panel="athena-crucible-text"
+                        src="assets/images/scroll-arrow.png" alt="Scroll to next section"></button>
+                
+                        
             </div>
 
             <div class="base-info" id="athena-base-text">
@@ -158,7 +162,7 @@
                     <h3>Athena-1 Lunar Base</h3>
                     <p>Athena-1 is our first permanent lunar base, designed to support long-term human presence on the
                         moon. The base has completed phase one of contruction and has been supporting
-                    15 full time resident engineers.</p>
+                        15 full time resident engineers.</p>
                 </article>
 
             </div>
@@ -167,17 +171,20 @@
                 <article>
                     <p class="phase-text">Lunar Sustainability Phase-1</p>
                     <h3>Athena Crucible</h3>
-                    <p>The Athena Crucible is our innovative facility designed to support sustainable resource utilization on the moon. It serves as a hub for research and development of technologies that will enable long-term lunar habitation.</p>
+                    <p>The Athena Crucible is our innovative facility designed to support sustainable resource
+                        utilization on the moon. It serves as a hub for research and development of technologies that
+                        will enable long-term lunar habitation.</p>
                 </article>
             </div>
             <div class="base-info" id="athena-crucible-image">
                 <div class="info-panel">
-                    <p>The Athena Crucible is our future mining facility that will help to sustain industry on the moon. Plans include resource export, sending rare minerals back to Earth.</p>
+                    <p>The Athena Crucible is our future mining facility that will help to sustain industry on the moon.
+                        Plans include resource export, sending rare minerals back to Earth.</p>
                 </div>
             </div>
-            <div id="arrow-four" class="scroll-arrow" data-next-panel="panel-four"><img
-                    src="assets/images/scroll-arrow.png">
-            </div>
+            <button class="scroll-arrow-button"><img id="arrow-four" class="scroll-arrow" data-next-panel="panel-four"
+                    src="assets/images/scroll-arrow.png" alt="Scroll to next section"></button>
+            
 
         </section>
         <section id="panel-four">
@@ -189,18 +196,18 @@
 
         </section>
 
-        <div id="footer-up-arrow" class="scroll-arrow" data-next-panel="home-top">
+        <button id="footer-up-arrow" class="scroll-arrow" data-next-panel="home-top">
             <img src="assets/images/scroll-up-arrow.webp" alt="Arrow pointing upwards">
-        </div>
+        </button>
 
     </main>
     <footer>
         <div id="footer-content">
             <div id="social-links-holder">
                 <a href="https://www.x.com" target="_blank"><img id="x-logo" src="assets/images/social-logos/x-logo.svg"
-                        width="20px"></a>
+                        width="20px" alt="X Logo"></a>
                 <a href="https://www.instagram.com" target="_blank"><img id="instagram-logo"
-                        src="assets/images/social-logos/instagram-logo.svg" width="30px"></a>
+                        src="assets/images/social-logos/instagram-logo.svg" width="30px" alt="Instagram Logo"></a>
 
             </div>
             <div id="footer-links">
@@ -210,7 +217,7 @@
                 </ul>
             </div>
             <div id="copyright-holder">
-                <p>©Project Athena 2026</p>
+                <p>©Athena Aerospace 2026</p>
             </div>
 
 
@@ -220,22 +227,4 @@
     </footer>
 </body>
 
-
 </html>
-
-<!-- <h2>Tackling the frontiers of tomorrow. Today.</h2>
-
-                <blockquote>
-                    "Look again at that dot. That's here. That's home. That's us.
-                    On it everyone you love, everyone you know, everyone you ever
-                    heard of, every human being who ever was, lived out their
-                    lives....every saint and sinner in the history of our species
-                    lived there--on a mote of dust suspended in a sunbeam."
-                    <footer>— <cite>Carl Sagan, Pale Blue Dot, 1994.</cite></footer>
-                </blockquote>
-
-                <p id="motivation-paragraph">
-                    The fragility of mankinds home in the universe plays a large part in driving
-                    us to tackle the emerging technical problems of tomorrow.
-
-                </p> -->
