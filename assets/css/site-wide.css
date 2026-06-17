@@ -59,6 +59,12 @@ blockquote > footer {
     background: none;
     text-align: right;
 }
+button {
+    cursor: pointer;
+    background: none;
+    outline: none;
+    border: none;
+}
 
 /* =====================
    LAYOUT

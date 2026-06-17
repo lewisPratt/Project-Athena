@@ -210,6 +210,7 @@ header {
   animation-name: fadeInSide;
   font-size:4rem;
   line-height:4rem;
+  margin-bottom: 30px;
 }
 
 #portraits-container>div {
@@ -244,15 +245,15 @@ header {
 }
 
 #portrait-one {
-  animation-range: cover 0% cover 50%;
+  animation-range: cover 0% cover 30%;
 }
 
 #portrait-two {
-  animation-range: cover 10% cover 50%;
+  animation-range: cover 10% cover 30%;
 }
 
 #portrait-three {
-  animation-range: cover 20% cover 50%;
+  animation-range: cover 20% cover 30%;
 }
 
 /* =====================
