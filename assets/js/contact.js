@@ -17,7 +17,7 @@ contactForm.addEventListener("submit", (event) => {
     //get answer to math question
     const formData = new FormData(contactForm);
     const mathAnswer = formData.get("math-answer");
-    //TO DO: get honeypot input value (should be empty)
+    const honeypot = formData.get("website");
 
     // run through checks to determine if it's a valid submission
     if (difference < 3) {
@@ -26,7 +26,9 @@ contactForm.addEventListener("submit", (event) => {
     else if (mathAnswer != 15) {
         errorText.innerHTML = "<p>Please answer the verification question correctly.</p>";
     } 
-    //TO DO: Add honeypot check
+    else if(honeypot){
+        errorText.innerHTML = "<p>An error occurred. Please try again.</p>";
+    }
     else {
         contactForm.submit()
     }

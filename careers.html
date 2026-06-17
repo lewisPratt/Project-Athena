@@ -46,12 +46,15 @@
   <div id="lightbox" class="hidden">
     <div id="application-form">
       <h2>Let's take some details.</h2>
+      <span id="error-text"></span>
       <form id="job-form" action="" method="post">
-        <input type="email" name="email" placeholder="Email Address" autocomplete="email" required aria-required="true" aria-label="Email Address">
-        <input type="text" name="name" placeholder="Name" autocomplete="name" required aria-required="true" aria-label="Name">
+        <input type="email" name="email" placeholder="Email Address" autocomplete="email" required aria-required="true"
+          aria-label="Email Address">
+        <input type="text" name="name" placeholder="Name" autocomplete="name" required aria-required="true"
+          aria-label="Name">
         <label id="file-upload-label" for="cv-upload">Upload CV</label>
-        <input type="file" name="cv" id="cv-upload" placeholder="Upload cv" accept=".pdf,.doc,.docx" >
-          <p id="file-upload-text">No file selected</p>
+        <input type="file" name="cv" id="cv-upload" placeholder="Upload cv" accept=".pdf,.doc,.docx">
+        <p id="file-upload-text">No file selected</p>
         <select name="position" required aria-required="true" aria-label="Select Position">
           <option value="" disabled selected>Select Position</option>
           <option value="Advanced Aerospace Pilot">Advanced Aerospace Pilot</option>
@@ -62,6 +65,8 @@
           <option value="Flight Training Officer">Flight Training Officer</option>
         </select>
         <input type="submit" value="Send">
+        <input id="website-input" type="text" name="website" placeholder="Your Website" autocomplete="off"
+          tabindex="-1">
       </form>
     </div>
     <div id="thank-you" class="hidden"></div>
@@ -120,7 +125,8 @@
         </div>
         <h2>Astronaut & Flight Researcher</h2>
         <p>Conduct research and participate in space missions.</p>
-        <button data-position="Astronaut & Flight Researcher" class="button-class apply-button" href="contact.html">Apply
+        <button data-position="Astronaut & Flight Researcher" class="button-class apply-button"
+          href="contact.html">Apply
           Now</button>
       </div>
       <div class="careers-card">

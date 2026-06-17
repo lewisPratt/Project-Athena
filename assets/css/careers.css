@@ -92,7 +92,10 @@ header {
   width: 90%;
   margin: auto;
 }
-
+#website-input {
+  position: absolute;
+  left: -10000px;
+}
 #thank-you {
   width: 90%;
   text-align: center;

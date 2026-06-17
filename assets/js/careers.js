@@ -5,37 +5,51 @@ const lightboxDiv = document.querySelector("#application-form");
 const thankYouDiv = document.querySelector("#thank-you");
 const filenNameText = document.querySelector("#file-upload-text");
 
+const pageLoadTime = Date.now();
+const errorText = document.querySelector("#error-text");
+
 //updates file name element after file upload. 
 document.querySelector("#cv-upload").addEventListener("change", (event) => {
     let uploadedFileName = event.target.files[0].name;
-    if (filenNameText.style.color == "red"){
+    if (filenNameText.style.color == "red") {
         filenNameText.style.color = "#F4F4F4";
     }
     filenNameText.innerHTML = uploadedFileName;
-
-    
 });
 
 // handle submission of the job application form via JS
 jobForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const formData = new FormData(jobForm);
-    const position = formData.get("position");
-    const email = formData.get("email");
-    const name = formData.get("name");
-    const cvFile = formData.get("cv");
-    //check to see if a file was uploaded and throw early return if not.
-    if(cvFile.size <= 0){
-        filenNameText.innerHTML = "Please upload a CV before submitting.";
-        filenNameText.style.color = "red";
-        return;
+    //get for submission time
+    const formSubTime = Date.now();
+    let difference = (formSubTime - pageLoadTime) / 1000;
+    //perform time and honeypot validation
+    if (difference < 5) {
+        errorText.innerHTML = "<p>An error occurred. Please try again.</p>";
     }
-    lightboxDiv.classList.add("hidden");
-    thankYouDiv.classList.remove("hidden");
-    thankYouDiv.innerHTML = `<h2>Application received.</h2><p>We have received your application for the position of ${position}.</p><p> We'll review your application shortly and get back to you.</p><button class="button-class" id="close-button">Close</button>`;
-    document.querySelector("#close-button").addEventListener("click", closeLightbox);
-
+    else if(formData.get("website")){
+        errorText.innerHTML = "<p>An error occurred. Please try again.</p>";
+    }
+    else {
+        const position = formData.get("position");
+        const email = formData.get("email");
+        const name = formData.get("name");
+        const cvFile = formData.get("cv");
+        //check to see if a file was uploaded and throw early return if not.
+        if (cvFile.size <= 0) {
+            filenNameText.innerHTML = "Please upload a CV before submitting.";
+            filenNameText.style.color = "red";
+            return;
+        }
+        lightboxDiv.classList.add("hidden");
+        thankYouDiv.classList.remove("hidden");
+        thankYouDiv.innerHTML = `<h2>Application received.</h2><p>We have received your application for the position of ${position}.</p><p> We'll review your application shortly and get back to you.</p><button class="button-class" id="close-button">Close</button>`;
+        document.querySelector("#close-button").addEventListener("click", closeLightbox);
+    }
 });
+
+
 // Function to close the lightbox
 function closeLightbox() {
     lightBox.classList.add("hidden");
