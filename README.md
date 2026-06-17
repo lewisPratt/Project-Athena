@@ -70,6 +70,7 @@ Inspiration was taken from the SpaceX website, focusing on a minimal yet visuall
 * Custom video player with hidden controls, overlay feedback, and IntersectionObserver integration
 * Footer with social media links and navigation
 * Consistent styling across all pages
+* Robust form validation and measures to reduce spam submissions. 
 
 ### Pages
 
@@ -94,6 +95,7 @@ Inspiration was taken from the SpaceX website, focusing on a minimal yet visuall
 * A max-width of 1440px has been applied to all full-width containers, ensuring the layout remains controlled on high resolution displays.
 * Font Awesome icons have been used throughout, with custom graphics created in Affinity Designer where needed.
 * Some images have been edited to add a smooth transition between the image and the black background.
+* After implementing a custom math question on the contact page (in order to reduce possible spam bot submissions) i decided to create custom styled radio inputs, to better fit the aesthetic of the website. Using the `:has()` css selector, i was able to adjust the styling of the label element and it's children, dependent on whether the nested input was currently `:checked` or not.
 
 ## Deployment
 
@@ -152,9 +154,38 @@ To run the project locally:
 
 ## Challenges & Problem Solving
 
+### Form Validation and Security
+
+From previous experience of hosting websites with a contact page, I am aware that without appropriate counter-measures, contact forms can be routinely targetted by bots that will submit unwanted form data. This causes unnecessary spam, as well as possible security concerns depending on the backend systems.
+
+In order to address this issue, as well as ensure that all necessary information is collected, I chose to implement a layered approach of form validation, combining 4 strategies to reduce the likelihood of malicious or unwanted/unhelpful submissions.
+
+1. Required attribute
+    * Adding the `required` attribute to essential form inputs is the most basic form of validation, ensuring that key information such as contact details and names are not omitted either intentionally or accidentally. 
+2. Time based validation.
+    * When a page containing a form is loaded, the initial time at page load is recorded via Javascript.
+    * The time is also recorded at form submission.
+    * By determining the difference in these two time variables, we are able to see how long it took the user to complete and submit the form.
+    * If the time taken between loading the page and form submission is less than 5 seconds, an error is displayed in the UI, asking the user to try completing the form again.
+    * This helps to reduce automated form submissions as bots can often load the page, complete the required fields and submit the form within seconds.
+
+3. User Logic based validation
+    * Using a very simple math based logic question, it is possible to further reduce the risk of automated submissions.
+    * Once submitted, the value of the selected answer is checked and if incorrect, the UI prompts the user to complete the verification question correctly.
+
+4. 'Honeypot' input field
+    * Placing an input field within the form, but ensuring the user never see's it, is another way of checking for genuine user input.
+    * Many bots that submit spam via simple forms will fill out every form input element in an effort to meet all required criteria for it to submit successfully.
+    * By adding an input field that is never intended to be completed by a genuine user, it is possible to check on submission if a value has been entered, and if so, prevent the submission from completing. 
+    * Ideally the input should be visible (meaning not `display:none` as some bots can check for this) but placed out of view of the user.
+
+By combining these four methods, it is possible to reduce the likelihood of annoying/malicious automated form submissions. I am aware however, that for larger and more complex applciations, there are significantly more robust techniques available that will further reduce this risk.
+
+For a simple applciation such as this, I believe the techniques i have implimented are sufficient to address this issue.
+
 image hotspot research
 how i came to use svh instead of vh
-any other technical issues that i have overcome.
+form anti spam implementation.
 
 ---
 
