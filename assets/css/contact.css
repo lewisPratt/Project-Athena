@@ -44,17 +44,50 @@ form {
 #error-text {
   width: 50%;
   text-align: center;
-  font-size:.8rem;
+  font-size: .8rem;
 }
 
 fieldset {
   width: 100%;
   border: 0;
   text-align: center;
+  padding: 20px 0;
 }
-fieldset>input{
- margin-right:20px;
+
+.radio-container {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+  vertical-align: text-bottom;
+
 }
+
+.checkmark {
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+.checkmark:has(+ input:checked) {
+  background-color: black;
+}
+
+.radio-container>input {
+  display: none;
+}
+
+
+
+.radio-container:hover .checkmark {
+  background-color: black;
+}
+
 #contact-success-section {
   margin-top: 50px;
   gap: 25px;

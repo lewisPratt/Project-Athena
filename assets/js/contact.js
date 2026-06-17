@@ -23,7 +23,7 @@ contactForm.addEventListener("submit", (event) => {
     if (difference < 3) {
         errorText.innerHTML = "<p>An error occurred. Please try again.</p>";
     }
-    else if (mathAnswer != 12) {
+    else if (mathAnswer != 15) {
         errorText.innerHTML = "<p>Please answer the verification question correctly.</p>";
     } 
     //TO DO: Add honeypot check
