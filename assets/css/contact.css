@@ -8,7 +8,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  flex-basis: 400px;
+  flex-basis: 500px;
   padding-left: 40px;
 }
 
@@ -79,13 +79,40 @@ fieldset {
 }
 
 .radio-container>input {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
-
-
 
 .radio-container:hover .checkmark {
   background-color: black;
+}
+
+.checkmark:has(+ input:focus-visible){
+  background-color: black;
+}
+
+#website-input {
+  position: absolute;
+  left: -10000px;
+}
+
+details {
+  display: block;
+  width: 100%;
+
+  min-height: 40px;
+}
+
+details,
+summary {
+  font-size: .8rem;
+}
+
+details>summary {
+  list-style: none;
+  cursor: pointer;
 }
 
 #contact-success-section {

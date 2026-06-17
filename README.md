@@ -179,13 +179,42 @@ In order to address this issue, as well as ensure that all necessary information
     * By adding an input field that is never intended to be completed by a genuine user, it is possible to check on submission if a value has been entered, and if so, prevent the submission from completing. 
     * Ideally the input should be visible (meaning not `display:none` as some bots can check for this) but placed out of view of the user.
 
+    To achieve this is defined the input field:
+
+        <input id="website-input" type="text" name="website" placeholder="Your Website" autocomplete="off" tabindex="-1">
+
+    Then styled it so that it was placed out of the viewport by a significant amount:
+
+        #website-input{
+          position:absolute;
+          left:-10000px;
+        }
+
+    The `tabindex` attribute allows the field to be focusable but not reachable using keyboard controls. `autocomplete="off"` also ensures that the field is not accidentally completed automatically, causing the validation to fail through no fault of the user.  
+
 By combining these four methods, it is possible to reduce the likelihood of annoying/malicious automated form submissions. I am aware however, that for larger and more complex applciations, there are significantly more robust techniques available that will further reduce this risk.
 
 For a simple applciation such as this, I believe the techniques i have implimented are sufficient to address this issue.
 
+### Form accessibility
+
+When designing the custom `<input type="radio">` elements for my contact form, I initially set the  `input` element to `display:none;`. During testing I realised that this had taken the inputs out of the tab order, meaning that the custom radio buttons i had created could not be selected via the use of Tab on the keyboard. 
+
+This is a poor experience for users who may have accessibility needs. The solution to this was to keep the inputs in the tab order by removing `display:none;` and using CSS to alter their visibility and size.
+
+        .radio-container>input {
+          position: absolute;
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+
+The result ensures that the radio buttons can be selected with Tab then arrow buttons are used to move between the seperate radio buttons in the fieldset.
+
+
 image hotspot research
 how i came to use svh instead of vh
-form anti spam implementation.
+
 
 ---
 

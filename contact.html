@@ -63,8 +63,10 @@
                     aria-required="true" aria-label="Name">
                 <textarea name="contact-content" placeholder="What would you like to say?" required
                     aria-required="true"></textarea>
+
                 <fieldset>
-                    <legend>What is 23 - 8?</legend>
+
+                    <legend>What is 23 - 8? </legend>
                     <label class="radio-container" for="option-one"><span class="checkmark"></span><input type="radio"
                             id="option-one" name="math-answer" value="15"></label> 15
                     <label class="radio-container" for="option-two"><span class="checkmark"></span><input type="radio"
@@ -72,9 +74,14 @@
                     <label class="radio-container" for="option-three"><span class="checkmark"></span><input type="radio"
                             id="option-three" name="math-answer" value="11"></label> 11
                 </fieldset>
-
+                <details>
+                    <summary><i class="fa-solid fa-circle-info"></i> Why am i being asked this?</summary>
+                    <p>We're just checking you're a human and not a cyborg!</p>
+                </details>
 
                 <input type="submit" value="Send">
+                <input id="website-input" type="text" name="website" placeholder="Your Website" autocomplete="off"
+                    tabindex="-1">
 
             </form>
         </section>
