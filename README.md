@@ -144,6 +144,10 @@ To run the project locally:
 
   * Any link/clickable element that performs an action on the same page uses a `<button>` element. E.g. scrolling to a different part of the page, toggling the play state of video media.
 
+* Where appropriate, images have been contained within a `<figure>` element, with their accompanying description being nested inside a `<figcaption>` element. This accurately allows accessibility aids and search engines to identify the type of content being displayed and keeps these images as self contained pieces of content.
+
+* Form elements that do not have an associated label, have had the `aria-label` attribute added to them, to describe their purpose and give each element context.
+
 ---
 
 ## Challenges & Problem Solving
