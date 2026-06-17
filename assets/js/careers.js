@@ -3,6 +3,18 @@ const positionSelect = document.querySelector("select[name='position']");
 const jobForm = document.querySelector("#job-form");
 const lightboxDiv = document.querySelector("#application-form");
 const thankYouDiv = document.querySelector("#thank-you");
+const filenNameText = document.querySelector("#file-upload-text");
+
+//updates file name element after file upload. 
+document.querySelector("#cv-upload").addEventListener("change", (event) => {
+    let uploadedFileName = event.target.files[0].name;
+    if (filenNameText.style.color == "red"){
+        filenNameText.style.color = "#F4F4F4";
+    }
+    filenNameText.innerHTML = uploadedFileName;
+
+    
+});
 
 // handle submission of the job application form via JS
 jobForm.addEventListener("submit", (event) => {
@@ -12,15 +24,17 @@ jobForm.addEventListener("submit", (event) => {
     const email = formData.get("email");
     const name = formData.get("name");
     const cvFile = formData.get("cv");
-
-    // console.log("Position:", position);
-    // console.log("Email:", email);
-    // console.log("Name:", name);
-    // console.log("CV File:", cvFile);
+    //check to see if a file was uploaded and throw early return if not.
+    if(cvFile.size <= 0){
+        filenNameText.innerHTML = "Please upload a CV before submitting.";
+        filenNameText.style.color = "red";
+        return;
+    }
     lightboxDiv.classList.add("hidden");
     thankYouDiv.classList.remove("hidden");
-    thankYouDiv.innerHTML = `<h2>Thank you for applying!</h2><p>We have received your application for the position of ${position}. We will review your application and get back to you soon.</p>`;
-    
+    thankYouDiv.innerHTML = `<h2>Application received.</h2><p>We have received your application for the position of ${position}.</p><p> We'll review your application shortly and get back to you.</p><button class="button-class" id="close-button">Close</button>`;
+    document.querySelector("#close-button").addEventListener("click", closeLightbox);
+
 });
 // Function to close the lightbox
 function closeLightbox() {
@@ -30,6 +44,7 @@ function closeLightbox() {
         thankYouDiv.classList.add("hidden");
     }
     jobForm.reset();
+    filenNameText.innerHTML = "";
     lightboxDiv.classList.remove("hidden");
 }
 //trigger the lightbox to open when clicking on the apply button and set the position select value to the data-position attribute of the button
@@ -51,13 +66,6 @@ lightBox.addEventListener("click", (event) => {
 //close lightbox when pressing the escape key
 window.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
-        closeLightbox();
-    }
-});
-
-//close lightbox when scrolling
-window.addEventListener("scroll", () => {
-    if (!lightBox.classList.contains("hidden")) {
         closeLightbox();
     }
 });
