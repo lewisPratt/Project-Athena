@@ -16,6 +16,7 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <script src="https://kit.fontawesome.com/6f68c772bb.js" crossorigin="anonymous" defer></script>
+    <script src="assets/js/contact.js" defer></script>
     <script src="assets/js/site-wide.js" defer></script>
 
 </head>
@@ -50,13 +51,27 @@
             <p>Have something to ask or want to pick the brains of our experts? </p>
             <p>Fill out the form below and we'll get back to you within 24 hours.</p>
         </div>
+
         <section id="contact-form-section">
-            <form action="contact-success.html" method="">
-                <input type="email" name="email" placeholder="Email Address" required aria-required="true">
-                <input type="text" name="name" placeholder="Name" required aria-required="true">
+
+            <form action="contact-success.html" id="contact-form" method="">
+                <div id="error-text"></div>
+
+                <input type="email" name="email" placeholder="Email Address" autocomplete="email" required
+                    aria-required="true" aria-label="Email Address">
+                <input type="text" name="name" placeholder="Name" autocomplete="given-name" required
+                    aria-required="true" aria-label="Name">
                 <textarea name="contact-content" placeholder="What would you like to say?" required
                     aria-required="true"></textarea>
+                <fieldset>
+                    <legend>What is 4 + 8?</legend>
+                    <label for="answer-one">5</label> <input type="radio" id="answer-one" name="math-answer" value="5">
+                    <label for="answer-two">12</label> <input type="radio" id="answer-two" name="math-answer" value="12">
+                    <label for="answer-three">24</label> <input type="radio" id="answer-three" name="math-answer" value="24">
+                </fieldset>
+
                 <input type="submit" value="Send">
+
             </form>
         </section>
     </main>
@@ -66,9 +81,9 @@
         <div id="footer-content">
             <div id="social-links-holder">
                 <a href="https://www.x.com" target="_blank"><img id="x-logo" src="assets/images/social-logos/x-logo.svg"
-                        width="20px"></a>
+                        width="20px" alt="X (formerly Twitter) logo"></a>
                 <a href="https://www.instagram.com" target="_blank"><img id="instagram-logo"
-                        src="assets/images/social-logos/instagram-logo.svg" width="30px"></a>
+                        src="assets/images/social-logos/instagram-logo.svg" width="30px" alt="Instagram logo"></a>
 
             </div>
             <div id="footer-links">
