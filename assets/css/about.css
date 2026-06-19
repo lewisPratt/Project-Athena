@@ -7,6 +7,7 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   height: 60svh;
+  min-height:450px;
   background-position: top;
   z-index: 1;
   display: flex;
@@ -24,6 +25,17 @@ header {
   margin-bottom: 10px;
 }
 
+#aerospace-h {
+  margin-top: -30px;
+  margin-bottom:50px;
+
+}
+
+#aerospace-h>span {
+  letter-spacing: 50px;
+  text-align: center;
+}
+
 /* =====================
    TIMELINE
 ===================== */
@@ -35,7 +47,10 @@ header {
   flex-flow: column wrap;
   background-color: #000000;
   z-index: 5;
+  padding-top:20px;
+  overflow:clip;
 }
+
 
 #blip-column {
   display: flex;
@@ -208,8 +223,8 @@ header {
   animation-range: cover 0% cover 70%;
   animation-fill-mode: both;
   animation-name: fadeInSide;
-  font-size:4rem;
-  line-height:4rem;
+  font-size: 4rem;
+  line-height: 4rem;
   margin-bottom: 30px;
 }
 
