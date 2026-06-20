@@ -7,7 +7,7 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   height: 60svh;
-  min-height:450px;
+  min-height: 450px;
   background-position: top;
   z-index: 1;
   display: flex;
@@ -26,13 +26,14 @@ header {
 }
 
 #aerospace-h {
-  margin-top: -30px;
-  margin-bottom:50px;
+  margin-top: -20px;
+  margin-bottom: 50px;
+  font-size: .7rem;
 
 }
 
 #aerospace-h>span {
-  letter-spacing: 50px;
+  letter-spacing: 24px;
   text-align: center;
 }
 
@@ -47,8 +48,8 @@ header {
   flex-flow: column wrap;
   background-color: #000000;
   z-index: 5;
-  padding-top:20px;
-  overflow:clip;
+  padding-top: 20px;
+  /* overflow: clip; */
 }
 
 
@@ -120,6 +121,7 @@ header {
   animation-delay: 6400ms;
 }
 
+
 .timeline-container {
   display: flex;
   align-items: center;
@@ -131,17 +133,22 @@ header {
   background-color: #000000;
   font-size: 80%;
   text-align: center;
-  animation-name: fadeInSide;
+  animation-name: fadeIn;
   animation-timeline: view();
   animation-range: cover 0% cover 50%;
   animation-fill-mode: both;
   margin-top: 200px;
   will-change: opacity, transform;
+
 }
 
 .timeline-container>h2 {
   position: absolute;
   line-height: unset;
+}
+
+.timeline-container>h3 {
+  font-size: 1.5rem;
 }
 
 .timeline-left-container>h2,
@@ -415,11 +422,27 @@ header {
   #header-title>h1 {
     font-size: 5rem;
   }
+
+  #aerospace-h {
+    margin-top: -25px;
+    margin-bottom: 50px;
+  
+
+  }
+
+  #aerospace-h>span {
+    letter-spacing: 32px;
+    text-align: center;
+  }
 }
 
 @media (min-width: 425px) {
   #header-title>h1 {
     font-size: 6rem;
+  }
+    #aerospace-h>span {
+    letter-spacing: 40px;
+    text-align: center;
   }
 }
 
@@ -439,6 +462,18 @@ header {
 
   #header-title>h1 {
     font-size: 8rem;
+  }
+
+  #aerospace-h {
+    margin-top: -30px;
+    margin-bottom: 50px;
+    font-size: 1.2rem;
+
+  }
+
+  #aerospace-h>span {
+    letter-spacing: 50px;
+    text-align: center;
   }
 }
 
