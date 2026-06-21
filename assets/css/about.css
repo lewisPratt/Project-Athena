@@ -15,6 +15,12 @@ header {
   align-items: end;
 }
 
+.card h6 {
+  margin-left: 25px;
+  font-weight: 100;
+  font-style: italic;
+}
+
 #header-title {
   position: fixed;
   text-align: center;
@@ -126,7 +132,7 @@ header {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 30px 20%;
+  padding: 30px 10px;
   position: relative;
   border: 1px solid white;
   z-index: 0;
@@ -151,8 +157,8 @@ header {
   font-size: 1.5rem;
 }
 
-.timeline-left-container>h2,
-.timeline-right-container>h2 {
+
+.timeline-container>h2 {
   top: 0;
   left: 0;
   transform: translateY(-100%);
@@ -230,8 +236,8 @@ header {
   animation-range: cover 0% cover 70%;
   animation-fill-mode: both;
   animation-name: fadeInSide;
-  font-size: 4rem;
-  line-height: 4rem;
+  font-size: 2rem;
+  line-height: 2rem;
   margin-bottom: 30px;
 }
 
@@ -250,7 +256,7 @@ header {
 
 .card h2 {
   color: #dedede;
-  padding-left: 25px;
+  margin-left: 25px;
 }
 
 .card p {
@@ -426,7 +432,7 @@ header {
   #aerospace-h {
     margin-top: -25px;
     margin-bottom: 50px;
-  
+
 
   }
 
@@ -440,7 +446,8 @@ header {
   #header-title>h1 {
     font-size: 6rem;
   }
-    #aerospace-h>span {
+
+  #aerospace-h>span {
     letter-spacing: 40px;
     text-align: center;
   }
@@ -458,6 +465,11 @@ header {
 
   #portraits-container>div {
     width: 30%;
+    min-height: 620px;
+  }
+
+  .card p {
+    padding: 10px;
   }
 
   #header-title>h1 {
@@ -475,10 +487,19 @@ header {
     letter-spacing: 50px;
     text-align: center;
   }
+
+  #founders-title {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
 }
 
 @media (min-width: 1024px) {
   #mission {
     width: 50%;
+  }
+
+  #portraits-container>div {
+    min-height: 640px;
   }
 }
