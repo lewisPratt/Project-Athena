@@ -126,10 +126,6 @@ To run the project locally:
 * The `addEventListener()` method has been used throughout to handle user interactions, primarily the `"click"` event.
 * JavaScript manages the visibility of dynamic elements such as the navbar icon, overlay text, video player controls, and other buttons by toggling classes that control the `display` property.
 
-### Viewport Height
-
-* `svh` units have been used instead of `vh` for full viewport height panels. On mobile, `vh` does not account for retractable address bars and toolbars, causing elements to appear inconsistently above or below the fold across devices. `svh` calculates panel height based on the smallest potential viewport height, ensuring consistent and predictable styling across all devices.
-
 ### Video Player
 
 * Custom video player controls are hidden until the user presses play, preserving screen real estate and maintaining a clean design.
@@ -252,11 +248,13 @@ When first exploring this idea, i became aware of the unit of measurement, `vh` 
 However, as i continued development of the site, and regularly checked the results on a mobile device, i realised that the placement of elements within full height panels was unpredictable and would vary depending on whether the address bar was visible or retracted at the top of the screen. This meant that the bold visual style i was attempting to implement was at times being disrupted, as elements would appear below the fold when loading the page initially, then when scrolling (and the address bar retracting) the elements would be in the psoition i had initially intended.
 
 ![Viewport Height screenshot](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/viewport-height.webp "100vh unit test")
+
 *(Above panel is missing spacing at the bottom of the screen and an arrow that when pressed scrolls to the next panel)*
 
 After some research, i discovered the measurement unit `svh`. This measurement reflects the smallest possible viewport height of the users borwser, taking into account the address bar and other possible borwser elements that tend to retract on scroll. 
 
 ![Smallest Viewport Height screenshot](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/smallest-viewport-height.webp "100svh unit test")
+
 *(Using 100svh allows the full contents of the panel to be shown, without having to account for possible browser elements that take up some of the viewport space)*
 
 Using this unit ensured that, when my page loaded on a mobile device, the full height panel was exactly the size of the viewable area on the mobile device. This merant placing my nested elements in each panel became easier to predict as i did not have to account for additional space taken up by mobile browser elements.
@@ -275,10 +273,6 @@ Using this unit ensured that, when my page loaded on a mobile device, the full h
 
 
 ---
-
-## Usage
-
-To view this project locally, clone the repository to your machine and open `index.html` in your browser.
 
 ---
 
