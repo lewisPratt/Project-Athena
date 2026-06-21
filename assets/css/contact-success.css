@@ -1,0 +1,50 @@
+header {
+  padding-top: 100px;
+
+}
+
+#header-title {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 600px;
+  padding: 10px;
+}
+
+#header-title h1 {
+  font-size: 2rem;
+}
+
+#main-content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+
+
+
+@media (min-width:768px) {
+  #main-content-container {
+    align-items: center;
+  }
+}
+
+@media (min-width:1024px) {
+  #header-title {
+    flex-basis: 500px;
+    text-align: left;
+   
+  }
+
+  #header-title>h1 {
+    font-size: 3rem;
+  }
+
+  #contact-form-section {
+    flex-basis: 450px;
+  }
+}
