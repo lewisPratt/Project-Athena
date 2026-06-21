@@ -10,6 +10,7 @@ const pageLoadTime = Date.now();
 const errorText = document.querySelector("#error-text");
 const contactForm = document.querySelector("#contact-form")
 contactForm.addEventListener("submit", (event) => {
+    console.log("called");
     event.preventDefault();
     //get for submission time
     const formSubTime = Date.now();
@@ -21,13 +22,16 @@ contactForm.addEventListener("submit", (event) => {
 
     // run through checks to determine if it's a valid submission
     if (difference < 3) {
-        errorText.innerHTML = "<p>An error occurred. Please try again.</p>";
+        errorText.innerHTML = "An error occurred. Please try again.";
+  
     }
     else if (mathAnswer != 15) {
-        errorText.innerHTML = "<p>Please answer the verification question correctly.</p>";
+        errorText.innerHTML = "Please answer the verification question correctly.";
+   
     } 
     else if(honeypot){
-        errorText.innerHTML = "<p>An error occurred. Please try again.</p>";
+        errorText.innerHTML = "An error occurred. Please try again.";
+       
     }
     else {
         contactForm.submit()

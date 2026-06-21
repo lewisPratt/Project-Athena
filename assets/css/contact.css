@@ -4,12 +4,12 @@ header {
 }
 
 #header-title {
-  text-align: left;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  flex-basis: 500px;
-  padding-left: 40px;
+  align-items: center;
+  flex-basis: 600px;
+  padding: 10px;
 }
 
 #header-title h1 {
@@ -41,10 +41,10 @@ form {
   flex-basis: 800px;
 }
 
-#error-text {
-  width: 50%;
+#header-title>#error-text {
   text-align: center;
   font-size: .8rem;
+  color:red;
 }
 
 fieldset {
@@ -90,7 +90,7 @@ fieldset {
   background-color: black;
 }
 
-.checkmark:has(+ input:focus-visible){
+.checkmark:has(+ input:focus-visible) {
   background-color: black;
 }
 
@@ -167,7 +167,7 @@ input[type="submit"]:hover {
   cursor: pointer;
 }
 
-main {}
+
 
 .contact-success-button {
   width: 250px !important;
@@ -177,5 +177,22 @@ main {}
 @media (min-width:768px) {
   #main-content-container {
     align-items: center;
+  }
+}
+
+@media (min-width:1024px) {
+  #header-title {
+    flex-basis: 500px;
+    text-align: left;
+    margin-bottom: 150px;
+    align-items: flex-start;
+  }
+
+  #header-title>h1 {
+    font-size: 3rem;
+  }
+
+  #contact-form-section {
+    flex-basis: 450px;
   }
 }
