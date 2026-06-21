@@ -10,7 +10,6 @@ const pageLoadTime = Date.now();
 const errorText = document.querySelector("#error-text");
 const contactForm = document.querySelector("#contact-form")
 contactForm.addEventListener("submit", (event) => {
-    console.log("called");
     event.preventDefault();
     //get for submission time
     const formSubTime = Date.now();
