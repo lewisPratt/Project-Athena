@@ -196,6 +196,38 @@ By combining these four methods, it is possible to reduce the likelihood of anno
 
 For a simple applciation such as this, I believe the techniques i have implimented are sufficient to address this issue.
 
+    contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    //get for submission time
+    const formSubTime = Date.now();
+    let difference = (formSubTime - pageLoadTime) / 1000;
+    //get answer to math question
+    const formData = new FormData(contactForm);
+    const mathAnswer = formData.get("math-answer");
+    const honeypot = formData.get("website");
+
+    // run through checks to determine if it's a valid submission
+    if (difference < 3) {
+        errorText.innerHTML = "An error occurred. Please try again.";
+        console.log("stalled at check1");
+    }
+    else if (mathAnswer != 15) {
+        errorText.innerHTML = "Please answer the verification question correctly.";
+        console.log("stalled at check2");
+    } 
+    else if(honeypot){
+        errorText.innerHTML = "An error occurred. Please try again.";
+        console.log("stalled at check3");
+    }
+    else {
+        contactForm.submit()
+    }
+
+    })
+
+
+During development, i used `console.log()` to indicate during testing, which check the form was failing the validation on. This helped to identify any bugs or edge cases that may have been tricky to find.
+
 ### Form accessibility
 
 When designing the custom `<input type="radio">` elements for my contact form, I initially set the  `input` element to `display:none;`. During testing I realised that this had taken the inputs out of the tab order, meaning that the custom radio buttons i had created could not be selected via the use of Tab on the keyboard. 
@@ -211,9 +243,19 @@ This is a poor experience for users who may have accessibility needs. The soluti
 
 The result ensures that the radio buttons can be selected with Tab then arrow buttons are used to move between the seperate radio buttons in the fieldset.
 
+### Full screen panels
 
-image hotspot research
-how i came to use svh instead of vh
+I took inspiration for the design of my project from other tech companies such as SpaceX, who use full height 'panels' for a bold and visually pleasing effect.
+
+When first exploring this idea, i became aware of the unit of measurement, `vh` which i started to use when sizing my full screen panels. This presented very well on the desktop and on first appeareance on mobile. `vh` sets the height of an element to the viewport height, a unit that at first sight i thought was exactly what i was looking for.
+
+However, as i continued development of the site, and regularly checked the results on a mobile device, i realised that the placement of elements within full height panels was unpredictable and would vary depending on whether the address bar was visible or retracted at the top of the screen. This meant that the bold visual style i was attempting to implement was at times being disrupted, as elements would appear below the fold when loading the page initially, then when scrolling (and the address bar retracting) the elements would be in the psoition i had initially intended.
+
+![Viewport Height screenshot](https://github.com/lewispratt/project-athena/assets/images/readme/viewport-height.png "Logo Title Text 1")
+
+
+After some research, i discovered the measurement unit `svh`. This measurement reflects the smallest possible viewport height of the users borwser, taking into account the address bar and other possible borwser elements that tend to retract on scroll. 
+Using this unit ensured that, when my page loaded on a mobile device, the full height panel was exactly the size of the viewable area on the mobile device. This merant placing my nested elements in each panel became easier to predict as i did not have to account for additional space taken up by mobile browser elements. 
 
 
 ---

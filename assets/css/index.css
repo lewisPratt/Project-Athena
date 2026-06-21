@@ -5,7 +5,7 @@ header {
     background-image: url("../images/large-moon.jpg");
     background-color: black;
     background-size: cover;
-    height: 100svh;
+    height: 100vh;
     min-height: 560px;
     background-position: center;
     position: relative;
