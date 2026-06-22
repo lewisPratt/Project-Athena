@@ -146,6 +146,8 @@ To run the project locally:
 
 * Form elements that do not have an associated label, have had the `aria-label` attribute added to them, to describe their purpose and give each element context.
 
+* To evaluate and identify any issues related to accessibility, i used a Chrome plugin called Accessibility Insights for Web. This enabled me to run tests on specific pages, and recieve an assessment regrding how effectively that page meets accessibility standards.
+
 ---
 
 ## Challenges & Problem Solving
