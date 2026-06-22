@@ -94,6 +94,7 @@ header {
   animation-duration: 2.3s;
   transform-origin: center;
 }
+
 #start-blip:focus-visible,
 #start-blip:hover {
   background-color: white;
@@ -132,14 +133,13 @@ header {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 30px 10px;
   position: relative;
   border: 1px solid white;
   z-index: 0;
   background-color: #000000;
   font-size: 80%;
   text-align: center;
-  animation-name: fadeIn;
+  animation-name: slideUp;
   animation-timeline: view();
   animation-range: cover 0% cover 50%;
   animation-fill-mode: both;
@@ -153,10 +153,27 @@ header {
   line-height: unset;
 }
 
-.timeline-container>h3 {
+.timeline-container h3 {
   font-size: 1.5rem;
-}
+  position:absolute;
+  top:50%;
+  translate: 0 -50%;
+  background-color: rgba(0,0,0,.5);
+  padding: 10px 0;
 
+  width:100%;
+
+}
+.timeline-container > p{
+  padding:20px; 
+}
+.timeline-container>.timeline-header-image-container{
+  position:relative;
+}
+.timeline-container img {
+  max-width:100%;
+ 
+}
 
 .timeline-container>h2 {
   top: 0;
@@ -251,7 +268,7 @@ header {
 
 .card img {
   max-width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .card h2 {
@@ -462,10 +479,12 @@ header {
     justify-content: space-evenly;
     width: 50%;
   }
-
+  .timeline-container .history-text {
+    font-size:1rem;
+  }
   #portraits-container>div {
     width: 30%;
-    min-height: 620px;
+    min-height: 640px;
   }
 
   .card p {
@@ -498,8 +517,15 @@ header {
   #mission {
     width: 50%;
   }
-
+  .timeline-container h3 {
+    font-size:3rem;
+  }
   #portraits-container>div {
-    min-height: 640px;
+    min-height: 600px;
+  }
+}
+@media (min-width:1440px){
+    .timeline-container h3 {
+    font-size:3rem;
   }
 }
