@@ -94,9 +94,9 @@ header {
   animation-duration: 2.3s;
   transform-origin: center;
 }
-
+#start-blip:focus-visible,
 #start-blip:hover {
-  background-color: black;
+  background-color: white;
 }
 
 .moving-blip {
