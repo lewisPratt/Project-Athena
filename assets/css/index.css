@@ -287,7 +287,9 @@ header {
     font-family: "Aldrich", "Verdana", sans-serif;
     margin: 10px 0;
 }
-
+.video-control-class:focus-visible{
+    background-color:#d0d0d0;
+}
 #video-controls.hidden {
     display: none;
 }
