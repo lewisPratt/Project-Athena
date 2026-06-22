@@ -148,6 +148,8 @@ To run the project locally:
 
 * To evaluate and identify any issues related to accessibility, i used a Chrome plugin called Accessibility Insights for Web. This enabled me to run tests on specific pages, and recieve an assessment regrding how effectively that page meets accessibility standards.
 
+* All pages have been optimised to allow effective keyboard control if needed. This ensures all elements that a user may want to access, are available both via keyboard and mouse or just keyboard control. 
+
 ---
 
 ## Challenges & Problem Solving
