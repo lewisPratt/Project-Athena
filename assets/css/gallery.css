@@ -60,22 +60,22 @@ header {
     top: 10px;
     color: white;
     cursor: pointer;
-    display: none;
+    display: block;
 }
 
 /* --- Hover states --- */
+.image-container:focus-visible .gallery-image,
 .image-container:hover .gallery-image {
     transform: scale(1.05);
     transition: all 0.3s ease-in-out;
     filter: brightness(1.2);
 }
-
+.image-container:focus-visible .image-desc,
 .image-container:hover .image-desc {
     translate: 0 -100%;
 }
-
-.image-container:hover .enlarge-image {
-    display: block;
+.enlarge-image:focus-visible{
+    scale:1.2;
 }
 
 /* =====================
