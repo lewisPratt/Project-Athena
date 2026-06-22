@@ -422,8 +422,8 @@ header {
     background-size: cover;
     background-position: center;
     position: relative;
-}
 
+}
 .info-panel {
     background-color: white;
     color: black;
@@ -445,7 +445,7 @@ header {
     right: -50%;
     text-align: left;
 }
-
+#athena-base-image:focus-visible .info-panel,
 #athena-base-image:hover .info-panel {
     right: 0;
 }
@@ -454,7 +454,7 @@ header {
     left: -50%;
     text-align: right;
 }
-
+#athena-crucible-image:focus-visible .info-panel,
 #athena-crucible-image:hover .info-panel {
     left: 0;
 }
