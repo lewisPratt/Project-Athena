@@ -4,6 +4,7 @@ const jobForm = document.querySelector("#job-form");
 const lightboxDiv = document.querySelector("#application-form");
 const thankYouDiv = document.querySelector("#thank-you");
 const filenNameText = document.querySelector("#file-upload-text");
+const emailInput = document.querySelector("#email-input");
 
 const pageLoadTime = Date.now();
 const errorText = document.querySelector("#error-text");
@@ -68,6 +69,7 @@ document.querySelectorAll(".apply-button").forEach(button => {
         lightBox.classList.add("careers-lightbox-flex");
         const position = button.dataset.position;
         positionSelect.value = position;
+        emailInput.focus();
     });
 });
 

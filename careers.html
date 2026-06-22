@@ -48,12 +48,12 @@
       <h2>Let's take some details.</h2>
       <span id="error-text"></span>
       <form id="job-form" action="" method="post">
-        <input type="email" name="email" placeholder="Email Address" autocomplete="email" required aria-required="true"
+        <input id="email-input" type="email" name="email" placeholder="Email Address" autocomplete="email" required aria-required="true"
           aria-label="Email Address">
         <input type="text" name="name" placeholder="Name" autocomplete="name" required aria-required="true"
           aria-label="Name">
-        <label id="file-upload-label" for="cv-upload">Upload CV</label>
-        <input type="file" name="cv" id="cv-upload" placeholder="Upload cv" accept=".pdf,.doc,.docx">
+        <label id="file-upload-label" for="cv-upload" >Upload CV</label>
+        <input type="file" name="cv" id="cv-upload" placeholder="Upload cv" accept=".pdf,.doc,.docx" tabindex="0">
         <p id="file-upload-text">No file selected</p>
         <select name="position" required aria-required="true" aria-label="Select Position">
           <option value="" disabled selected>Select Position</option>
