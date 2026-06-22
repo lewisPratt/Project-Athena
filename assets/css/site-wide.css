@@ -86,7 +86,6 @@ header{
 input[type="text"],
 input[type="email"],
 textarea {
-    border-radius: 8px;
     padding: 10px;
 }
 
