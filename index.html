@@ -47,21 +47,11 @@
         </div>
     </nav>
     <main id="main-content-container">
-        <header id="home-top">
+        <header id="home-top" role="presentation" aria-label="Close up picture of the Moons surface.">
 
             <div id="base-location-container">
-                <div id="base-one-location">
-                    <button id="base-one-location-circle">
-                        <!--circle indicator-->
-                    </button>
-                    <div class="base-details">
-                        <h4>Humboldtianum Basin</h4>
-                        <p>Athena-1 Lunar Base Camp.</p>
-                        <p>April/2028</p>
-                    </div>
-                </div>
                 <div id="base-two-location">
-                    <button id="base-two-location-circle">
+                    <button id="base-two-location-circle" aria-label="Athena Crucible button">
                         <!--circle indicator-->
                     </button>
                     <div class="base-details">
@@ -70,13 +60,24 @@
                         <p>October/2030</p>
                     </div>
                 </div>
+                <div id="base-one-location">
+                    <button id="base-one-location-circle" aria-label="Athena-1 Lunar Base button">
+                        <!--circle indicator-->
+                    </button>
+                    <div class="base-details">
+                        <h4>Humboldtianum Basin</h4>
+                        <p>Athena-1 Lunar Base Camp.</p>
+                        <p>April/2028</p>
+                    </div>
+                </div>
+
             </div>
             <article id="header-title">
                 <h1>We're on a mission.</h1>
                 <p>The moon is our closest neighbour, yet we know so little about it. </p>
                 <p>ATHENA is here to change that.</p>
             </article>
-            <button class="scroll-arrow-button"><img id="arrow-one" class="scroll-arrow" data-next-panel="panel-one"
+            <button class="scroll-arrow-button aria-label="Scroll to next panel""><img id="arrow-one" class="scroll-arrow" data-next-panel="panel-one"
                     src="assets/images/scroll-arrow-opaque.png" alt="Scroll to next section"> </button>
         </header>
 
@@ -96,7 +97,7 @@
                     <button id="skip-forward" class="video-control-class"> <i
                             class="fa-solid fa-clock-rotate-left fa-flip-horizontal"></i></button>
                 </div>
-                <button id="video-playback-toggle-button">
+                <button id="video-playback-toggle-button" aria-label="Video playback toggle button">
                     <span id="play-icon" class="fa-solid fa-play"></span>
                     <span id="stop-icon" class="fa-solid fa-pause hidden-element"></span>
                 </button>
@@ -112,13 +113,14 @@
                     not meant for the stars. </p>
                 <p>We've decided to take up the challenge and push forwards to mankinds next frontier.</p>
             </article>
-            <div id="kennedy-picture"></div>
+            <div id="kennedy-picture" role="presentation"></div>
             <video muted loop id="kennedy-video">
                 <source src="assets/videos/kennedy.mp4" type="video/mp4">
                 Your browser doesn't support the HTML5 video tag. Please update your browser or use an alternative.
             </video>
-            <button class="scroll-arrow-button"><img id="arrow-three" class="scroll-arrow" data-next-panel="panel-two"
-                    src="assets/images/scroll-arrow.png" alt="Scroll to next section"></button>
+            <button class="scroll-arrow-button" aria-label="Scroll to next panel"><img id="arrow-three"
+                    class="scroll-arrow" data-next-panel="panel-two" src="assets/images/scroll-arrow.png"
+                    alt="Scroll to next section"></button>
 
 
         </section>
@@ -135,8 +137,9 @@
                 </p>
             </article>
 
-            <button class="scroll-arrow-button"><img id="arrow-two" class="scroll-arrow" data-next-panel="panel-three"
-                    src="assets/images/scroll-arrow.png" alt="Scroll to next section"></button>
+            <button class="scroll-arrow-button" aria-label="Scroll to next panel"><img id="arrow-two"
+                    class="scroll-arrow" data-next-panel="panel-three" src="assets/images/scroll-arrow.png"
+                    alt="Scroll to next section"></button>
             </div>
 
         </section>
@@ -149,10 +152,11 @@
                     <p>The main habitation module consists of living quarters, sanitation facilities, social spaces and
                         exercise areas.</p>
                 </div>
-                <button class="scroll-arrow-button"><img id="arrow-five" class="scroll-arrow" data-next-panel="athena-crucible-text"
+                <button id="optional-arrow" class="scroll-arrow-button" aria-label="Scroll to next panel"><img
+                        id="arrow-five" class="scroll-arrow" data-next-panel="athena-crucible-text"
                         src="assets/images/scroll-arrow.png" alt="Scroll to next section"></button>
-                
-                        
+
+
             </div>
 
             <div class="base-info" id="athena-base-text">
@@ -181,12 +185,13 @@
                         Plans include resource export, sending rare minerals back to Earth.</p>
                 </div>
             </div>
-            <button class="scroll-arrow-button"><img id="arrow-four" class="scroll-arrow" data-next-panel="panel-four"
-                    src="assets/images/scroll-arrow.png" alt="Scroll to next section"></button>
-            
+            <button class="scroll-arrow-button" aria-label="Scroll to next panel"><img id="arrow-four"
+                    class="scroll-arrow" data-next-panel="panel-four" src="assets/images/scroll-arrow.png"
+                    alt="Scroll to next section"></button>
+
 
         </section>
-        <section id="panel-four">
+        <section id="panel-four" aria-roledescription="presentation">
 
             <article id="panel-four-content">
                 <p>We're always looking for new talent to help solve the problems of tomorrow.</p>
@@ -195,7 +200,7 @@
 
         </section>
 
-        <button id="footer-up-arrow" class="scroll-arrow" data-next-panel="home-top">
+        <button id="footer-up-arrow" aria-label="Scroll to top" class="scroll-arrow" data-next-panel="home-top">
             <img src="assets/images/scroll-up-arrow.webp" alt="Arrow pointing upwards">
         </button>
 

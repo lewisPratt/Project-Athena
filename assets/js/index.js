@@ -15,6 +15,15 @@ const overlayContents = [volumePlus, volumeMinus, skipText];
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
+const baseScrollArrow = document.querySelector("#optional-arrow");
+let screenWidth = window.visualViewport.width;
+checkScreenWidth(screenWidth);
+
+window.addEventListener("resize", ()=>{
+  screenWidth = window.visualViewport.width;
+  checkScreenWidth(screenWidth);
+})
+
 let videoState;
 const observerOptions = {
   root: null,
@@ -34,6 +43,15 @@ const observer = new IntersectionObserver((entries) => {
 
 observer.observe(kennedyBox);
 
+
+function checkScreenWidth(currentWidth){
+  if (currentWidth >= 768){
+    baseScrollArrow.setAttribute("tabindex", "-1");
+  }
+  else if (currentWidth < 768){
+    baseScrollArrow.removeAttribute("tabindex");
+  }
+}
 // toggles the play state of the video playing in the background of panel 3
 function toggleVideo() {
   if (panelVideo.paused) {

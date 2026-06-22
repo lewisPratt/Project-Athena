@@ -86,7 +86,11 @@ header {
 #base-two-location-circle:hover {
     scale: 1.5;
 }
-
+#base-one-location-circle:focus-visible,
+#base-two-location-circle:focus-visible{
+    scale: 1.5;
+    background-color:rgb(255, 255, 219);
+}
 .base-details {
     position: absolute;
     width: max-content;
@@ -121,13 +125,16 @@ header {
     bottom: 0;
     left: 50px;
     z-index: 50;
+    border-radius:10px;
+    padding:0 5px;
 }
-
+.scroll-arrow-button:focus-visible{
+    background-color: rgb(77, 77, 77);
+}
 .scroll-arrow {
     text-align: center;
-
     margin: auto;
-    padding: 20px 0;
+    padding: 10px 0;
     animation-name: slideArrow;
     animation-iteration-count: infinite;
     animation-duration: 2s;
@@ -145,7 +152,9 @@ header {
     position: relative;
     left: 0;
 }
-
+#footer-up-arrow:focus-visible{
+    background-color: rgb(77, 77, 77);
+}
 #footer-up-arrow img {
     max-width: 50px;
 }
@@ -169,7 +178,7 @@ header {
 #panel-one,
 #panel-two,
 #panel-three, #panel-four {
-    margin-top: 200px;
+    margin-top: 50px;
 
 }
 
@@ -254,7 +263,10 @@ header {
     border-radius: 5px;
     background: #000000;
 }
-
+#video-playback-toggle-button:focus-visible{
+    background-color:rgb(178, 178, 178);
+    
+}
 #video-playback-toggle-button.pressed-control {
     background-color: rgba(255, 255, 255, 1);
     color: black;
@@ -569,6 +581,7 @@ header {
 
     #arrow-five {
         display: none;
+      
     }
 }
 
