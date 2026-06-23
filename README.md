@@ -51,7 +51,18 @@ A static website for a fictional private aerospace company seeking to raise awar
 * To act as a hub for the company to display its media, such as launch videos and images.
 
 ---
+## Wireframes
 
+![Index.html Wireframe](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/wireframes/index-wireframe.webp "Index.html Wireframe")
+
+![About.html Wireframe](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/wireframes/about-wireframe.webp "About.html Wireframe")
+
+![Gallery.html Wireframe](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/wireframes/gallery-wireframe.webp "Gallery.html Wireframe")
+
+![Careers.html Wireframe](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/wireframes/careers-wireframe.webp "Careers.html Wireframe")
+
+![Contact.html Wireframe](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/wireframes/contact-wireframe.webp "contact.html Wireframe")
+---
 ## Design & Style
 
 Inspiration was taken from the SpaceX website, focusing on a minimal yet visually impactful design language. Large images highlight attractive features within high quality photography and contribute aesthetically to the overall design. The colour scheme is primarily black and white, allowing attractive transitions between images of space and the body background colour. Font colour has been set to an off-white `(#F4F4F4)` to reduce eye strain caused by using pure white against pure black.
