@@ -24,7 +24,6 @@ A static website for a fictional private aerospace company seeking to raise awar
   * [Styling](#styling)
   * [Layout](#layout)
   * [Javascript](#javascript)
-  * [Viewport Height](#viewport-height)
   * [Video Player](#video-player)
   * [Accessibility](#accessibility)
 * [Challenges & Problem Solving](#challenges--problem-solving)
