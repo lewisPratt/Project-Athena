@@ -37,7 +37,7 @@
             </ul>
 
         </div>
-        <div id="mobile-nav-toggle" aria-label="Toggle Navigation Menu">
+        <div id="mobile-nav-toggle"  role="button" aria-label="Toggle Navigation Menu">
             <i class="fa-solid fa-bars"></i>
         </div>
     </nav>
@@ -52,17 +52,16 @@
 
         </div>
 
-        <section id="contact-form-section">
+        <div id="contact-form-section">
 
-            <form action="contact-success.html" id="contact-form" method="">
+            <form action="contact-success.html" id="contact-form" method="post">
 
                 <input type="email" name="email" placeholder="Email Address" autocomplete="email" required
-                    aria-required="true" aria-label="Email Address">
+                     aria-label="Email Address">
                 <input type="text" name="name" placeholder="Name" autocomplete="given-name" required
-                    aria-required="true" aria-label="Name">
+                     aria-label="Name">
                 <textarea name="contact-content" placeholder="What would you like to say?" required
-                    aria-required="true"></textarea>
-
+                    aria-label="Message"></textarea>
                 <fieldset>
 
                     <legend>What is 23 - 8? </legend>
@@ -83,7 +82,7 @@
                     tabindex="-1">
 
             </form>
-        </section>
+        </div>
     </main>
 
  <footer>
