@@ -261,7 +261,12 @@ footer li {
     vertical-align: middle;
     margin: 0 5px;
 }
-
+#x-logo {
+    width: 20px;
+}
+#instagram-logo{
+    width:30px;
+}
 #copyright-holder {
     text-align: center;
     padding-right: 10px;
