@@ -282,6 +282,19 @@ about.css was the only file to show any errors. The validator stated that the pr
 By undertaking some research I was able to find that despite the validator not recognising these properties, they are in fact valid, but are not yet added to the documentation that is being used by the validator. Chromium based browsers have supported the properties since 2023 and alternative browsers have begun supporting it more recently. Through my testing, i have seen the properties successfully work in all major browsers with no issues.
 
 ![about.css validator result](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/about-jigsaw-result.jpg "about.css jigsaw result")
+
+![index.css validator result](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/index-jigsaw-result.jpg "index.css jigsaw result")
+
+![contact.css validator result](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/contact-jigsaw-result.jpg "contact.css jigsaw result")
+
+![contact-success.css validator result](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/contact-success-jigsaw-result.jpg "contact-success.css jigsaw result")
+
+![gallery.css validator result](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/gallery-jigsaw-result.jpg "gallery.css jigsaw result")
+
+![careers.css validator result](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/careers-jigsaw-result.jpg "careers.css jigsaw result")
+
+
+
 ---
 
 ## Credits
