@@ -27,6 +27,7 @@ A static website for a fictional private aerospace company seeking to raise awar
   * [Video Player](#video-player)
   * [Accessibility](#accessibility)
 * [Challenges & Problem Solving](#challenges--problem-solving)
+* [Code Validation](#code-validation)
 * [Credits](#credits)
 * [Author](#author)
 
@@ -273,8 +274,14 @@ After some research, i discovered the measurement unit `svh`. This measurement r
 
 Using this unit ensured that, when my page loaded on a mobile device, the full height panel was exactly the size of the viewable area on the mobile device. This merant placing my nested elements in each panel became easier to predict as i did not have to account for additional space taken up by mobile browser elements.
 
+## Code Validation
+I used the Jigsaw CSS Validator to ensure that my CSS files were valid and met current standards.
 
+about.css was the only file to show any errors. The validator stated that the properties `animation-timeline:view()` and `animation-range:cover 0% cover 70%` were not valid and did not exist. 
 
+By undertaking some research I was able to find that despite the validator not recognising these properties, they are in fact valid, but are not yet added to the documentation that is being used by the validator. Chromium based browsers have supported the properties since 2023 and alternative browsers have begun supporting it more recently. Through my testing, i have seen the properties successfully work in all major browsers with no issues.
+
+![about.css validator result](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/about-jigsaw-result.jpg "about.css jigsaw result")
 ---
 
 ## Credits
