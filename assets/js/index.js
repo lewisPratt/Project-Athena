@@ -1,3 +1,10 @@
+/*////////////////////////////////////////
+Index page JS for Project Athena
+Contains functions and event listeners for the index page, including video playback controls,
+scroll arrow navigation, location circle interactions, and viewport-responsive behaviour.
+/////////////////////////////////////////*/
+
+// ---- Element references ----
 
 const kennedyText = document.getElementById("kennedy-reference-content");
 const kennedyBox = document.getElementById("panel-one");
@@ -9,78 +16,82 @@ const volumePlus = document.getElementById("volume-plus");
 const volumeMinus = document.getElementById("volume-minus");
 const skipText = document.getElementById("skip-text");
 const historyButton = document.getElementById("kennedy-button");
-const skipLength = 10;
-const overlayContents = [volumePlus, volumeMinus, skipText];
-//bootstrap tooltips initialization
-const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-
+const scrollArrows = document.querySelectorAll(".scroll-arrow");
 const baseScrollArrow = document.querySelector("#optional-arrow");
-let screenWidth = window.visualViewport.width;
-checkScreenWidth(screenWidth);
+const overlayContents = [volumePlus, volumeMinus, skipText];
 
-window.addEventListener("resize", ()=>{
-  screenWidth = window.visualViewport.width;
-  checkScreenWidth(screenWidth);
-})
-
+const skipLength = 10;
 let videoState;
+let screenWidth = window.visualViewport.width;
+
+/*/////////////////////////
+Intersection Observer
+/////////////////////////*/
+
 const observerOptions = {
   root: null,
-  rootMargin: '0px',
-  threshold: .2,
-}
+  rootMargin: "0px",
+  threshold: 0.2,
+};
 
+// pauses the video if it is playing and the panel scrolls out of view
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
+  entries.forEach((entry) => {
     if (!entry.isIntersecting && videoState == true) {
-      console.log(videoState);
-      toggleVideo()
+      toggleVideo();
     }
-  })
-
+  });
 }, observerOptions);
 
 observer.observe(kennedyBox);
 
+/*/////////////////////////
+Functions
+/////////////////////////*/
 
-function checkScreenWidth(currentWidth){
-  if (currentWidth >= 768){
+// shows or hides the optional scroll arrow based on screen width
+function checkScreenWidth(currentWidth) {
+  if (currentWidth >= 768) {
     baseScrollArrow.setAttribute("tabindex", "-1");
-  }
-  else if (currentWidth < 768){
+  } else {
     baseScrollArrow.removeAttribute("tabindex");
   }
 }
-// toggles the play state of the video playing in the background of panel 3
+
+// scrolls the viewport smoothly to the element with the given ID
+function scrollToPanel(panelId) {
+  const panelElement = document.getElementById(panelId);
+  if (panelElement) panelElement.scrollIntoView({ block: "start", behavior: "smooth" });
+}
+
+// toggles play/pause state of the kennedy panel video, managing UI state transitions
 function toggleVideo() {
   if (panelVideo.paused) {
     panelVideo.muted = false;
     panelVideo.volume = 0.2;
+
     if (kennedyText.classList.contains("slide-in-x")) {
       kennedyText.classList.remove("slide-in-x");
       historyButton.classList.toggle("slide-in-x");
       kennedyPicture.classList.toggle("slide-in-y");
-
-
     }
+
     historyButton.classList.toggle("slide-out-x");
     kennedyText.classList.toggle("slide-out-x");
     kennedyPicture.classList.toggle("slide-out-y");
-
     videoControls.classList.toggle("hidden");
+
     document.getElementById("play-icon").classList.toggle("hidden-element");
     document.getElementById("stop-icon").classList.toggle("hidden-element");
-    //add in feedback class to show button was pressed
     document.getElementById("video-playback-toggle-button").classList.toggle("pressed-control");
-    //optional scroll to code. scrolls the viewport to have the video panel fill the screen when play is pressed.
-    scrollToPanel("panel-one");
 
+    scrollToPanel("panel-one");
     panelVideo.play();
 
   } else {
     panelVideo.pause();
     videoControls.classList.toggle("hidden");
+
     kennedyText.classList.toggle("slide-out-x");
     kennedyText.classList.toggle("slide-in-x");
     historyButton.classList.toggle("slide-out-x");
@@ -90,146 +101,114 @@ function toggleVideo() {
 
     document.getElementById("play-icon").classList.toggle("hidden-element");
     document.getElementById("stop-icon").classList.toggle("hidden-element");
-    //remove feedback class to show button was pressed
     document.getElementById("video-playback-toggle-button").classList.toggle("pressed-control");
   }
 }
 
+// makes a specific overlay content element visible
 function showOverlayText(elementToToggle) {
   elementToToggle.classList.add("visible-element");
 }
 
+// removes all visible-element classes and resets the overlay animation
 function resetOverlayAnimation() {
-  overlayContents.forEach(element => {
-    if (element.classList.contains("visible-element")) {
-      element.classList.remove("visible-element");
-    }
+  overlayContents.forEach((element) => {
+    element.classList.remove("visible-element");
   });
   videoOverlay.classList.remove("overlay-animation");
   void videoOverlay.offsetWidth;
 }
 
-//remove the class that triggers the animation to start on the overlay.
-//this mainly accounts for the button being pressed again, during the animation playing. 
+// removes the overlay animation class if it is currently active, preventing animation conflicts
 function checkOverlayNotActive() {
   if (videoOverlay.classList.contains("overlay-animation")) {
     resetOverlayAnimation();
   }
 }
 
-//triggers the animation to start playing on the overlay
+// triggers the overlay feedback animation
 function activateOverlay() {
   videoOverlay.classList.add("overlay-animation");
-
 }
 
-// function to manage the video skips as well as resetting and triggering of 
-//video overlay panel to give feedback when video control buttons are pressed. 
+// skips the video forward by skipLength seconds and shows overlay feedback
 function skipForward() {
   checkOverlayNotActive();
-  showOverlayText(skipText);
   panelVideo.currentTime += skipLength;
   skipText.innerText = "+" + skipLength + "s";
-  //add in code to make specific function related text (time skipped forward) visible and other content hidden.
+  showOverlayText(skipText);
   activateOverlay();
 }
 
+// increases video volume by 20% up to a maximum of 100%, with overlay feedback
 function increaseVolume() {
   checkOverlayNotActive();
-  let newVolume = panelVideo.volume + 0.2;
+  const newVolume = panelVideo.volume + 0.2;
   if (newVolume <= 1) {
-    panelVideo.volume = panelVideo.volume + 0.2;
-    //console.log("volume:", newVolume);
+    panelVideo.volume += 0.2;
     volumePlus.innerText = "+20%";
-    showOverlayText(volumePlus);
-    activateOverlay();
   } else {
     volumePlus.innerText = "Max volume";
-    showOverlayText(volumePlus);
-    activateOverlay();
   }
+  showOverlayText(volumePlus);
+  activateOverlay();
 }
 
+// decreases video volume by 20% down to a minimum of 0%, with overlay feedback
 function decreaseVolume() {
   checkOverlayNotActive();
-  let newVolume = panelVideo.volume - 0.2;
+  const newVolume = panelVideo.volume - 0.2;
   if (newVolume >= 0) {
-    panelVideo.volume = panelVideo.volume - 0.2;
-    // console.log("volume:", newVolume);
+    panelVideo.volume -= 0.2;
     volumeMinus.innerText = "-20%";
-    showOverlayText(volumeMinus);
-    activateOverlay();
   } else {
     volumeMinus.innerText = "Min volume";
-    showOverlayText(volumeMinus);
-    activateOverlay();
   }
+  showOverlayText(volumeMinus);
+  activateOverlay();
 }
-//sets event listeners on video control elements. 
-// increases volume by 20% each time it's clicked, up to a max of 100%
-document.getElementById("volume-up").addEventListener("click", increaseVolume);
 
-//decreases volume by 20% each time it's clicked, down to a min of 0%
+/*/////////////////////////
+Event Listeners
+/////////////////////////*/
+
+// updates screenWidth and re-evaluates arrow visibility on viewport resize
+window.addEventListener("resize", () => {
+  screenWidth = window.visualViewport.width;
+  checkScreenWidth(screenWidth);
+});
+
+// pauses video when clicked while playing (allows overlay controls to still toggle play)
+panelVideo.addEventListener("click", () => {
+  if (!panelVideo.paused) toggleVideo();
+});
+
+// resets the overlay animation once it has finished playing
+videoOverlay.addEventListener("animationend", resetOverlayAnimation);
+
+// tracks video playing state for the intersection observer
+panelVideo.addEventListener("playing", () => { videoState = true; });
+panelVideo.addEventListener("pause", () => { videoState = false; });
+
+document.getElementById("video-playback-toggle-button").addEventListener("click", toggleVideo);
+document.getElementById("skip-forward").addEventListener("click", skipForward);
+document.getElementById("volume-up").addEventListener("click", increaseVolume);
 document.getElementById("volume-down").addEventListener("click", decreaseVolume);
 
-//add in eventlistener that detects click on panelVideo and triggers toggleVideo function
-panelVideo.addEventListener("click", () => {
-  if (panelVideo.paused === false) {
-    toggleVideo();
-  }
-});
-
+// scrolls to the relevant base info section when a location circle is clicked
 document.getElementById("base-one-location-circle").addEventListener("click", () => {
   scrollToPanel("athena-base-text");
-})
+});
 document.getElementById("base-two-location-circle").addEventListener("click", () => {
   scrollToPanel("athena-crucible-text");
-})
-//skips forward skipLength seconds in the video when clicked.
-document.getElementById("skip-forward").addEventListener("click", skipForward);
-//toggles the play state of the video when the play/pause button is clicked.
-document.getElementById("video-playback-toggle-button").addEventListener("click", toggleVideo);
-
-videoOverlay.addEventListener("animationend", resetOverlayAnimation)
-
-panelVideo.addEventListener("playing", () => {
-  videoState = true;
-  console.log("video is playing");
-});
-panelVideo.addEventListener("pause", () => {
-  videoState = false;
-  console.log("video is paused");
 });
 
+// scrolls to the panel specified in each arrow's data-next-panel attribute
+scrollArrows.forEach((arrow) => {
+  arrow.addEventListener("click", () => {
+    scrollToPanel(arrow.getAttribute("data-next-panel"));
+  });
+});
 
-// https://www.w3schools.com/howto/howto_js_countdown.asp
-// // Set the date we're counting down to
-// var countDownDate = new Date("Jan 5, 2028 15:37:25").getTime();
-
-// // Update the count down every 1 second
-// var x = setInterval(function () {
-
-//   // Get today's date and time
-//   var now = new Date().getTime();
-
-//   // Find the distance between now and the count down date
-//   var distance = countDownDate - now;
-
-//   // Time calculations for days, hours, minutes and seconds
-//   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-//   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-//   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-//   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-//   // Display the result in the element with id="demo"
-//   document.getElementById("countdown-text").innerHTML = days + " days,<br>" + hours + " hours,<br>"
-//     + minutes + " minutes,<br>" + seconds + " seconds.";
-
-
-//   // If the count down is finished, write some text
-//   if (distance < 0) {
-//     clearInterval(x);
-//     document.getElementById("countdown-text").innerHTML = "EXPIRED";
-//   }
-// }, 1000);
-
+// run on load
+checkScreenWidth(screenWidth);
