@@ -44,7 +44,7 @@ form {
 #header-title>#error-text {
   text-align: center;
   font-size: .8rem;
-  color:red;
+  color: red;
 }
 
 fieldset {
@@ -62,7 +62,7 @@ fieldset {
   display: inline-block;
   margin-left: 20px;
   vertical-align: text-bottom;
-
+  cursor: pointer;
 }
 
 .checkmark {
