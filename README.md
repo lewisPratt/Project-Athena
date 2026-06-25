@@ -294,6 +294,8 @@ By undertaking some research I was able to find that despite the validator not r
 
 ![careers.css validator result](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/careers-jigsaw-result.jpg "careers.css jigsaw result")
 
+![style.css validator result](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/style-jigsaw-result.jpg "style.css jigsaw result")
+
 ### HTML
 
 ![contact.html validator result](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/contact-html-result.jpg "contact.html validator result")
