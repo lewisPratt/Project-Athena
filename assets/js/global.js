@@ -27,5 +27,4 @@ Event Listeners
 document.addEventListener("scroll", closeMobileNav);
 document.querySelector("#main-content-container").addEventListener("click", closeMobileNav);
 
-
 document.querySelector("#mobile-nav-toggle").addEventListener("click", toggleNav);
