@@ -95,11 +95,6 @@ header {
   transform-origin: center;
 }
 
-#start-blip:focus-visible,
-#start-blip:hover {
-  background-color: white;
-}
-
 .moving-blip {
   height: 26px;
   width: 26px;
