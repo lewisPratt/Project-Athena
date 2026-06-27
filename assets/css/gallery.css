@@ -1,7 +1,7 @@
 /* =====================
    HEADER
 ===================== */
-header {
+#gallery-top {
     padding-top: 100px;
     height: 80svh;
     display: flex;
@@ -29,7 +29,13 @@ header {
     gap:0;
 }
 
-
+#main-content-container header{
+    padding:20px;
+}
+#main-content-container header .button-class{
+    display: inline-block;
+    margin:0 10px;
+}
 .image-container {
     position: relative;
     width: fit-content;

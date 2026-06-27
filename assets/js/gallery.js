@@ -6,7 +6,7 @@ Contains functions and event listeners for the image lightbox on the gallery pag
 // ---- Element references ----
 
 const lightBox = document.querySelector("#lightbox");
-
+const imageGallery = document.querySelector("#gallery-container")
 /*/////////////////////////
 Functions
 /////////////////////////*/
