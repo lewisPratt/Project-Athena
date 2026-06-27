@@ -15,10 +15,12 @@ header {
   align-items: end;
 }
 
-.card h6 {
+.card h3 {
   margin-left: 25px;
   font-weight: 100;
   font-style: italic;
+  font-size: .7rem;
+  font-family: "Montserrat", "Verdana", sans-serif;
 }
 
 #header-title {
@@ -299,7 +301,7 @@ header {
 /* =====================
    MISSION
 ===================== */
-#about-intro {
+#mission-blurb-container {
   background-color: black;
   z-index: 5;
   position: relative;
