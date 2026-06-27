@@ -298,7 +298,17 @@ By undertaking some research I was able to find that despite the validator not r
 
 ### HTML
 
+![index.html validator result](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/about-html-result.jpg "index.html validator result")
+
+![about.html validator result](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/contact-html-result.jpg "about.html validator result")
+
+![gallery.html validator result](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/gallery-html-result.jpg "gallery.html validator result")
+
+![careers.html validator result](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/careers-html-result.jpg "careers.html validator result")
+
 ![contact.html validator result](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/contact-html-result.jpg "contact.html validator result")
+
+![contact-success.html validator result](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/contact-success-html-result.jpg "contact-success.html validator result")
 
 
 ---
