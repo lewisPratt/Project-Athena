@@ -298,9 +298,9 @@ By undertaking some research I was able to find that despite the validator not r
 
 ### HTML
 
-![index.html validator result](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/about-html-result.jpg "index.html validator result")
+![index.html validator result](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/index-html-result.jpg "index.html validator result")
 
-![about.html validator result](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/contact-html-result.jpg "about.html validator result")
+![about.html validator result](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/about-html-result.jpg "about.html validator result")
 
 ![gallery.html validator result](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/gallery-html-result.jpg "gallery.html validator result")
 
