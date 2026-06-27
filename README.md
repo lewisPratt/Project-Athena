@@ -8,7 +8,7 @@ Live site: [Athena Home Page](https://lewispratt.github.io/Project-Athena/)
 
 ## Description
 
-A static website for a fictional private aerospace company seeking to raise awareness of their brand, their goals, and attract new employees.
+A website for a fictional private aerospace company seeking to raise awareness of their brand, their goals, and attract new employees.
 
 ---
 
