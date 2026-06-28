@@ -27,7 +27,9 @@
 #video-gallery-container {
     column-count: 2;
     gap:0;
+    
 }
+
 
 #main-content-container header{
     padding:20px;
@@ -64,7 +66,8 @@
     font-size: .8rem;
 }
 
-.enlarge-image {
+.enlarge-image,
+.enlarge-video {
     position: absolute;
     left: 10px;
     top: 10px;
@@ -87,6 +90,10 @@
 .enlarge-image:focus-visible{
     scale:1.2;
 }
+.active-gallery-button{
+    background-color:white;
+    color:black;
+}
 
 /* =====================
    LIGHTBOX
@@ -101,7 +108,8 @@
     z-index: 9999;
 }
 
-#lightbox > img {
+#lightbox > img,
+#lightbox > video {
     max-width: 100%;
 }
 

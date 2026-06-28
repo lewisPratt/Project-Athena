@@ -6,7 +6,14 @@ Contains functions and event listeners for the image lightbox on the gallery pag
 // ---- Element references ----
 
 const lightBox = document.querySelector("#lightbox");
-const imageGallery = document.querySelector("#gallery-container")
+const imageGallery = document.querySelector("#gallery-container");
+const videoGallery = document.querySelector("#video-gallery-container");
+const galleryButtons = document.querySelectorAll(".gallery-button");
+const imageButton = document.querySelector("#image-gallery-button");
+const videoButton = document.querySelector("#video-gallery-button")
+const videoThumbs = document.querySelectorAll(".video-thumb");
+
+let videoPlayTimer
 /*/////////////////////////
 Functions
 /////////////////////////*/
@@ -18,9 +25,68 @@ function closeLightbox() {
   lightBox.innerHTML = "";
 }
 
+function setButtonState() {
+  if (videoGallery.classList.contains("hidden") && !imageGallery.classList.contains("hidden")) {
+    imageButton.classList.add("active-gallery-button");
+    videoButton.classList.remove("active-gallery-button");
+  }
+  else if (!videoGallery.classList.contains("hidden") && imageGallery.classList.contains("hidden")) {
+    videoButton.classList.add("active-gallery-button");
+    imageButton.classList.remove("active-gallery-button");
+  }
+}
+
+function showActiveGallery(activeGallery) {
+  if (activeGallery == "images") {
+    imageGallery.classList.add("gallery-entry");
+    imageGallery.classList.remove("hidden");
+    videoGallery.classList.add("hidden");
+    videoGallery.classList.remove("gallery-entry");
+
+  }
+  else if (activeGallery == "videos") {
+    imageGallery.classList.remove("gallery-entry");
+    imageGallery.classList.add("hidden");
+    videoGallery.classList.add("gallery-entry");
+    videoGallery.classList.remove("hidden");
+  }
+  setButtonState()
+}
+
+function changeGallery(event) {
+  if (event.target.id == "image-gallery-button") {
+    showActiveGallery("images")
+  }
+  else {
+    showActiveGallery("videos")
+  }
+}
+function playDelay(event) {
+  video = event.target;
+  videoPlayTimer = setTimeout(playThumb, 1000, video);
+}
+function playThumb(videoToPlay) {
+videoToPlay.play()
+
+}
+function resetThumb(event) {
+  clearTimeout(videoPlayTimer);
+  event.target.pause();
+  event.target.currentTime = 0;
+}
 /*/////////////////////////
 Event Listeners
 /////////////////////////*/
+videoThumbs.forEach(thumb => {
+  thumb.addEventListener("mouseover", playDelay, false);
+  thumb.addEventListener("mouseout", resetThumb, false);
+
+});
+
+galleryButtons.forEach(button => {
+  button.addEventListener("click", changeGallery, false);
+});
+
 
 // opens the lightbox and populates it with the clicked image
 document.querySelectorAll(".enlarge-image").forEach((image) => {
@@ -30,7 +96,14 @@ document.querySelectorAll(".enlarge-image").forEach((image) => {
     lightBox.innerHTML = `<img src="${image.dataset.src}" alt="${image.dataset.alt}">`;
   });
 });
-
+// opens the lightbox and populates it with the clicked video
+document.querySelectorAll(".enlarge-video").forEach((video) => {
+  video.addEventListener("click", () => {
+    lightBox.classList.remove("hidden");
+    lightBox.classList.add("gallery-lightbox-flex");
+    lightBox.innerHTML = `<video autoplay controls src="${video.dataset.src}" alt="${video.dataset.alt}">`;
+  });
+});
 // closes the lightbox when clicking on the backdrop (outside the image)
 lightBox.addEventListener("click", (event) => {
   if (event.target === lightBox) closeLightbox();
@@ -40,3 +113,7 @@ lightBox.addEventListener("click", (event) => {
 window.addEventListener("keydown", (event) => {
   if (event.key === "Escape") closeLightbox();
 });
+
+//on load
+
+setButtonState();
