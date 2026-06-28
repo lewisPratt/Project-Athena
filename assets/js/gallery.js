@@ -61,30 +61,44 @@ function changeGallery(event) {
     showActiveGallery("videos")
   }
 }
+
 function playDelay(event) {
   video = event.target;
-  let playDelayAmount = 1000;
   let progressOuter = video.parentElement.querySelector(".progress-outer");
-  progressBar(progressOuter);
-  videoPlayTimer = setTimeout(playThumb, playDelayAmount, video);
+  progressOuter.classList.remove("visibility-hidden")
+  progressBar(progressOuter, video);
 }
-function progressBar(bar){
+
+function progressBar(bar, video) {
+  let barSize = bar.offsetWidth;
   videoProgressInterval = setInterval(() => {
-    console.log("interval");
-    bar.style.width -= 100 / (1000 / 50)+"px";
-    // parseFloat(bar.style.width)
+
+    let newWidth = bar.offsetWidth - barSize / (1000 / 50);
+    if (newWidth <= 0) {
+      playThumb(video)
+      clearInterval(videoProgressInterval);
+      bar.classList.add("visibility-hidden");
+    }
+    else {
+      bar.style.width = newWidth + "px";
+
+    }
   }, 50);
 }
-function playThumb(videoToPlay) {
-videoToPlay.play()
 
+function playThumb(videoToPlay) {
+  videoToPlay.play()
 }
+
 function resetThumb(event) {
-  clearTimeout(videoPlayTimer);
   clearInterval(videoProgressInterval);
+  let progressOuter = event.target.parentElement.querySelector(".progress-outer");
+  progressOuter.classList.add("visibility-hidden")
+  progressOuter.style.width = "50%";
   event.target.pause();
   event.target.currentTime = 0;
 }
+
 /*/////////////////////////
 Event Listeners
 /////////////////////////*/
