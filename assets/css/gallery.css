@@ -23,21 +23,23 @@
 /* =====================
    GALLERY
 ===================== */
-#gallery-container, 
+#gallery-container,
 #video-gallery-container {
     column-count: 2;
-    gap:0;
-    
+    gap: 0;
+
 }
 
 
-#main-content-container header{
-    padding:20px;
+#main-content-container header {
+    padding: 20px;
 }
-#main-content-container header .button-class{
+
+#main-content-container header .button-class {
     display: inline-block;
-    margin:0 10px;
+    margin: 0 10px;
 }
+
 .image-container {
     position: relative;
     width: fit-content;
@@ -52,6 +54,7 @@
     width: 100%;
     height: auto;
     transition: transform 0.3s ease-in-out;
+    position: relative;
 }
 
 .image-desc {
@@ -83,16 +86,30 @@
     transition: all 0.3s ease-in-out;
     filter: brightness(1.2);
 }
+
 .image-container:focus-visible .image-desc,
 .image-container:hover .image-desc {
     translate: 0 -100%;
 }
-.enlarge-image:focus-visible{
-    scale:1.2;
+
+.enlarge-image:focus-visible {
+    scale: 1.2;
 }
-.active-gallery-button{
-    background-color:white;
-    color:black;
+
+.active-gallery-button {
+    background-color: white;
+    color: black;
+}
+
+.progress-outer {
+    width: 50%;
+    left: 50%;
+    translate: -50% 0;
+    height: 10px;
+    background-color: white;
+    position: absolute;
+    z-index: 10;
+    top: 10px;
 }
 
 /* =====================
@@ -108,8 +125,8 @@
     z-index: 9999;
 }
 
-#lightbox > img,
-#lightbox > video {
+#lightbox>img,
+#lightbox>video {
     max-width: 100%;
 }
 
@@ -124,6 +141,7 @@
    MEDIA QUERIES
 ===================== */
 @media (min-width: 768px) {
+
     #gallery-container,
     #video-gallery-container {
         column-count: 3;

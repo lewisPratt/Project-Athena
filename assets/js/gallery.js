@@ -63,7 +63,17 @@ function changeGallery(event) {
 }
 function playDelay(event) {
   video = event.target;
-  videoPlayTimer = setTimeout(playThumb, 1000, video);
+  let playDelayAmount = 1000;
+  let progressOuter = video.parentElement.querySelector(".progress-outer");
+  progressBar(progressOuter);
+  videoPlayTimer = setTimeout(playThumb, playDelayAmount, video);
+}
+function progressBar(bar){
+  videoProgressInterval = setInterval(() => {
+    console.log("interval");
+    bar.style.width -= 100 / (1000 / 50)+"px";
+    // parseFloat(bar.style.width)
+  }, 50);
 }
 function playThumb(videoToPlay) {
 videoToPlay.play()
@@ -71,6 +81,7 @@ videoToPlay.play()
 }
 function resetThumb(event) {
   clearTimeout(videoPlayTimer);
+  clearInterval(videoProgressInterval);
   event.target.pause();
   event.target.currentTime = 0;
 }
