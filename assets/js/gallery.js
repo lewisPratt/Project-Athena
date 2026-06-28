@@ -14,6 +14,7 @@ const videoButton = document.querySelector("#video-gallery-button")
 const videoThumbs = document.querySelectorAll(".video-thumb");
 
 let videoPlayTimer
+let videoProgressInterval
 /*/////////////////////////
 Functions
 /////////////////////////*/
@@ -63,10 +64,10 @@ function changeGallery(event) {
 }
 
 function playDelay(event) {
-  video = event.target;
-  let progressOuter = video.parentElement.querySelector(".progress-outer");
-  progressOuter.classList.remove("visibility-hidden")
-  progressBar(progressOuter, video);
+  let video = event.target;
+  let autoplayBar = video.parentElement.querySelector(".progress-bar");
+  autoplayBar.classList.remove("visibility-hidden")
+  progressBar(autoplayBar, video);
 }
 
 function progressBar(bar, video) {
@@ -75,7 +76,8 @@ function progressBar(bar, video) {
 
     let newWidth = bar.offsetWidth - barSize / (1000 / 50);
     if (newWidth <= 0) {
-      playThumb(video)
+      
+      video.play();
       clearInterval(videoProgressInterval);
       bar.classList.add("visibility-hidden");
     }
@@ -86,15 +88,11 @@ function progressBar(bar, video) {
   }, 50);
 }
 
-function playThumb(videoToPlay) {
-  videoToPlay.play()
-}
-
 function resetThumb(event) {
   clearInterval(videoProgressInterval);
-  let progressOuter = event.target.parentElement.querySelector(".progress-outer");
-  progressOuter.classList.add("visibility-hidden")
-  progressOuter.style.width = "50%";
+  let autoplayBar = event.target.parentElement.querySelector(".progress-bar");
+  autoplayBar.classList.add("visibility-hidden")
+  autoplayBar.style.width = "50%";
   event.target.pause();
   event.target.currentTime = 0;
 }
