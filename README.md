@@ -1,10 +1,46 @@
-# Project Athena
+# Athena Aerospace 
 
-A static website for a fictional private aerospace company, built as part of my Web Application Development at Code Institute. The project demonstrates user centric front end web development skills including responsive design, CSS animations, and interactive UI elements.
+Live site: [Athena Aerospace Home Page](https://lewispratt.github.io/Project-Athena/)
 
-Live site: [Athena Home Page](https://lewispratt.github.io/Project-Athena/)
+## Project Goals
 
+The primary goal of Athena Aerospace is to provide a hub for the aerospace company's contact information, media assets and history. It also serves as a recruitment portal, displaying avaialble job roles and facilitating the submission of job applications. 
+
+## Target Audience
+There are three main target audiences for the site:
+ * Aerospace Industry professionals looking for new work apportunities.
+ * Investors looking for informaiton on the company and it's history.
+ * Hobbyists looking for information about Athena Aerospace projects as well as associated images and videos. 
+
+
+## Audience Goals
+* Aerospace Industry Professional
+    * To view information on current projects being undertaken.
+    * To view information on available jobs at the company.
+    * To be able to submit a job application directly to the company.
+    * To find information future plans, projects and vision for the company
+    * To contact the company directly to ask any questions.
+
+* Investors
+    * To view information on the history of the company.
+    * To view information detailing the founding members of the company.
+    * To gain an understanding of future plans, projects and vision for the company.
+    * To contact the company directly to ask any questions.
+
+* Hobbyist
+    * To view information on the history of the company. 
+    * To view information detailing the founding members of the company.
+    * To gain an understanding of future plans, projects and vision for the company.
+    * To contact the company directly to ask any questions.
+    * To access images of past projects and meaningful achievements that the company has undertaken.
+    * To access videos of past launches and view details of these launches.
 ---
+## Developer Goals
+
+* The site should be professional and modern, incorporating current design standards and meetign accessibility needs.
+* The site should present media assets in a clean and responsive design, ensuring that images and videos can be viewed on both mobile and desktop browsers. 
+* Javascript should be used to enhance the UX, providing user interaction feedback that feels modern and falls in line with current design trends seen elsewehere on the web. 
+* The site should demonstrate the developers knowledge of the three core languages of web design (HTML/CSS/JS), with code being cross-browser copatible, full validated, tested and organised in line with industry standard practices. 
 
 ## Description
 
