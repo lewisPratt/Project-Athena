@@ -46,6 +46,16 @@ To run the project locally:
 1. Clone the repository: `git clone https://github.com/lewispratt/Project-Athena.git`
 2. Open `index.html` in your browser — no build step or dependencies required
 
+
+## Technologies Used
+
+* HTML5
+* CSS3
+* JavaScript (Vanilla)
+* Google Fonts
+* Font Awesome Icons
+
+
 ## UX Design
 
 ### Project Goals
@@ -217,10 +227,10 @@ I am a member of the public that likes to learn about past rocket launches as we
 #### Tasks
 
 * [ ] Create launches page.
-* [ ] Create video gallery section.
+* [x] Create video gallery section.
 * [ ] Create responsive layout for launches page.
-* [ ] Hover effect that shows additional information about the video being selected.
-* [ ] Add option to show video in full screen/larger size if wanted.
+* [x] Hover effect that shows additional information about the video being selected.
+* [x] Add option to show video in full screen/larger size if wanted.
 * [ ] Add launches link to site navigation.
 * [ ] Create countdown timer, counting towards next launch.
 
@@ -432,16 +442,6 @@ Throughout the site there are a number of CSS animations that add some interest 
 * Gallery page that features images and videos. Descriptions and the ability to view larger versions of the media.
 * About page featuring unique styling to engage the user and convey the culture and history of the business.
 * Careers page to allow users to view available job roles and submit job applications.
-
----
-
-## Technologies Used
-
-* HTML5
-* CSS3
-* JavaScript (Vanilla)
-* Google Fonts
-* Font Awesome Icons
 
 ---
 
