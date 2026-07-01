@@ -4,12 +4,12 @@ Live site: [Athena Aerospace Home Page](https://lewispratt.github.io/Project-Ath
 
 ## Table of Contents
 
-* [UX Design](#UX-design)
-    * [Project Goals](#project-goals)
-    * [Target Audience](#target-audience)
-    * [Audience Goals](#Audience-goals)
-    * [Developer Goals](#developer-goals)
-    * [User Stories](#user-stories)
+* [UX Design](#ux-design)
+  * [Project Goals](#project-goals)
+  * [Target Audience](#target-audience)
+  * [Audience Goals](#audience-goals)
+  * [Developer Goals](#developer-goals)
+  * [User Stories](#user-stories)
 * [Technologies Used](#technologies-used)
 * [Wireframes](#wireframes)
 * [Design and Style](#design--style)
@@ -26,67 +26,74 @@ Live site: [Athena Aerospace Home Page](https://lewispratt.github.io/Project-Ath
 * [Credits](#credits)
 * [Author](#author)
 
-# UX Design
+## UX Design
 
-## Project Goals
+### Project Goals
 
-The primary goal of Athena Aerospace is to provide a hub for the fictional aerospace company's contact information, media assets and history. It also serves as a recruitment portal, displaying avaialble job roles and facilitating the submission of job applications. 
+The primary goal of the Athena Aerospace website is to provide a hub for the fictional aerospace company's contact information, media assets and history. It also serves as a recruitment portal, displaying avaialble job roles and facilitating the submission of job applications.
 
-## Target Audience
+### Target Audience
+
 There are three main target audiences for the site:
- * Aerospace Industry professionals looking for new work apportunities.
- * Investors looking for informaiton on the company and it's history.
- * Hobbyists looking for information about Athena Aerospace projects as well as associated images and videos. 
 
+* Aerospace Industry professionals looking for new work apportunities.
+* Investors looking for informaiton on the company and it's history.
+* Hobbyists looking for information about Athena Aerospace projects as well as associated images and videos.
 
-## Audience Goals
+### Audience Goals
+
 * Aerospace Industry Professional
-    * To view information on current projects being undertaken.
-    * To view information on available jobs at the company.
-    * To be able to submit a job application directly to the company.
-    * To find information future plans, projects and vision for the company
-    * To contact the company directly to ask any questions.
+  * To view information on current projects being undertaken.
+  * To view information on available jobs at the company.
+  * To be able to submit a job application directly to the company.
+  * To find information future plans, projects and vision for the company
+  * To contact the company directly to ask any questions.
 
 * Investors
-    * To view information on the history of the company.
-    * To view information detailing the founding members of the company.
-    * To gain an understanding of future plans, projects and vision for the company.
-    * To contact the company directly to ask any questions.
+  * To view information on the history of the company.
+  * To view information detailing the founding members of the company.
+  * To gain an understanding of future plans, projects and vision for the company.
+  * To contact the company directly to ask any questions.
 
 * Hobbyist
-    * To view information on the history of the company. 
-    * To view information detailing the founding members of the company.
-    * To gain an understanding of future plans, projects and vision for the company.
-    * To contact the company directly to ask any questions.
-    * To access images of past projects and meaningful achievements that the company has undertaken.
-    * To access videos of past launches and view details of these launches.
+  * To view information on the history of the company. 
+  * To view information detailing the founding members of the company.
+  * To gain an understanding of future plans, projects and vision for the company.
+  * To contact the company directly to ask any questions.
+  * To access images of past projects and meaningful achievements that the company has undertaken.
+  * To access videos of past launches and view details of these launches.
+
 ---
-## Developer Goals
+
+### Developer Goals
 
 * The site should be professional and modern, incorporating current design standards and meetign accessibility needs.
-* The site should present media assets in a clean and responsive design, ensuring that images and videos can be viewed on both mobile and desktop browsers. 
-* Javascript should be used to enhance the UX, providing user interaction feedback that feels modern and falls in line with current design trends seen elsewehere on the web. 
-* The site should demonstrate the developers knowledge of and ability to use the three core languages of web design (HTML/CSS/JS), with code being cross-browser compatible, fully validated, tested and organised in line with industry standard practices. 
+* The site should present media assets in a clean and responsive design, ensuring that images and videos can be viewed on both mobile and desktop browsers.
+* Javascript should be used to enhance the UX, providing user interaction feedback that feels modern and falls in line with current design trends seen elsewehere on the web.
+* The site should demonstrate the developers knowledge of and ability to use the three core languages of web design (HTML/CSS/JS), with code being cross-browser compatible, fully validated, tested and organised in line with industry standard practices.
 
-## User Stories
+---
+
+### User Stories
 
 The following user stories describe the key ways in which the site may be used, from the perspective of different users.
 
 ---
 
-**User Story 1 - Hobbyist Space Enthusiast**  
+### User Story 1 - Hobbyist Space Enthusiast
+
 (Must Have)
 
-I am a space enthusiast and i want to view media related to shuttle launches undertaken by Athena to increase my knowledge on the progress of the companies work. 
+I am a space enthusiast and i want to view media related to shuttle launches undertaken by Athena to increase my knowledge on the progress of the companies work.
 
-**Acceptance Criteria**
+#### Acceptance Criteria
 
 - [x] The site navigation should allow easy and intuitive access to media such as videos and images.
 - [x] Images and videos should be well presented and not distorted or poor quality.
 - [x] Launch videos should be of good quality and easily identifiable by date.
 - [x] Images and videos should be accompanied by brief descriptions. 
 
-**Tasks**
+#### Tasks
 
 - [x] Create gallery page.
 - [x] Create Image gallery section.
@@ -98,127 +105,110 @@ I am a space enthusiast and i want to view media related to shuttle launches und
 
 ---
 
-**User Story 2 - Industry professional**  
+### User Story 2 - Industry professional
+
 (Must Have)
 
-As an engineer, I'd like to view possible job opportunities that i may be interested in applying for. 
+As an engineer, I'd like to view possible job opportunities that i may be interested in applying for.
 
-**Acceptance Criteria**
+#### Acceptance Criteria
 
-- [x] Clear call to action on home page that directs the user to the careers/available job roles page. 
-- [x] Careers page must have currently available job opportunities clearly outlined.
-- [x] Job listings should be responsive on all screen sizes and easily readable. 
-- [x] Each job opportunity must have a clear path to apply for the role.  
+* [x] Clear call to action on home page that directs the user to the careers/available job roles page.
+* [x] Careers page must have currently available job opportunities clearly outlined.
+* [x] Job listings should be responsive on all screen sizes and easily readable.
+* [x] Each job opportunity must have a clear path to apply for the role.  
 
+#### Tasks
 
-**Tasks**
-
-- [x] Add and style a clear call to action button on the homepage that directs the user to the careers page.
-- [x] Add careers link to the footer of every page.
-- [x] Add careers link to the nav bar.
-- [x] Create responsive layout of current job opportunities on careers page.
-- [x] Implement bootstrap card HTML structure to format each job opportunity aesthetically.
-- [x] Add button on each job card to apply for that role. Button links to application page. 
+* [x] Add and style a clear call to action button on the homepage that directs the user to the careers page.
+* [x] Add careers link to the footer of every page.
+* [x] Add careers link to the nav bar.
+* [x] Create responsive layout of current job opportunities on careers page.
+* [x] Implement bootstrap card HTML structure to format each job opportunity aesthetically.
+* [x] Add button on each job card to apply for that role. Button links to application page.
 
 ---
 
-**User Story 3 - Industry Investor**  
+### User Story 3 - Industry Investor
+
 (Must Have)
 
 I am an investor who wants to learn more about the founders of Athena Aerospace and the company's history.
 
-**Acceptance Criteria**
+#### Acceptance Criteria
 
-- [x] The site navigation should allow easy and intuitive access to an about page.
-- [x] Images and videos should be well presented and not distorted or poor quality.
-- [x] History of the company should be easily read in a short period of time.
-- [x] Images should be used to increase confidence and put a face to the founders of the company.
+* [x] The site navigation should allow easy and intuitive access to an about page.
+* [x] Images and videos should be well presented and not distorted or poor quality.
+* [x] History of the company should be easily read in a short period of time.
+* [x] Images should be used to increase confidence and put a face to the founders of the company.
 
-**Tasks**
+#### Tasks
 
-- [x] Create about page.
-- [x] Create history section that outlines briefly the origins of the company.
-- [x] Add images to history section.
-- [x] Add quotes from founders.
-- [x] Create founder bio cards to give background on each founder.
+* [x] Create about page.
+* [x] Create history section that outlines briefly the origins of the company.
+* [x] Add images to history section.
+* [x] Add quotes from founders.
+* [x] Create founder bio cards to give background on each founder.
 
 ---
 
-**User Story 4 - Industry Professional**  
+### User Story 4 - Industry Professional
+
 (Must Have)
 
 I am a member of the the Aerospace profession and would like to contact Athena to ask a question about a project they are undertaking. 
 
- **Acceptance Criteria**
+ #### Acceptance Criteria
 
-- [x] The site navigation should allow easy and intuitive access to a contact page.
-- [x] The contact page should be responsive and work on mobile as well as desktop.
-- [x] The contact page should have required fields to ensure a response can be sent to the user when ready.
-- [x] The contact form should use validation strategies to reduce the likelihood of accidental or malicious submissions.
-- [x] The user should be informed when their contact form has successfully been submitted. 
+* [x] The site navigation should allow easy and intuitive access to a contact page.
+* [x] The contact page should be responsive and work on mobile as well as desktop.
+* [x] The contact page should have required fields to ensure a response can be sent to the user when ready.
+* [x] The contact form should use validation strategies to reduce the likelihood of accidental or malicious submissions.
+* [x] The user should be informed when their contact form has successfully been submitted.
 
-**Tasks**
+#### Tasks
 
-- [x] Create contact page.
-- [x] Ensure a responsive layout for contact page to make it work easily on mobile and desktop.
-- [x] Gather the users email address, name and query.
-- [x] Require all fields to be completed to ensure it is a meaningful submission.
-- [x] Utilise JS to validate the form submission.
-- [x]  For invalid submission, show clearly visible error prompt.
-- [x] For valid submission direct the user to the contact success page.
-- [x] Create contact success page
-- [x] Write successful submission message to inform user of valid submission
+* [x] Create contact page.
+* [x] Ensure a responsive layout for contact page to make it work easily on mobile and desktop.
+* [x] Gather the users email address, name and query.
+* [x] Require all fields to be completed to ensure it is a meaningful submission.
+* [x] Utilise JS to validate the form submission.
+* [x]  For invalid submission, show clearly visible error prompt.
+* [x] For valid submission direct the user to the contact success page.
+* [x] Create contact success page
+* [x] Write successful submission message to inform user of valid submission
 
 ---
 
-**User Story 5 - Hobbysit**  
+### User Story 5 - Hobbyist
+
 (Could Have)
 
 I am a member of the public that likes to learn about past rocket launches as well as see details of future planned launches
 
-**Acceptance Criteria**
+#### Acceptance Criteria
 
-- [ ] The site navigation should allow easy and intuitive access to a launches page.
-- [ ] Videos should be well presented and not distorted or poor quality.
-- [ ] Each video should be accompanied by launch date and description.
-- [ ] Details of future planned launches should be clear and easy to understand.
-- [ ] Future launch details should include descriptions of their purpose and location.
+* [ ] The site navigation should allow easy and intuitive access to a launches page.
+* [ ] Videos should be well presented and not distorted or poor quality.
+* [ ] Each video should be accompanied by launch date and description.
+* [ ] Details of future planned launches should be clear and easy to understand.
+* [ ] Future launch details should include descriptions of their purpose and location.
 
-**Tasks**
+#### Tasks
 
-- [ ] Create launches page.
-- [ ] Create video gallery section.
-- [ ] Create responsive layout for launches page.
-- [ ] Hover effect that shows additional information about the video being selected.
-- [ ] Add option to show video in full screen/larger size if wanted.
-- [ ] Add launches link to site navigation.
-- [ ] Create countdown timer, counting towards next launch.
-
-
----
-
-
-## Technologies Used
-
-* HTML5
-* CSS3
-* JavaScript (Vanilla)
-* Google Fonts
-* Font Awesome Icons
+* [ ] Create launches page.
+* [ ] Create video gallery section.
+* [ ] Create responsive layout for launches page.
+* [ ] Hover effect that shows additional information about the video being selected.
+* [ ] Add option to show video in full screen/larger size if wanted.
+* [ ] Add launches link to site navigation.
+* [ ] Create countdown timer, counting towards next launch.
 
 ---
 
-## Project Goals
-
-* To communicate the goals of the company to the user in a succinct manner.
-* To provide a history of the company and insight into the motivations for its formation.
-* To attract new talent and provide a route for interested applicants to submit their information and be considered for a position at the company.
-* To act as a hub for the company to display its media, such as launch videos and images.
-
----
 ## Wireframes
 
-![Index.html Wireframe](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/wireframes/index-wireframe.webp "Index.html Wireframe")
+<!-- ![Index.html Wireframe](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/wireframes/index-wireframe.webp "Index.html Wireframe")
 
 ![About.html Wireframe](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/wireframes/about-wireframe.webp "About.html Wireframe")
 
@@ -226,11 +216,66 @@ I am a member of the public that likes to learn about past rocket launches as we
 
 ![Careers.html Wireframe](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/wireframes/careers-wireframe.webp "Careers.html Wireframe")
 
-![Contact.html Wireframe](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/wireframes/contact-wireframe.webp "contact.html Wireframe")
+![Contact.html Wireframe](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/wireframes/contact-wireframe.webp "contact.html Wireframe") -->
+
 ---
-## Design & Style
+
+## Design & Style breakdown
 
 Inspiration was taken from the SpaceX website, focusing on a minimal yet visually impactful design language. Large images highlight attractive features within high quality photography and contribute aesthetically to the overall design. The colour scheme is primarily black and white, allowing attractive transitions between images of space and the body background colour. Font colour has been set to an off-white `(#F4F4F4)` to reduce eye strain caused by using pure white against pure black.
+
+### Color Scheme
+
+The color scheme was kept simple and high contrast to compliment the theme of the site, drawing parallels between the high contrast of many images taken from space. Using black as a background color allows some creative use of backgraound images, enabling some images to gradually fade to black. This can contribute to the pages sense of flow is inkeeping with the theming of the overall site.
+
+Other colours were used sparsely in order to ensure consistentcy and predictability across the site:
+
+* Red `#ff0000` has been used to highlight error messages (on the form submission pages)  
+* A shade of grey `#999898` has been used on the footer elements, reducign their contrast with the background to show that they are less vital elements but still usful and informative if needed.
+* Hover effects were added to the navigation links to ensure that the user receives feedback on which link they are about to select. Inverting the colours of the nav link (to white background and black text) clearly highlights the relevant navigation link. 
+
+### Fonts
+
+Google fonts was used to import selected fonts into the project. Only 2 fonts were used to ensure consistency in design across the whole site.
+`<link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Aldrich&display=swap"
+    rel="stylesheet" />`
+Heading fonts:
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6{
+                font-family: "Aldrich", "Verdana", sans-serif;
+                text-transform: uppercase;
+            }
+Button fonts :
+
+            .button-class{
+                text-transform: uppercase;
+                font-size: 1rem;
+                font-family: "Aldrich", "Verdana", sans-serif;
+            }
+
+Paragraph fonts:
+
+            p {
+                font-family: "Montserrat", "Verdana", sans-serif;
+            }
+
+### Styling
+
+All CSS styling has been achieved thorugh the use of a maximum of 2 stylesheets per page. 
+
+* `styles.css` - Includes the global styling for elements that are used throughout the website. Utilising a central global stylesheet allows changes to elements on multiple pages by only changing the properties in one sheet.
+* `page-name.css` - Each page has it's own named stylesheet, containing specific CSS styling relevant to that page alone.
+
+By seperating out global styles and page specific styles, it ensures that stylesheets stay readable and specific to their intended purpose. Ensuring that the page specific stylesheet is included after the global stylesheet allows the developer to overwrite global styles if needed, as CSS is applied in a cascading fashion (top down).
+
+CSS variables were used to specify key property values that may change at some point, ensuring that these properties were applied consistently across the entire site.
+
 
 ---
 
@@ -247,6 +292,19 @@ Inspiration was taken from the SpaceX website, focusing on a minimal yet visuall
 * Footer with social media links and navigation
 * Consistent styling across all pages
 * Robust form validation and measures to reduce spam submissions. 
+
+---
+
+## Technologies Used
+
+* HTML5
+* CSS3
+* JavaScript (Vanilla)
+* Google Fonts
+* Font Awesome Icons
+
+---
+
 
 ### Pages
 
