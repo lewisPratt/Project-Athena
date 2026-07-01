@@ -1,4 +1,4 @@
-# Athena Aerospace 
+# Athena Aerospace
 
 Live site: [Athena Aerospace Home Page](https://lewispratt.github.io/Project-Athena/)
 
@@ -56,7 +56,7 @@ There are three main target audiences for the site:
   * To contact the company directly to ask any questions.
 
 * Hobbyist
-  * To view information on the history of the company. 
+  * To view information on the history of the company.
   * To view information detailing the founding members of the company.
   * To gain an understanding of future plans, projects and vision for the company.
   * To contact the company directly to ask any questions.
@@ -88,20 +88,20 @@ I am a space enthusiast and i want to view media related to shuttle launches und
 
 #### Acceptance Criteria
 
-- [x] The site navigation should allow easy and intuitive access to media such as videos and images.
-- [x] Images and videos should be well presented and not distorted or poor quality.
-- [x] Launch videos should be of good quality and easily identifiable by date.
-- [x] Images and videos should be accompanied by brief descriptions. 
+* [x] The site navigation should allow easy and intuitive access to media such as videos and images.
+* [x] Images and videos should be well presented and not distorted or poor quality.
+* [x] Launch videos should be of good quality and easily identifiable by date.
+* [x] Images and videos should be accompanied by brief descriptions.
 
 #### Tasks
 
-- [x] Create gallery page.
-- [x] Create Image gallery section.
-- [x] Create video gallery section.
-- [x] Create responsive layout for gallery page.
-- [x] Hover effect that shows additional information about the media. 
-- [x] Add option that when clicked images/videos open in separate tab to view larger.
-- [x] Add gallery link to site navigation.
+* [x] Create gallery page.
+* [x] Create Image gallery section.
+* [x] Create video gallery section.
+* [x] Create responsive layout for gallery page.
+* [x] Hover effect that shows additional information about the media.
+* [x] Add option that when clicked images/videos open in separate tab to view larger.
+* [x] Add gallery link to site navigation.
 
 ---
 
@@ -156,9 +156,9 @@ I am an investor who wants to learn more about the founders of Athena Aerospace 
 
 (Must Have)
 
-I am a member of the the Aerospace profession and would like to contact Athena to ask a question about a project they are undertaking. 
+I am a member of the the Aerospace profession and would like to contact Athena to ask a question about a project they are undertaking.
 
- #### Acceptance Criteria
+#### Acceptance Criteria
 
 * [x] The site navigation should allow easy and intuitive access to a contact page.
 * [x] The contact page should be responsive and work on mobile as well as desktop.
@@ -232,7 +232,7 @@ Other colours were used sparsely in order to ensure consistentcy and predictabil
 
 * Red `#ff0000` has been used to highlight error messages (on the form submission pages)  
 * A shade of grey `#999898` has been used on the footer elements, reducign their contrast with the background to show that they are less vital elements but still usful and informative if needed.
-* Hover effects were added to the navigation links to ensure that the user receives feedback on which link they are about to select. Inverting the colours of the nav link (to white background and black text) clearly highlights the relevant navigation link. 
+* Hover effects were added to the navigation links to ensure that the user receives feedback on which link they are about to select. Inverting the colours of the nav link (to white background and black text) clearly highlights the relevant navigation link.
 
 ### Fonts
 
@@ -298,12 +298,100 @@ These variables were then accessible in all of my page specific stylesheets beca
 
 ### CSS Animations
 
-Throughout the site there are a number of CSS animations that add some interest to the pages. 
+Throughout the site there are a number of CSS animations that add some interest to the pages.
 
 1. index.html
-    * Animations added to the spinning base location circles at the top of the page:
+    * Animations added to the spinning base location circles at the top of the page. These animations have been added to draw attention to the information in the header of the page and to add some interactivity to the page:
 
-    
+            #base-one-location-circle,
+            #base-two-location-circle {
+                transform-origin: center;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, .3);
+                border: 1px dashed white;
+                animation: rotateLocator 12s infinite linear;
+                transition: .8s;
+                cursor: pointer;
+            }
+
+            #base-one-location-circle:hover,
+            #base-two-location-circle:hover {
+                scale: 1.5;
+            }
+            #base-one-location-circle:focus-visible,
+            #base-two-location-circle:focus-visible{
+                scale: 1.5;
+                background-color:rgb(255, 255, 219);
+            }
+
+            @keyframes rotateLocator {
+                0% {
+                    transform: rotateZ(0deg);
+                }
+
+                100% {
+                    transform: rotateZ(360deg);
+                }   
+            }
+
+        The base location indicators are also buttons that the user can click to jump to another section of the page. The addition CSS rule for `:focus-visible` ensures that keyboard users are able to see when the base elements are selected usign the Tab key.
+
+    * Animation to control opacity of the video overlay that is shown when a video control element is pressed:
+
+                @keyframes video-overlay {
+                    0% {
+                        opacity: 0;
+                    }
+
+                    50% {
+                        opacity: 1;
+                    }
+
+                    100% {
+                        opacity: 0;
+                    }
+                }
+
+        The video overlay provides feedback for when the user presses the skip, volume up or volume down buttons. revealing and concealing the the video itself is managed via Javascript.
+
+        Using classes with different properties applied, Javascript is able to hide and reveal elements dependant on the state of the video. (play/stopped/out of view). Below is a simplified version of the code used to manage the video section:
+
+                //Javascript
+
+                const videoOverlayPicture = document.querySelector("#video-overlay-picture");
+
+                function toggleVideoState(){
+                    if(video.paused()){
+                        video.play();
+                        video.muted = false;
+                        video.volume = 0.2;
+                        videoOverlayPicture.classList.remove("slide-in-x");
+                        videoOverlayPicture.classList.add("slide-out-x");
+                    }
+                
+                    else{
+                        video.pause();
+                        video.muted = true
+                        videoOverlayPicture.classList.remove("slide-out-x");
+                        videoOverlayPicture.classList.add("slide-in-x");
+                    }
+                }
+
+
+                //CSS
+
+                    .slide-out-x {
+                        transform: translateX(-100%);
+                        opacity: 0;
+                    }
+
+                    .slide-in-x {
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
+  
 ---
 
 ## Key Features
@@ -318,7 +406,7 @@ Throughout the site there are a number of CSS animations that add some interest 
 * Custom video player with hidden controls, overlay feedback, and IntersectionObserver integration
 * Footer with social media links and navigation
 * Consistent styling across all pages
-* Robust form validation and measures to reduce spam submissions. 
+* Robust form validation and measures to reduce spam submissions.
 
 ---
 
@@ -331,7 +419,6 @@ Throughout the site there are a number of CSS animations that add some interest 
 * Font Awesome Icons
 
 ---
-
 
 ### Pages
 
@@ -409,7 +496,7 @@ To run the project locally:
 
 * To evaluate and identify any issues related to accessibility, i used a Chrome plugin called Accessibility Insights for Web. This enabled me to run tests on specific pages, and recieve an assessment regrding how effectively that page meets accessibility standards.
 
-* All pages have been optimised to allow effective keyboard control if needed. This ensures all elements that a user may want to access, are available both via keyboard and mouse or just keyboard control. 
+* All pages have been optimised to allow effective keyboard control if needed. This ensures all elements that a user may want to access, are available both via keyboard and mouse or just keyboard control.
 
 ---
 
@@ -422,7 +509,7 @@ From previous experience of hosting websites with a contact page, I am aware tha
 In order to address this issue, as well as ensure that all necessary information is collected, I chose to implement a layered approach of form validation, combining 4 strategies to reduce the likelihood of malicious or unwanted/unhelpful submissions.
 
 1. Required attribute
-    * Adding the `required` attribute to essential form inputs is the most basic form of validation, ensuring that key information such as contact details and names are not omitted either intentionally or accidentally. 
+    * Adding the `required` attribute to essential form inputs is the most basic form of validation, ensuring that key information such as contact details and names are not omitted either intentionally or accidentally.
 2. Time based validation.
     * When a page containing a form is loaded, the initial time at page load is recorded via Javascript.
     * The time is also recorded at form submission.
@@ -437,7 +524,7 @@ In order to address this issue, as well as ensure that all necessary information
 4. 'Honeypot' input field
     * Placing an input field within the form, but ensuring the user never see's it, is another way of checking for genuine user input.
     * Many bots that submit spam via simple forms will fill out every form input element in an effort to meet all required criteria for it to submit successfully.
-    * By adding an input field that is never intended to be completed by a genuine user, it is possible to check on submission if a value has been entered, and if so, prevent the submission from completing. 
+    * By adding an input field that is never intended to be completed by a genuine user, it is possible to check on submission if a value has been entered, and if so, prevent the submission from completing.
     * Ideally the input should be visible (meaning not `display:none` as some bots can check for this) but placed out of view of the user.
 
     To achieve this is defined the input field:
@@ -486,12 +573,11 @@ For a simple applciation such as this, I believe the techniques i have impliment
 
     })
 
-
 During development, i used `console.log()` to indicate during testing, which check the form was failing the validation on. This helped to identify any bugs or edge cases that may have been tricky to find.
 
 ### Form accessibility
 
-When designing the custom `<input type="radio">` elements for my contact form, I initially set the  `input` element to `display:none;`. During testing I realised that this had taken the inputs out of the tab order, meaning that the custom radio buttons i had created could not be selected via the use of Tab on the keyboard. 
+When designing the custom `<input type="radio">` elements for my contact form, I initially set the  `input` element to `display:none;`. During testing I realised that this had taken the inputs out of the tab order, meaning that the custom radio buttons i had created could not be selected via the use of Tab on the keyboard.
 
 This is a poor experience for users who may have accessibility needs. The solution to this was to keep the inputs in the tab order by removing `display:none;` and using CSS to alter their visibility and size.
 
@@ -516,7 +602,7 @@ However, as i continued development of the site, and regularly checked the resul
 
 *(Above panel is missing spacing at the bottom of the screen and an arrow that when pressed scrolls to the next panel)*
 
-After some research, i discovered the measurement unit `svh`. This measurement reflects the smallest possible viewport height of the users borwser, taking into account the address bar and other possible borwser elements that tend to retract on scroll. 
+After some research, i discovered the measurement unit `svh`. This measurement reflects the smallest possible viewport height of the users borwser, taking into account the address bar and other possible borwser elements that tend to retract on scroll.
 
 ![Smallest Viewport Height screenshot](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/smallest-viewport-height.webp "100svh unit test")
 
@@ -525,10 +611,12 @@ After some research, i discovered the measurement unit `svh`. This measurement r
 Using this unit ensured that, when my page loaded on a mobile device, the full height panel was exactly the size of the viewable area on the mobile device. This merant placing my nested elements in each panel became easier to predict as i did not have to account for additional space taken up by mobile browser elements.
 
 ## Code Validation
+
 ### CSS
+
 I used the Jigsaw CSS Validator to ensure that my CSS files were valid and met current standards.
 
-about.css was the only file to show any errors. The validator stated that the properties `animation-timeline:view()` and `animation-range:cover 0% cover 70%` were not valid and did not exist. 
+about.css was the only file to show any errors. The validator stated that the properties `animation-timeline:view()` and `animation-range:cover 0% cover 70%` were not valid and did not exist.
 
 By undertaking some research I was able to find that despite the validator not recognising these properties, they are in fact valid, but are not yet added to the documentation that is being used by the validator. Chromium based browsers have supported the properties since 2023 and alternative browsers have begun supporting it more recently. Through my testing, i have seen the properties successfully work in all major browsers with no issues.
 
@@ -560,7 +648,6 @@ By undertaking some research I was able to find that despite the validator not r
 
 ![contact-success.html validator result](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/contact-success-html-result.jpg "contact-success.html validator result")
 
-
 ---
 
 ## Credits
@@ -569,8 +656,6 @@ By undertaking some research I was able to find that despite the validator not r
 * Images: [Unsplash](https://unsplash.com)
 * Fonts: Google Fonts — `Aldrich`
 * Icons: Font Awesome
-
-
 
 ---
 
