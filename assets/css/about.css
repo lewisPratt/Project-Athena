@@ -3,7 +3,7 @@
 ===================== */
 header {
   background-image: url("../images/darkside-moon.webp");
-  background-color: black;
+  background-color: var(--background-color);
   background-size: cover;
   background-repeat: no-repeat;
   height: 60svh;
@@ -20,7 +20,7 @@ header {
   font-weight: 100;
   font-style: italic;
   font-size: .7rem;
-  font-family: "Montserrat", "Verdana", sans-serif;
+  font-family: var(--priamry-font)
 }
 
 #header-title {
@@ -54,7 +54,7 @@ header {
   justify-content: center;
   align-items: center;
   flex-flow: column wrap;
-  background-color: #000000;
+  background-color: var(--background-color);
   z-index: 5;
   padding-top: 20px;
   /* overflow: clip; */
@@ -241,7 +241,7 @@ header {
   position: relative;
   justify-content: space-around;
   margin-top: 100px;
-  background-color: black;
+  background-color: var(--background-color);
 }
 
 #founders-title {
@@ -256,7 +256,7 @@ header {
 }
 
 #portraits-container>div {
-  background-color: #000000;
+  background-color: var(--background-color);
   border: 1px solid white;
   margin-bottom: 50px;
   width: 80%;
@@ -302,7 +302,7 @@ header {
    MISSION
 ===================== */
 #mission-blurb-container {
-  background-color: black;
+  background-color: var(--background-color);
   z-index: 5;
   position: relative;
   display: flex;
@@ -355,7 +355,7 @@ header {
    ABOUT LINKS
 ===================== */
 #about-links {
-  background-color: #000000;
+  background-color: var(--background-color);
   position: relative;
   z-index: 5;
   padding: 100px 0;
