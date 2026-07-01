@@ -4,6 +4,7 @@ Live site: [Athena Aerospace Home Page](https://lewispratt.github.io/Project-Ath
 
 ## Table of Contents
 
+* [Deployment](#deployment)
 * [UX Design](#ux-design)
   * [Project Goals](#project-goals)
   * [Target Audience](#target-audience)
@@ -12,7 +13,7 @@ Live site: [Athena Aerospace Home Page](https://lewispratt.github.io/Project-Ath
   * [User Stories](#user-stories)
 * [Technologies Used](#technologies-used)
 * [Wireframes](#wireframes)
-* [Design and Style](#design--style)
+* [Design and Style](#design-style)
 * [Key Features](#key-features)
 * [Page Descriptions](#pages)
 * [Technical Decisions](#technical-decisions)
@@ -26,18 +27,33 @@ Live site: [Athena Aerospace Home Page](https://lewispratt.github.io/Project-Ath
 * [Credits](#credits)
 * [Author](#author)
 
+## Deployment
+
+This project was deployed using GitHub Pages. The steps taken were:
+
+1. Push all project files to a GitHub repository
+2. Navigate to the repository **Settings** tab
+3. Select **Pages** from the left hand menu
+4. Under **Branch**, select `main` and click **Save**
+5. GitHub Pages will publish the site and provide a live URL
+
+To run the project locally:
+
+1. Clone the repository: `git clone https://github.com/lewispratt/Project-Athena.git`
+2. Open `index.html` in your browser — no build step or dependencies required
+
 ## UX Design
 
 ### Project Goals
 
-The primary goal of the Athena Aerospace website is to provide a hub for the fictional aerospace company's contact information, media assets and history. It also serves as a recruitment portal, displaying avaialble job roles and facilitating the submission of job applications.
+The primary goal of the Athena Aerospace website is to provide a hub for the fictional aerospace company's contact information, media assets and history. It also serves as a recruitment portal, displaying available job roles and facilitating the submission of job applications.
 
 ### Target Audience
 
 There are three main target audiences for the site:
 
-* Aerospace Industry professionals looking for new work apportunities.
-* Investors looking for informaiton on the company and it's history.
+* Aerospace Industry professionals looking for new work opportunities.
+* Investors looking for information on the company and it's history.
 * Hobbyists looking for information about Athena Aerospace projects as well as associated images and videos.
 
 ### Audience Goals
@@ -67,10 +83,10 @@ There are three main target audiences for the site:
 
 ### Developer Goals
 
-* The site should be professional and modern, incorporating current design standards and meetign accessibility needs.
+* The site should be professional and modern, incorporating current design standards and meeting accessibility needs.
 * The site should present media assets in a clean and responsive design, ensuring that images and videos can be viewed on both mobile and desktop browsers.
-* Javascript should be used to enhance the UX, providing user interaction feedback that feels modern and falls in line with current design trends seen elsewehere on the web.
-* The site should demonstrate the developers knowledge of and ability to use the three core languages of web design (HTML/CSS/JS), with code being cross-browser compatible, fully validated, tested and organised in line with industry standard practices.
+* Javascript should be used to enhance the UX, providing user interaction feedback that feels modern and falls in line with current design trends seen elsewhere on the web.
+* The site should demonstrate the developers knowledge of and ability to use the three core languages of web design (HTML/CSS/JS), with code being cross-browser compatible, fully validated, tested and organized in line with industry standard practices.
 
 ---
 
@@ -226,53 +242,22 @@ Inspiration was taken from the SpaceX website, focusing on a minimal yet visuall
 
 ### Color Scheme
 
-The color scheme was kept simple and high contrast to compliment the theme of the site, drawing parallels between the high contrast of many images taken from space. Using black as a background color allows some creative use of backgraound images, enabling some images to gradually fade to black. This can contribute to the pages sense of flow is inkeeping with the theming of the overall site.
+The color scheme was kept simple and high contrast to compliment the theme of the site, drawing parallels between the high contrast of many images taken from space. Using black as a background color allows some creative use of background images, enabling some images to gradually fade to black. This can contribute to the pages sense of flow is in keeping with the theming of the overall site.
 
-Other colours were used sparsely in order to ensure consistentcy and predictability across the site:
+Other colours were used sparsely in order to ensure consistency and predictability across the site:
 
 * Red `#ff0000` has been used to highlight error messages (on the form submission pages)  
-* A shade of grey `#999898` has been used on the footer elements, reducign their contrast with the background to show that they are less vital elements but still usful and informative if needed.
+* A shade of grey `#999898` has been used on the footer elements, reducing their contrast with the background to show that they are less vital elements but still useful and informative if needed.
 * Hover effects were added to the navigation links to ensure that the user receives feedback on which link they are about to select. Inverting the colours of the nav link (to white background and black text) clearly highlights the relevant navigation link.
-
-### Fonts
-
-Google fonts was used to import selected fonts into the project. Only 2 fonts were used to ensure consistency in design across the whole site.
-`<link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Aldrich&display=swap"
-    rel="stylesheet" />`
-Heading fonts:
-
-            h1,
-            h2,
-            h3,
-            h4,
-            h5,
-            h6{
-                font-family: "Aldrich", "Verdana", sans-serif;
-                text-transform: uppercase;
-            }
-Button fonts :
-
-            .button-class{
-                text-transform: uppercase;
-                font-size: 1rem;
-                font-family: "Aldrich", "Verdana", sans-serif;
-            }
-
-Paragraph fonts:
-
-            p {
-                font-family: "Montserrat", "Verdana", sans-serif;
-            }
 
 ### Styling
 
 All CSS styling has been achieved through the use of a maximum of 2 stylesheets per page. No inline or embedded CSS has been used throughout the site.
 
-* `styles.css` - Includes the global styling for elements that are used throughout the website. Utilising a central global stylesheet allows changes to elements on multiple pages by only changing the properties in one sheet.
+* `styles.css` - Includes the global styling for elements that are used throughout the website. Utilizing a central global stylesheet allows changes to elements on multiple pages by only changing the properties in one sheet.
 * `page-name.css` - Each page has it's own named stylesheet, containing specific CSS styling relevant to that page alone.
 
-By seperating out global styles and page specific styles, it ensures that stylesheets stay readable and specific to their intended purpose. Ensuring that the page specific stylesheet is included after the global stylesheet allows the developer to overwrite global styles if needed, as CSS is applied in a cascading fashion (top down).
+By separating out global styles and page specific styles, it ensures that stylesheets stay readable and specific to their intended purpose. Ensuring that the page specific stylesheet is included after the global stylesheet allows the developer to overwrite global styles if needed, as CSS is applied in a cascading fashion (top down).
 
 CSS variables were used to specify key property values that may change at some point, ensuring that these properties were applied consistently across the entire site.
 
@@ -295,6 +280,40 @@ These variables were then accessible in all of my page specific stylesheets beca
         <link rel="stylesheet" href="assets/css/index.css">
 
 2. The variables were applied to the root pseudo class, making them accessible to the entire document because they have been applied to the root element of the document (which in HTML is the `<html>` element.)
+
+### Fonts
+
+Google fonts was used to import selected fonts into the project. Only 2 fonts were used to ensure consistency in design across the whole site.
+
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Aldrich&display=swap" rel="stylesheet" />
+
+* Aldrich
+* Montserrat
+
+Heading fonts:
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6{
+                font-family: var(--header-font)
+                text-transform: uppercase;
+            }
+Button fonts :
+
+            .button-class{
+                text-transform: uppercase;
+                font-size: 1rem;
+                font-family: var(--header-font)
+            }
+
+Paragraph fonts:
+
+            p {
+                font-family: var(--primary-font)
+            }
 
 ### CSS Animations
 
@@ -336,7 +355,7 @@ Throughout the site there are a number of CSS animations that add some interest 
                 }   
             }
 
-        The base location indicators are also buttons that the user can click to jump to another section of the page. The addition CSS rule for `:focus-visible` ensures that keyboard users are able to see when the base elements are selected usign the Tab key.
+        The base location indicators are also buttons that the user can click to jump to another section of the page. The addition CSS rule for `:focus-visible` ensures that keyboard users are able to see when the base elements are selected using the Tab key.
 
     * Animation to control opacity of the video overlay that is shown when a video control element is pressed:
 
@@ -391,22 +410,24 @@ Throughout the site there are a number of CSS animations that add some interest 
                         transform: translateX(0);
                         opacity: 1;
                     }
-  
+
 ---
 
-## Key Features
+## Key Features - Design & content
 
-* Fully responsive layout built with Flexbox, designed with a mobile first approach
-* Full viewport height panels using `100svh`
-* Scroll driven fade in animations using `animation-timeline: view()`
-* CSS animations and pseudo classes used to highlight key areas and enhance visual appeal
-* Bootstrap tooltips
-* Responsive navigation with active page indicators on both mobile and desktop
-* Clear calls to action (CTAs) directing users to the most important sections of the site
-* Custom video player with hidden controls, overlay feedback, and IntersectionObserver integration
-* Footer with social media links and navigation
-* Consistent styling across all pages
+* Fully responsive layout built with Flexbox, designed with a mobile first approach.
+* Full viewport height panels using `100svh`.
+* Scroll driven fade in animations using `animation-timeline: view()`.
+* CSS animations and pseudo classes used to highlight key areas and enhance visual appeal.
+* Responsive navigation with active page indicators on both mobile and desktop.
+* Clear calls to action (CTAs) directing users to the most important sections of the site.
+* Custom video player with hidden controls, overlay feedback, and IntersectionObserver integration.
+* Footer with social media links and navigation.
+* Consistent styling across all pages to convey business branding.
 * Robust form validation and measures to reduce spam submissions.
+* Gallery page that features images and videos. Descriptions and the ability to view larger versions of the media.
+* About page featuring unique styling to engage the user and convey the culture and history of the business.
+* Careers page to allow users to view available job roles and submit job applications.
 
 ---
 
@@ -426,7 +447,6 @@ Throughout the site there are a number of CSS animations that add some interest 
 * **About** — a visual history of Athena
 * **Contact** — allows visitors to submit their details and receive confirmation their message was sent
 * **Gallery** — features images that align with Athena's mission statement
-* **Launch** — displays future and past rocket launch videos
 * **Careers** — lists possible job vacancies
 
 ---
@@ -445,21 +465,6 @@ Throughout the site there are a number of CSS animations that add some interest 
 * Some images have been edited to add a smooth transition between the image and the black background.
 * After implementing a custom math question on the contact page (in order to reduce possible spam bot submissions) i decided to create custom styled radio inputs, to better fit the aesthetic of the website. Using the `:has()` css selector, i was able to adjust the styling of the label element and it's children, dependent on whether the nested input was currently `:checked` or not.
 
-## Deployment
-
-This project was deployed using GitHub Pages. The steps taken were:
-
-1. Push all project files to a GitHub repository
-2. Navigate to the repository **Settings** tab
-3. Select **Pages** from the left hand menu
-4. Under **Branch**, select `main` and click **Save**
-5. GitHub Pages will publish the site and provide a live URL
-
-To run the project locally:
-
-1. Clone the repository: `git clone https://github.com/lewispratt/Project-Athena.git`
-2. Open `index.html` in your browser — no build step or dependencies required
-
 ### Layout
 
 * Semantic HTML elements (`<header>`, `<main>`, `<article>`, `<footer>`) have been used to structure all pages logically, ensuring search engines and accessibility tools can understand the content.
@@ -468,8 +473,8 @@ To run the project locally:
 
 ### JavaScript
 
-* All JavaScript has been placed in external files linked in the `<head>` section with the `defer` attribute. This ensures scripts are loaded only after the DOM has finished parsing, improving performance and keeping the `<head>` organised alongside other external file links. This is a more modern approach than placing scripts just before the closing `</body>` tag.
-* A site-wide `sitewide.js` file handles universal JS functions, with each page having its own JS file for page-specific functionality.
+* All JavaScript has been placed in external files linked in the `<head>` section with the `defer` attribute. This ensures scripts are loaded only after the DOM has finished parsing, improving performance and keeping the `<head>` organized alongside other external file links. This is a more modern approach than placing scripts just before the closing `</body>` tag.
+* A site-wide `global.js` file handles universal JS functions, with each page having its own JS file for page-specific functionality.
 * Reusable JS functionality has been refactored into functions to avoid unnecessary repetition of code.
 * The `addEventListener()` method has been used throughout to handle user interactions, primarily the `"click"` event.
 * JavaScript manages the visibility of dynamic elements such as the navbar icon, overlay text, video player controls, and other buttons by toggling classes that control the `display` property.
@@ -485,7 +490,7 @@ To run the project locally:
 
 * The `prefers-reduced-motion` CSS media query has been used where animations are present, ensuring users with vestibular conditions can access and use the site comfortably.
 
-* To adhere to accessibility conventions, a distinction was made between the types of links used on each page. These distinctions allow assitive technology to provide more context aroudn the type of link that is being focussed.
+* To adhere to accessibility conventions, a distinction was made between the types of links used on each page. These distinctions allow assistive technology to provide more context around the type of link that is being focussed.
   * Any link/clickable element that takes the user to a different page uses an `<a>` tag.
 
   * Any link/clickable element that performs an action on the same page uses a `<button>` element. E.g. scrolling to a different part of the page, toggling the play state of video media.
@@ -494,9 +499,9 @@ To run the project locally:
 
 * Form elements that do not have an associated label, have had the `aria-label` attribute added to them, to describe their purpose and give each element context.
 
-* To evaluate and identify any issues related to accessibility, i used a Chrome plugin called Accessibility Insights for Web. This enabled me to run tests on specific pages, and recieve an assessment regrding how effectively that page meets accessibility standards.
+* To evaluate and identify any issues related to accessibility, i used a Chrome plugin called Accessibility Insights for Web. This enabled me to run tests on specific pages, and receive an assessment regarding how effectively that page meets accessibility standards.
 
-* All pages have been optimised to allow effective keyboard control if needed. This ensures all elements that a user may want to access, are available both via keyboard and mouse or just keyboard control.
+* All pages have been optimized to allow effective keyboard control if needed. This ensures all elements that a user may want to access, are available both via keyboard and mouse or just keyboard control.
 
 ---
 
@@ -504,7 +509,7 @@ To run the project locally:
 
 ### Form Validation and Security
 
-From previous experience of hosting websites with a contact page, I am aware that without appropriate counter-measures, contact forms can be routinely targetted by bots that will submit unwanted form data. This causes unnecessary spam, as well as possible security concerns depending on the backend systems.
+From previous experience of hosting websites with a contact page, I am aware that without appropriate counter-measures, contact forms can be routinely targeted by bots that will submit unwanted form data. This causes unnecessary spam, as well as possible security concerns depending on the backend systems.
 
 In order to address this issue, as well as ensure that all necessary information is collected, I chose to implement a layered approach of form validation, combining 4 strategies to reduce the likelihood of malicious or unwanted/unhelpful submissions.
 
@@ -540,9 +545,9 @@ In order to address this issue, as well as ensure that all necessary information
 
     The `tabindex` attribute allows the field to be focusable but not reachable using keyboard controls. `autocomplete="off"` also ensures that the field is not accidentally completed automatically, causing the validation to fail through no fault of the user.  
 
-By combining these four methods, it is possible to reduce the likelihood of annoying/malicious automated form submissions. I am aware however, that for larger and more complex applciations, there are significantly more robust techniques available that will further reduce this risk.
+By combining these four methods, it is possible to reduce the likelihood of annoying/malicious automated form submissions. I am aware however, that for larger and more complex applications, there are significantly more robust techniques available that will further reduce this risk.
 
-For a simple applciation such as this, I believe the techniques i have implimented are sufficient to address this issue.
+For a simple application such as this, I believe the techniques i have implemented are sufficient to address this issue.
 
     contactForm.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -577,7 +582,7 @@ During development, i used `console.log()` to indicate during testing, which che
 
 ### Form accessibility
 
-When designing the custom `<input type="radio">` elements for my contact form, I initially set the  `input` element to `display:none;`. During testing I realised that this had taken the inputs out of the tab order, meaning that the custom radio buttons i had created could not be selected via the use of Tab on the keyboard.
+When designing the custom `<input type="radio">` elements for my contact form, I initially set the  `input` element to `display:none;`. During testing I realized that this had taken the inputs out of the tab order, meaning that the custom radio buttons i had created could not be selected via the use of Tab on the keyboard.
 
 This is a poor experience for users who may have accessibility needs. The solution to this was to keep the inputs in the tab order by removing `display:none;` and using CSS to alter their visibility and size.
 
@@ -588,27 +593,27 @@ This is a poor experience for users who may have accessibility needs. The soluti
           height: 0;
         }
 
-The result ensures that the radio buttons can be selected with Tab then arrow buttons are used to move between the seperate radio buttons in the fieldset.
+The result ensures that the radio buttons can be selected with Tab then arrow buttons are used to move between the separate radio buttons in the fieldset.
 
 ### Full screen panels
 
 I took inspiration for the design of my project from other tech companies such as SpaceX, who use full height 'panels' for a bold and visually pleasing effect.
 
-When first exploring this idea, i became aware of the unit of measurement, `vh` which i started to use when sizing my full screen panels. This presented very well on the desktop and on first appeareance on mobile. `vh` sets the height of an element to the viewport height, a unit that at first sight i thought was exactly what i was looking for.
+When first exploring this idea, i became aware of the unit of measurement, `vh` which i started to use when sizing my full screen panels. This presented very well on the desktop and on first appearance on mobile. `vh` sets the height of an element to the viewport height, a unit that at first sight i thought was exactly what i was looking for.
 
-However, as i continued development of the site, and regularly checked the results on a mobile device, i realised that the placement of elements within full height panels was unpredictable and would vary depending on whether the address bar was visible or retracted at the top of the screen. This meant that the bold visual style i was attempting to implement was at times being disrupted, as elements would appear below the fold when loading the page initially, then when scrolling (and the address bar retracting) the elements would be in the psoition i had initially intended.
+However, as i continued development of the site, and regularly checked the results on a mobile device, i realized that the placement of elements within full height panels was unpredictable and would vary depending on whether the address bar was visible or retracted at the top of the screen. This meant that the bold visual style i was attempting to implement was at times being disrupted, as elements would appear below the fold when loading the page initially, then when scrolling (and the address bar retracting) the elements would be in the position i had initially intended.
 
 ![Viewport Height screenshot](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/viewport-height.webp "100vh unit test")
 
 *(Above panel is missing spacing at the bottom of the screen and an arrow that when pressed scrolls to the next panel)*
 
-After some research, i discovered the measurement unit `svh`. This measurement reflects the smallest possible viewport height of the users borwser, taking into account the address bar and other possible borwser elements that tend to retract on scroll.
+After some research, i discovered the measurement unit `svh`. This measurement reflects the smallest possible viewport height of the users browser, taking into account the address bar and other possible browser elements that tend to retract on scroll.
 
 ![Smallest Viewport Height screenshot](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/smallest-viewport-height.webp "100svh unit test")
 
 *(Using 100svh allows the full contents of the panel to be shown, without having to account for possible browser elements that take up some of the viewport space)*
 
-Using this unit ensured that, when my page loaded on a mobile device, the full height panel was exactly the size of the viewable area on the mobile device. This merant placing my nested elements in each panel became easier to predict as i did not have to account for additional space taken up by mobile browser elements.
+Using this unit ensured that, when my page loaded on a mobile device, the full height panel was exactly the size of the viewable area on the mobile device. This meant placing my nested elements in each panel became easier to predict as i did not have to account for additional space taken up by mobile browser elements.
 
 ## Code Validation
 
@@ -618,7 +623,7 @@ I used the Jigsaw CSS Validator to ensure that my CSS files were valid and met c
 
 about.css was the only file to show any errors. The validator stated that the properties `animation-timeline:view()` and `animation-range:cover 0% cover 70%` were not valid and did not exist.
 
-By undertaking some research I was able to find that despite the validator not recognising these properties, they are in fact valid, but are not yet added to the documentation that is being used by the validator. Chromium based browsers have supported the properties since 2023 and alternative browsers have begun supporting it more recently. Through my testing, i have seen the properties successfully work in all major browsers with no issues.
+By undertaking some research I was able to find that despite the validator not recognizing these properties, they are in fact valid, but are not yet added to the documentation that is being used by the validator. Chromium based browsers have supported the properties since 2023 and alternative browsers have begun supporting it more recently. Through my testing, i have seen the properties successfully work in all major browsers with no issues.
 
 ![about.css validator result](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/about-jigsaw-result.jpg "about.css jigsaw result")
 
@@ -650,16 +655,19 @@ By undertaking some research I was able to find that despite the validator not r
 
 ---
 
+## Compatibility
+
+---
+
+## Testing
+
 ## Credits
 
 * Images: [NASA](https://images.nasa.gov/)
 * Images: [Unsplash](https://unsplash.com)
-* Fonts: Google Fonts — `Aldrich`
+* Fonts: Google Fonts — `Aldrich`, `Montserrat`
 * Icons: Font Awesome
 
----
-
----
 
 ## Author
 
