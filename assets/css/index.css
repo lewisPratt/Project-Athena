@@ -27,9 +27,14 @@ header {
 }
 
 #header-title>h1 {
-    font-size: 3.5rem;
+    font-size: 2.8rem;
+    line-height:2.8rem;
     margin-bottom: 0;
-    line-height: 60px;
+}
+#header-title>h2 {
+    font-size: 1.5rem;
+    line-height:1.5rem;
+    margin-bottom: 0;
 }
 
 #header-title>h3 {
@@ -86,11 +91,13 @@ header {
 #base-two-location-circle:hover {
     scale: 1.5;
 }
+
 #base-one-location-circle:focus-visible,
-#base-two-location-circle:focus-visible{
+#base-two-location-circle:focus-visible {
     scale: 1.5;
-    background-color:rgb(255, 255, 219);
+    background-color: rgb(255, 255, 219);
 }
+
 .base-details {
     position: absolute;
     width: max-content;
@@ -125,12 +132,14 @@ header {
     bottom: 0;
     left: 50px;
     z-index: 50;
-    border-radius:10px;
-    padding:0 5px;
+    border-radius: 10px;
+    padding: 0 5px;
 }
-.scroll-arrow-button:focus-visible{
+
+.scroll-arrow-button:focus-visible {
     background-color: rgb(77, 77, 77);
 }
+
 .scroll-arrow {
     text-align: center;
     margin: auto;
@@ -152,9 +161,11 @@ header {
     position: relative;
     left: 0;
 }
-#footer-up-arrow:focus-visible{
+
+#footer-up-arrow:focus-visible {
     background-color: rgb(77, 77, 77);
 }
+
 #footer-up-arrow img {
     max-width: 50px;
 }
@@ -177,7 +188,8 @@ header {
 
 #panel-one,
 #panel-two,
-#panel-three, #panel-four {
+#panel-three,
+#panel-four {
     margin-top: 50px;
 
 }
@@ -263,10 +275,12 @@ header {
     border-radius: 5px;
     background: #000000;
 }
-#video-playback-toggle-button:focus-visible{
-    background-color:rgb(178, 178, 178);
-    
+
+#video-playback-toggle-button:focus-visible {
+    background-color: rgb(178, 178, 178);
+
 }
+
 #video-playback-toggle-button.pressed-control {
     background-color: rgba(255, 255, 255, 1);
     color: black;
@@ -287,9 +301,11 @@ header {
     font-family: var(--heading-font);
     margin: 10px 0;
 }
-.video-control-class:focus-visible{
-    background-color:#d0d0d0;
+
+.video-control-class:focus-visible {
+    background-color: #d0d0d0;
 }
+
 #video-controls.hidden {
     display: none;
 }
@@ -426,6 +442,7 @@ header {
     position: relative;
 
 }
+
 .info-panel {
     background-color: white;
     color: black;
@@ -447,6 +464,7 @@ header {
     right: -50%;
     text-align: left;
 }
+
 #athena-base-image:focus-visible .info-panel,
 #athena-base-image:hover .info-panel {
     right: 0;
@@ -456,6 +474,7 @@ header {
     left: -50%;
     text-align: right;
 }
+
 #athena-crucible-image:focus-visible .info-panel,
 #athena-crucible-image:hover .info-panel {
     left: 0;
@@ -541,8 +560,13 @@ header {
 ===================== */
 @media (min-width: 768px) {
     #header-title>h1 {
-        font-size: 5rem;
-        line-height: 5rem;
+        font-size: 6rem;
+        line-height: 6rem;
+    }
+
+    #header-title>h2 {
+        font-size: 3rem;
+        line-height: 3rem;
     }
 
     #panel-four-content {
@@ -583,7 +607,7 @@ header {
 
     #arrow-five {
         display: none;
-      
+
     }
 }
 
