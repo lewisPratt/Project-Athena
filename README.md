@@ -1,6 +1,8 @@
-![Athena Aerospace](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/wireframes/readme-header.webp "Athena Aerospace")
+
 
 # Athena Aerospace
+
+![Athena Aerospace](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/readme-header.webp "Athena Aerospace")
 
 Live site: [Athena Aerospace Home Page](https://lewispratt.github.io/Project-Athena/)
 
