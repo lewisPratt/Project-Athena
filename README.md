@@ -267,7 +267,7 @@ Paragraph fonts:
 
 ### Styling
 
-All CSS styling has been achieved thorugh the use of a maximum of 2 stylesheets per page. 
+All CSS styling has been achieved through the use of a maximum of 2 stylesheets per page. No inline or embedded CSS has been used throughout the site.
 
 * `styles.css` - Includes the global styling for elements that are used throughout the website. Utilising a central global stylesheet allows changes to elements on multiple pages by only changing the properties in one sheet.
 * `page-name.css` - Each page has it's own named stylesheet, containing specific CSS styling relevant to that page alone.
@@ -276,7 +276,34 @@ By seperating out global styles and page specific styles, it ensures that styles
 
 CSS variables were used to specify key property values that may change at some point, ensuring that these properties were applied consistently across the entire site.
 
+                /*======================
+                    VARIABLES
+                =====================*/
 
+                :root{
+                    --primary-font-color: #F4F4F4;
+                    --background-color: #000000;
+                    --primary-font: "Montserrat", "Verdana", sans-serif;
+                    --heading-font: "Aldrich", "Verdana", sans-serif;
+                }
+
+These variables were then accessible in all of my page specific stylesheets because:
+
+1. The global `style.css` was loaded before the page specific stylesheet.This ensures that when the page specific sheet uses a variable, it has actually been created.
+
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/index.css">
+
+2. The variables were applied to the root pseudo class, making them accessible to the entire document because they have been applied to the root element of the document (which in HTML is the `<html>` element.)
+
+### CSS Animations
+
+Throughout the site there are a number of CSS animations that add some interest to the pages. 
+
+1. index.html
+    * Animations added to the spinning base location circles at the top of the page:
+
+    
 ---
 
 ## Key Features
