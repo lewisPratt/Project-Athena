@@ -52,7 +52,7 @@ To run the project locally:
 * HTML5
 * CSS3
 * JavaScript (Vanilla)
-* Google Fonts
+* Google Fonts - `Aldrich`, `Montserrat`
 * Font Awesome Icons
 
 
@@ -154,7 +154,7 @@ As an engineer, I'd like to view possible job opportunities that i may be intere
 * [x] Add careers link to the footer of every page.
 * [x] Add careers link to the nav bar.
 * [x] Create responsive layout of current job opportunities on careers page.
-* [x] Implement bootstrap card HTML structure to format each job opportunity aesthetically.
+* [x] Implement card HTML structure to format each job opportunity aesthetically.
 * [x] Add button on each job card to apply for that role. Button links to application page.
 
 ---
@@ -250,15 +250,15 @@ I am a member of the public that likes to learn about past rocket launches as we
 
 ---
 
-## Design & Style breakdown
+## Design & Style
 
 Inspiration was taken from the SpaceX website, focusing on a minimal yet visually impactful design language. Large images highlight attractive features within high quality photography and contribute aesthetically to the overall design. The colour scheme is primarily black and white, allowing attractive transitions between images of space and the body background colour. Font colour has been set to an off-white `(#F4F4F4)` to reduce eye strain caused by using pure white against pure black.
 
 ### Color Scheme
 
-The color scheme was kept simple and high contrast to compliment the theme of the site, drawing parallels between the high contrast of many images taken from space. Using black as a background color allows some creative use of background images, enabling some images to gradually fade to black. This can contribute to the pages sense of flow is in keeping with the theming of the overall site.
+The color scheme was kept simple and high contrast to complement the theme of the site, drawing parallels between the high contrast of many images taken from space. Using black as a background color allows some creative use of background images, enabling some images to gradually fade to black. This can contribute to the pages sense of flow is in keeping with the theming of the overall site.
 
-Other colours were used sparsely in order to ensure consistency and predictability across the site:
+Other colours were used sparingly in order to ensure consistency and predictability across the site:
 
 * Red `#ff0000` has been used to highlight error messages (on the form submission pages)  
 * A shade of grey `#999898` has been used on the footer elements, reducing their contrast with the background to show that they are less vital elements but still useful and informative if needed.
@@ -312,7 +312,7 @@ Heading fonts:
             h4,
             h5,
             h6{
-                font-family: var(--header-font)
+                font-family: var(--heading-font)
                 text-transform: uppercase;
             }
 Button fonts :
@@ -664,6 +664,14 @@ By undertaking some research I was able to find that despite the validator not r
 ---
 
 ## Testing
+
+| Feature | Chrome | Firefox | Safari | Mobile |
+|---|---|---|---|---|
+| Navigation | ✅ | ✅ | ✅ | ✅ |
+| Lightbox | ✅ | ✅ | ✅ | ✅ |
+| Video Playback | ✅ | ✅ | ✅ | ✅ |
+| Form Validation radio buttons | ✅ | ✅ | ✅ | ✅ |
+
 
 ## Credits
 
