@@ -102,7 +102,9 @@
     translate: 0 -100%;
 }
 
-.enlarge-image:focus-visible {
+.enlarge-image:focus-visible,
+.enlarge-image:hover,
+.enlarge-video:hover {
     scale: 1.2;
 }
 
