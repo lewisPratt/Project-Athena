@@ -47,10 +47,19 @@ To run the project locally:
 2. Open `index.html` in your browser — no build step or dependencies required
 
 ## Pages Overview
+(Due to some pages having css driven animations that effect their visibility dependant on scroll location, some elements are not fully visible in the following screenshots)
 
 <img src="https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/index-screenshot.webp" width="600" alt="Home page screenshot">
 
-![index.html screenshot](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/index-screenshot.webp "index.html screenshot")
+<img src="https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/about-screenshot.webp" width="600" alt="Home page screenshot">
+
+<img src="https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/gallery-screenshot.webp" width="600" alt="Home page screenshot">
+
+<img src="https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/careers-screenshot.webp" width="600" alt="Home page screenshot">
+
+<img src="https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/contact-screenshot.webp" width="600" alt="Home page screenshot">
+
+<img src="https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/contact-success-screenshot.webp" width="600" alt="Home page screenshot">
 
 ## Technologies Used
 
