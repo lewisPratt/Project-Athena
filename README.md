@@ -519,11 +519,15 @@ Throughout the site there are a number of CSS animations that add some interest 
 ## Challenges & Problem Solving
 
 ### Page Deployment
-Towards the end of the project, i encountered an issue with GitHub failing to deploy my pages site successfully. The error messages were not helpful in determining what was wrong as they just returned "failed to deploy, please try again later". 
+Towards the end of the project, i encountered an issue with GitHub failing to deploy my pages site successfully. The error messages were not helpful in determining what was wrong as they just returned "Deployment Failed, try again later". 
 ![Failed Deployment](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/failed-pages-deployment.webp "Failed Pages Deployment")
 
 By searching online for recent news about this issue, it appeared that there had been a GitHub service issue the previous day that was causing pages to fail deployment, however it was now marked as solved and should no longer be an issue. This was not the case for my project. 
-I spent some time making sure the commit that first failed to deploy wasn't causing the issue. This commit was simply adding an additional CSS rule, so was highly unlikely to be the cause of the issue. From further reading online I came to the conclusion that i had tried to push my changes to GitHub during the disrupted service period, which then effectively caused my pages deployment to become "locked up" stopping any further deployments. 
+I spent some time making sure the commit that first failed to deploy wasn't causing the issue. This commit was simply adding an additional CSS rule, so was highly unlikely to be the cause of the issue. 
+
+From further reading online I came to the conclusion that i had tried to push my changes to GitHub during the disrupted service period, which then effectively caused my pages deployment to become "locked up" stopping any further deployments.
+
+
 To solve this, i essentially reset my pages deployment by going back to the pages section in the repo settings, setting the root folder to none and pressing save. Then waiting 5 minutes and re-selecting my root folder and saving again.
 Within 5 minutes the site had deployed successfully with the changes from the previously failed deployments. 
 
