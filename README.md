@@ -55,6 +55,13 @@ To run the project locally:
 * Google Fonts - `Aldrich`, `Montserrat`
 * Font Awesome Icons
 
+## Additional Reading References
+
+Whilst developing this site, additional reading was undertaken to learn and implement design features and interactivity that contribute to the business and developer goals. 
+
+* Javascript / CSS / HTML - https://www.w3schools.com. When searching online for additional details on html elements, css selectors and JS functions, w3schools was utilized to gain a high level understanding of the code. W3 provides very good, short descriptions and examples of how specific pieces of code can be used, as well as linking to additional reading that may contribute to fully understanding it's use.
+
+
 
 ## UX Design
 
@@ -238,7 +245,7 @@ I am a member of the public that likes to learn about past rocket launches as we
 
 ## Wireframes
 
-<!-- ![Index.html Wireframe](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/wireframes/index-wireframe.webp "Index.html Wireframe")
+![Index.html Wireframe](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/wireframes/index-wireframe.webp "Index.html Wireframe")
 
 ![About.html Wireframe](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/wireframes/about-wireframe.webp "About.html Wireframe")
 
@@ -246,7 +253,7 @@ I am a member of the public that likes to learn about past rocket launches as we
 
 ![Careers.html Wireframe](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/wireframes/careers-wireframe.webp "Careers.html Wireframe")
 
-![Contact.html Wireframe](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/wireframes/contact-wireframe.webp "contact.html Wireframe") -->
+![Contact.html Wireframe](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/wireframes/contact-wireframe.webp "contact.html Wireframe")
 
 ---
 
