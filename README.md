@@ -78,7 +78,7 @@ The primary goal of the Athena Aerospace website is to provide a hub for the fic
 There are three main target audiences for the site:
 
 * Aerospace Industry professionals looking for new work opportunities.
-* Investors looking for information on the company and it's history.
+* Investors looking for information on the company and its history.
 * Hobbyists looking for information about Athena Aerospace projects as well as associated images and videos.
 
 ### Audience Goals
@@ -230,8 +230,8 @@ I am a member of the public that likes to learn about past rocket launches as we
 #### Acceptance Criteria
 
 * [ ] The site navigation should allow easy and intuitive access to a launches page.
-* [ ] Videos should be well presented and not distorted or poor quality.
-* [ ] Each video should be accompanied by launch date and description.
+* [X] Videos should be well presented and not distorted or poor quality.
+* [X] Each video should be accompanied by launch date and description.
 * [ ] Details of future planned launches should be clear and easy to understand.
 * [ ] Future launch details should include descriptions of their purpose and location.
 
@@ -246,6 +246,14 @@ I am a member of the public that likes to learn about past rocket launches as we
 * [ ] Create countdown timer, counting towards next launch.
 
 ---
+
+## User Story Outcomes
+
+During development, all [Must have] designated user stories were implemented and completed in full. These features were essential to ensure the site met the core goals fo the company.
+
+User Story 5 was not fully implemented due to the limited time available on the project, however, selected acceptance criteria and tasks were integrated into the gallery page of the final website, allowing the viewing of videos alongside images.
+
+Implementing a fully featured launch page would be completed if this were an ongoing project. Not having the launch page does not have a significant impact on the core goals of the company, but does effect a specific user group that may appreciate the ease of access to associated launch details in the future.
 
 ## Wireframes
 
@@ -331,7 +339,7 @@ Button fonts :
             .button-class{
                 text-transform: uppercase;
                 font-size: 1rem;
-                font-family: var(--header-font)
+                font-family: var(--heading-font)
             }
 
 Paragraph fonts:
@@ -607,7 +615,7 @@ For a simple application such as this, I believe the techniques i have implement
 
     })
 
-During development, i used `console.log()` to indicate during testing, which check the form was failing the validation on. This helped to identify any bugs or edge cases that may have been tricky to find.
+During development, i used `console.log()` to indicate during testing, which check the form was failing the validation on. This helped to identify any bugs or edge cases that may have been tricky to find. These liens were removed prior to final deployment.
 
 ### Form accessibility
 
