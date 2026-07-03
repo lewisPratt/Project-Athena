@@ -48,6 +48,8 @@ To run the project locally:
 
 ## Pages Overview
 
+<img src="https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/index-screenshot.webp" width="600" alt="Home page screenshot">
+
 ![index.html screenshot](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/index-screenshot.webp "index.html screenshot")
 
 ## Technologies Used
