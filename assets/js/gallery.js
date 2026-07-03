@@ -70,6 +70,8 @@ function playDelay(event) {
   progressBar(autoplayBar, video);
 }
 
+//https://www.w3schools.com/Jsref/prop_element_offsetwidth.asp
+//https://www.w3schools.com/jsref/met_win_setinterval.asp
 function progressBar(bar, video) {
   let barSize = bar.offsetWidth;
   videoProgressInterval = setInterval(() => {

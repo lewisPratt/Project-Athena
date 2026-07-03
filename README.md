@@ -671,7 +671,8 @@ By undertaking some research I was able to find that despite the validator not r
 | Lightbox | ✅ | ✅ | ✅ | ✅ |
 | Video Playback | ✅ | ✅ | ✅ | ✅ |
 | Form Validation radio buttons | ✅ | ✅ | ✅ | ✅ |
-
+| Scroll to section arrows | ✅ | ✅ | ✅ | ✅ |
+| Full viewport height panels | ✅ | ✅ | ✅ | ✅ |
 
 ## Credits
 
