@@ -61,7 +61,11 @@ Whilst developing this site, additional reading was undertaken to learn and impl
 
 * Javascript / CSS / HTML - https://www.w3schools.com. When searching online for additional details on html elements, css selectors and JS functions, w3schools was utilized to gain a high level understanding of the code. W3 provides very good, short descriptions and examples of how specific pieces of code can be used, as well as linking to additional reading that may contribute to fully understanding it's use.
 
+* Javascript / CSS / HTML - https://developer.mozilla.org/en-US/ For a more detailed understanding of particular concepts.
 
+* I did not use any structured tutorials (either written or video format) to design or implement any aspects of this project.
+
+* I utilized a LLM (Claude) to troubleshoot bugs that i was not able to solve through my additional reading. During my learning, I always ensure that my prompts are accompanied by a direction to not provide complete code to solve the issue i am facing. Instead I am clear to instruct the LLM to support my learning and help me to think out the problem i am facing step by step and prioritize critical thinking in order to gain a deeper understanding of the problem i am trying to solve.
 
 ## UX Design
 
