@@ -46,6 +46,9 @@ To run the project locally:
 1. Clone the repository: `git clone https://github.com/lewispratt/Project-Athena.git`
 2. Open `index.html` in your browser — no build step or dependencies required
 
+## Pages Overview
+
+![index.html screenshot](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/index-screenshot.webp "index.html screenshot")
 
 ## Technologies Used
 
@@ -249,11 +252,11 @@ I am a member of the public that likes to learn about past rocket launches as we
 
 ## User Story Outcomes
 
-During development, all [Must have] designated user stories were implemented and completed in full. These features were essential to ensure the site met the core goals fo the company.
+During development, all [Must have] designated user stories were implemented and completed in full. These features were essential to ensure the site met the core goals of the company.
 
 User Story 5 was not fully implemented due to the limited time available on the project, however, selected acceptance criteria and tasks were integrated into the gallery page of the final website, allowing the viewing of videos alongside images.
 
-Implementing a fully featured launch page would be completed if this were an ongoing project. Not having the launch page does not have a significant impact on the core goals of the company, but does effect a specific user group that may appreciate the ease of access to associated launch details in the future.
+Implementing a fully featured launch page would be completed if this were an ongoing project. Not having the launch page does not have a significant impact on the core goals of the company, but does affect a specific user group that may appreciate the ease of access to associated launch details in the future.
 
 ## Wireframes
 
