@@ -66,7 +66,7 @@ To run the project locally:
 2. Open `index.html` in your browser — no build step or dependencies required
 
 ## Pages Overview
-(Due to some pages having css driven animations that effect their visibility dependant on scroll location, some elements are not fully visible in the following screenshots)
+(Due to css driven animations that effect visibility dependant on scroll location, some elements are not fully visible in the following screenshots)
 
 <img src="https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/index-screenshot.webp" width="600" alt="Home page screenshot">
 
@@ -98,7 +98,7 @@ Whilst developing this site, additional reading was undertaken to learn and impl
 
 * I did not use any structured tutorials (either written or video format) to design or implement any aspects of this project.
 
-* I utilized a LLM (Claude) to troubleshoot bugs that i was not able to solve through my additional reading. During my learning, I always ensure that my prompts are accompanied by a direction to not provide complete code to solve the issue i am facing. Instead I am clear to instruct the LLM to support my learning and help me to think out the problem i am facing step by step and prioritize critical thinking in order to gain a deeper understanding of the problem i am trying to solve.
+* I utilized a LLM (Claude) to troubleshoot bugs that i was not able to solve through my additional reading. During my learning, I always ensure that my prompts are accompanied by a direction to not provide complete code to solve the issue i am facing. Instead I am clear to instruct the LLM to support my learning and help me to think out the problem i am facing and prioritize critical thinking in order to gain a deeper understanding of the problem i am trying to solve.
 
 ## UX Design
 
@@ -477,6 +477,79 @@ Throughout the site there are a number of CSS animations that add some interest 
                         opacity: 1;
                     }
 
+2. About.html
+
+    - Animations applied to elements when they enter the viewport. These animations have been added to improve the visual appeal, creating some additional movement and interactivity to the page. About pages can sometimes be lengthy and unattractive with large blocks of text, so adding smaller chunks of text, with added visual flair, helps to keep the content approachable and interesting.  
+    - The top of the page features a strong heading, with a striking background and animated timeline leading the user downwards. The moving circles that travel down the timeline were animated using the following CSS animation, with each circle (blip) being given a staggered animation delay to have them appearing to be produced infinitely. 
+  
+                @keyframes moveBlip {
+                    0% {
+                        top: 0;
+                    }
+
+                    90% {
+                        top: 100%;
+                        opacity: 1;
+                    }
+
+                    100% {
+                        opacity: 0;
+                    }
+                }
+
+    - These moving circles guide the users view downwards and create a sense of movement and progress as you move through the timeline below.
+  
+    - As you move down the page, the timeline containers subtly move upwards into view.
+
+                @keyframes slideUp {
+                    0% {
+                        transform: translateY(100%);
+                    }
+
+                    100% {
+                        transform: translateY(0);
+                    }
+                }
+
+    - As you come to the end of the timeline, you see the 'We are Athena' headline again as it has a fixed position and there has been transparent space left for it to appear again just above the founders portraits. This further positions the founders as committed and dedicated, showing that they are confident to put their names and reputations alongside the company name and culture.
+
+    - The position and visibility of the heading above the founders portraits is linked to position of the scroll in the viewport using `animation-timeline: view();`
+
+                #founders-title {
+                    width: 90%;
+                    animation-timeline: view();
+                    animation-range: cover 0% cover 70%;
+                    animation-fill-mode: both;
+                    animation-name: fadeInSide;
+                    font-size: 2rem;
+                    line-height: 2rem;
+                    margin-bottom: 30px;
+                }
+
+    - this same type of CSS animation was used for the founder portrait cards, adding slightly different values to stagger their entrance into the viewport. 
+
+
+                #portrait-one {
+                    animation-range: cover 0% cover 30%;
+                }
+
+                #portrait-two {
+                    animation-range: cover 10% cover 30%;
+                }
+
+                #portrait-three {
+                    animation-range: cover 20% cover 30%;
+                }
+
+    - The first `cover` defines when the animation should start playing, in this case it is when the element starts to "cover"   the viewport. 0% would mean as soon as it starts covering the viewport. 10% means when the element is 10% into covering the viewport etc. This results in all the elements starting their entry animation slightly staggered. The second `cover` defines when the animation will finish, when the element is 30% into covering the viewport.
+    As the start thresholds are slightly staggered but the ending threshold is the same for all three, the last cards animation runs over a shorter scroll period, ensuring that all elements are fully visible within the viewport before the user scrolls too far down the page.  
+
+    - When researching the `animation-range` property, I came to understand that it is not currently supported in all major browsers, with FireFox being the main browser missing support.
+
+    ![browser support](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/animation-range.webp "missing browser support")
+
+    For this reason, this property has not been used in a way that would impact on the sites core features, and during testing in FireFox, as the property is not supported, the elements that use it, simply appear as usual on the About.html page, with no evident negative impact. 
+  
 ---
 
 ## Key Features - Design & content
@@ -739,6 +812,9 @@ By undertaking some research I was able to find that despite the validator not r
 | Form Validation radio buttons | ✅ | ✅ | ✅ | ✅ |
 | Scroll to section arrows | ✅ | ✅ | ✅ | ✅ |
 | Full viewport height panels | ✅ | ✅ | ✅ | ✅ |
+| CSS: animation-range | ✅ | X | ✅ | ✅ |
+
+
 
 ## Credits
 
