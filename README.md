@@ -766,7 +766,7 @@ I used the Jigsaw CSS Validator to ensure that my CSS files were valid and met c
 
 about.css was the only file to show any errors. The validator stated that the properties `animation-timeline:view()` and `animation-range:cover 0% cover 70%` were not valid and did not exist.
 
-By undertaking some research I was able to find that despite the validator not recognizing these properties, they are in fact valid, but are not yet added to the documentation that is being used by the validator. Chromium based browsers have supported the properties since 2023 and alternative browsers have begun supporting it more recently. Through my testing, i have seen the properties successfully work in all major browsers with no issues.
+By undertaking some research I was able to find that despite the validator not recognizing these properties, they are in fact valid, but are not yet added to the documentation that is being used by the validator. Chromium based browsers have supported the properties since 2023 and alternative browsers have begun supporting it more recently. Through my testing, i have seen the properties successfully work in the majority of mainstream browsers, with FIreFox being the notable exception. However the property not being supported just results in the animation not being applied to the elements, so no difference can be seen on the page and there is no negative impact on the UX.
 
 ![about.css validator result](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/about-jigsaw-result.jpg "about.css jigsaw result")
 
@@ -795,6 +795,21 @@ By undertaking some research I was able to find that despite the validator not r
 ![contact.html validator result](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/contact-html-result.jpg "contact.html validator result")
 
 ![contact-success.html validator result](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/contact-success-html-result.jpg "contact-success.html validator result")
+
+
+### Javascript
+
+To validate my Javascript code, i used jshint.com, which helped to identify unused variables, missing semicolons and syntax errors that could cause bugs in the codes function.
+
+![contact.js validator result](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/contact-js.png "contact.js validator result")
+
+![index.js validator result](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/index-js.png "index.js validator result")
+
+![gallery.js validator result](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/gallery-js.png "gallery.js validator result")
+
+![careers.js validator result](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/careers-js.png "careers.js validator result")
+
+![global.js validator result](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/global-js.png "global.js validator result")
 
 ---
 
