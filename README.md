@@ -206,6 +206,11 @@ As an engineer, I'd like to view possible job opportunities that i may be intere
 * [x] Implement card HTML structure to format each job opportunity aesthetically.
 * [x] Add button on each job card to apply for that role. Button links to application page.
 
+#### Visual Journey
+
+![Complete User Story 2](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/user-story-images/complete-user-story-two.webp "Complete User Story 2")
+
+
 ---
 
 ### User Story 3 - Industry Investor
@@ -228,6 +233,11 @@ I am an investor who wants to learn more about the founders of Athena Aerospace 
 * [x] Add images to history section.
 * [x] Add quotes from founders.
 * [x] Create founder bio cards to give background on each founder.
+
+
+#### Visual Journey
+
+![Complete User Story 3](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/user-story-images/complete-user-story-three.webp "Complete User Story 3")
 
 ---
 
@@ -256,6 +266,11 @@ I am a member of the the Aerospace profession and would like to contact Athena t
 * [x] For valid submission direct the user to the contact success page.
 * [x] Create contact success page
 * [x] Write successful submission message to inform user of valid submission
+
+
+#### Visual Journey
+
+![Complete User Story 4](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/user-story-images/complete-user-story-four.webp "Complete User Story 4")
 
 ---
 
