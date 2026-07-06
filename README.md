@@ -1,5 +1,4 @@
 
-
 # Athena Aerospace
 
 ![Athena Aerospace](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/readme-header.webp "Athena Aerospace")
@@ -72,15 +71,15 @@ To run the project locally:
 
 <img src="https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/index-screenshot.webp" width="600" alt="Home page screenshot">
 
-<img src="https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/about-screenshot.webp" width="600" alt="Home page screenshot">
+<img src="https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/about-screenshot.webp" width="600" alt="About page screenshot">
 
-<img src="https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/gallery-screenshot.webp" width="600" alt="Home page screenshot">
+<img src="https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/gallery-screenshot.webp" width="600" alt="Gallery page screenshot">
 
-<img src="https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/careers-screenshot.webp" width="600" alt="Home page screenshot">
+<img src="https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/careers-screenshot.webp" width="600" alt="Careers page screenshot">
 
-<img src="https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/contact-screenshot.webp" width="600" alt="Home page screenshot">
+<img src="https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/contact-screenshot.webp" width="600" alt="Contact page screenshot">
 
-<img src="https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/contact-success-screenshot.webp" width="600" alt="Home page screenshot">
+<img src="https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/contact-success-screenshot.webp" width="600" alt="Contact Success page screenshot">
 
 ## Technologies Used
 
@@ -178,6 +177,10 @@ I am a space enthusiast and i want to view media related to shuttle launches und
 * [x] Hover effect that shows additional information about the media.
 * [x] Add option that when clicked images/videos open in separate tab to view larger.
 * [x] Add gallery link to site navigation.
+
+#### Visual Journey
+
+![Complete User Story 1](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/user-story-images/complete-user-story-one.webp "Complete User Story 1")
 
 ---
 
@@ -550,8 +553,11 @@ Throughout the site there are a number of CSS animations that add some interest 
 
     ![browser support](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/animation-range.webp "missing browser support")
 
-    For this reason, this property has not been used in a way that would impact on the sites core features, and during testing in FireFox, as the property is not supported, the elements that use it, simply appear as usual on the About.html page, with no evident negative impact. 
-  
+    For this reason, this property has not been used in a way that would impact on the sites core features, and during testing in Firefox, as the property is not supported, the elements that use it, simply appear as usual on the About.html page, with no evident negative impact.
+
+  ### Media
+Any video media present on the site is triggered entirely via user interaction. Videos do not autoplay on page load and where they do autoplay on mouseover/tap (on the gallery page) there is an indicator to signal when this will start and they play muted. The video is only un-muted and played when the user clicks on a specific video.
+
 ---
 
 ## Key Features - Design & content
@@ -719,15 +725,12 @@ For a simple application such as this, I believe the techniques i have implement
     // run through checks to determine if it's a valid submission
     if (difference < 3) {
         errorText.innerHTML = "An error occurred. Please try again.";
-        console.log("stalled at check1");
     }
     else if (mathAnswer != 15) {
         errorText.innerHTML = "Please answer the verification question correctly.";
-        console.log("stalled at check2");
     } 
     else if(honeypot){
         errorText.innerHTML = "An error occurred. Please try again.";
-        console.log("stalled at check3");
     }
     else {
         contactForm.submit()
@@ -735,7 +738,7 @@ For a simple application such as this, I believe the techniques i have implement
 
     })
 
-During development, i used `console.log()` to indicate during testing, which check the form was failing the validation on. This helped to identify any bugs or edge cases that may have been tricky to find. These liens were removed prior to final deployment.
+During development, i used `console.log()` to indicate during testing, which check the form was failing the validation on. This helped to identify any bugs or edge cases that may have been tricky to find. These lines were removed prior to final deployment.
 
 ### Form accessibility
 
@@ -835,15 +838,15 @@ All CSS files have been passed through https://autoprefixer.github.io/ to ensure
 
 ## Testing
 
-| Feature | Chrome | Firefox | Safari | IE | Mobile |
-|---|---|---|---|---|
+| Feature | Chrome | Firefox | Safari | Edge | Mobile |
+|---|---|---|---|---|---|
 | Navigation | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Lightbox | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Video Playback | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Form Validation radio buttons | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Scroll to section arrows | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Full viewport height panels | ✅ | ✅ | ✅ | ✅ | ✅ |
-| CSS: animation-range | ✅ | X | ✅ | ✅ | ✅ |
+| CSS: animation-range | ✅ | ❌ | ✅ | ✅ | ✅ |
 
 
 
