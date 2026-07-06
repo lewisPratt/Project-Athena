@@ -545,7 +545,7 @@ Throughout the site there are a number of CSS animations that add some interest 
     - The first `cover` defines when the animation should start playing, in this case it is when the element starts to "cover"   the viewport. 0% would mean as soon as it starts covering the viewport. 10% means when the element is 10% into covering the viewport etc. This results in all the elements starting their entry animation slightly staggered. The second `cover` defines when the animation will finish, when the element is 30% into covering the viewport.
     As the start thresholds are slightly staggered but the ending threshold is the same for all three, the last cards animation runs over a shorter scroll period, ensuring that all elements are fully visible within the viewport before the user scrolls too far down the page.  
 
-    - When researching the `animation-range` property, I came to understand that it is not currently supported in all major browsers, with FireFox being the main browser missing support.
+    - When researching the `animation-range` property, I came to understand that it is not currently supported in all major browsers, with Firefox being the main browser missing support.
 
     ![browser support](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/animation-range.webp "missing browser support")
 
@@ -638,6 +638,7 @@ Throughout the site there are a number of CSS animations that add some interest 
 ## Challenges & Problem Solving
 
 ### Page Deployment
+
 Towards the end of the project, i encountered an issue with GitHub failing to deploy my pages site successfully. The error messages were not helpful in determining what was wrong as they just returned "Deployment Failed, try again later". 
 ![Failed Deployment](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/failed-pages-deployment.webp "Failed Pages Deployment")
 
@@ -650,6 +651,17 @@ From further reading online I came to the conclusion that i had tried to push my
 To solve this, i essentially reset my pages deployment by going back to the pages section in the repo settings, setting the root folder to none and pressing save. Then waiting 5 minutes and re-selecting my root folder and saving again.
 Within 5 minutes the site had deployed successfully with the changes from the previously failed deployments. 
 
+### Background-image vs image element
+
+When planning some of informative sections of the site, i initially intended to have a number of images visible, which would have overlayed content that the user could interact with for further information e.g. on an image of Athena Base, highlight specific buildings with a rectangle that triggers a popup when clicked/hovered. I will refer to these as hotspots. 
+
+When implementing this approach I soon realized that due to the responsive nature of the site and the changing size of image elements (dependant on the viewport size), it was very difficult reliably position image hotspots in the correct location on all screen sizes. The approach i wanted could be achieved by repositioning the hotspots at every breakpoint, however this was not the main issue. The desired outcome for the images was to fill a predefined section of the page, with a set width and height, whilst remaining responsive on different devices. Using image elements for this resulted in either stretched images or unwanted gaps around the image in an effort to maintain its original aspect ratio.
+
+The alternative was to use `background-size:cover` to set the image i wanted as the background and ensure it covered the whole div regardless of screen size. This worked well, however made hotspot positioning more difficult as the background would scale somewhat unpredictably dependant on the viewport size.
+
+Implementing this design feature would require a compromise between design and functionality. There was an alternative that i found through my further reading, which identified that utilizing an SVG based approach would make this design reliable and effective, however due to the necessity of this design feature and my current limited experience using SVG based graphics, I chose to take an different route. I ended up implementing an image overlay that contains details of the image, triggered on user hover or on touch screen, tap. This provides the information I was wanting to convey at a fraction of the time cost.
+
+![Image Overlay](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/image-overlay.png "Image Overlay")
 
 ### Form Validation and Security
 
@@ -767,7 +779,7 @@ I used the Jigsaw CSS Validator to ensure that my CSS files were valid and met c
 
 about.css was the only file to show any errors. The validator stated that the properties `animation-timeline:view()` and `animation-range:cover 0% cover 70%` were not valid and did not exist.
 
-By undertaking some research I was able to find that despite the validator not recognizing these properties, they are in fact valid, but are not yet added to the documentation that is being used by the validator. Chromium based browsers have supported the properties since 2023 and alternative browsers have begun supporting it more recently. Through my testing, i have seen the properties successfully work in the majority of mainstream browsers, with FIreFox being the notable exception. However the property not being supported just results in the animation not being applied to the elements, so no difference can be seen on the page and there is no negative impact on the UX.
+By undertaking some research I was able to find that despite the validator not recognizing these properties, they are in fact valid, but are not yet added to the documentation that is being used by the validator. Chromium based browsers have supported the properties since 2023 and alternative browsers have begun supporting it more recently. Through my testing, i have seen the properties successfully work in the majority of mainstream browsers, with Firefox being the notable exception. However the property not being supported just results in the animation not being applied to the elements, so no difference can be seen on the page and there is no negative impact on the UX.
 
 ![about.css validator result](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/about-jigsaw-result.jpg "about.css jigsaw result")
 
@@ -816,21 +828,21 @@ To validate my Javascript code, i used jshint.com, which helped to identify unus
 
 ## Compatibility
 
-All CSS files have been passed through https://autoprefixer.github.io/ to ensure that all properties are as widely compatible as possible.
+All CSS files have been passed through https://autoprefixer.github.io/ to ensure that all properties are as widely compatible as possible. Notable additions were the prefixes necessary for the FlexBox properties to work consistently across all browsers, and animation properties. After updating the prefixed CSS, no issues were found in subsequent testing.
 
 ---
 
 ## Testing
 
-| Feature | Chrome | Firefox | Safari | Mobile |
+| Feature | Chrome | Firefox | Safari | IE | Mobile |
 |---|---|---|---|---|
-| Navigation | ✅ | ✅ | ✅ | ✅ |
-| Lightbox | ✅ | ✅ | ✅ | ✅ |
-| Video Playback | ✅ | ✅ | ✅ | ✅ |
-| Form Validation radio buttons | ✅ | ✅ | ✅ | ✅ |
-| Scroll to section arrows | ✅ | ✅ | ✅ | ✅ |
-| Full viewport height panels | ✅ | ✅ | ✅ | ✅ |
-| CSS: animation-range | ✅ | X | ✅ | ✅ |
+| Navigation | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Lightbox | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Video Playback | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Form Validation radio buttons | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Scroll to section arrows | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Full viewport height panels | ✅ | ✅ | ✅ | ✅ | ✅ |
+| CSS: animation-range | ✅ | X | ✅ | ✅ | ✅ |
 
 
 
