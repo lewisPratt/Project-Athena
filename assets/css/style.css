@@ -1,8 +1,15 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.5.15,
+* Autoprefixer: v10.5.0
+* Browsers: last 4 version
+*/
+
 /*======================
     VARIABLES
 =====================*/
 
-:root{
+:root {
     --primary-font-color: #F4F4F4;
     --background-color: #000000;
     --primary-font: "Montserrat", "Verdana", sans-serif;
@@ -15,9 +22,11 @@
 * {
     padding: 0;
     margin: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     color: var(--primary-font-color);
 }
+
 /* =====================
    BODY
 ===================== */
@@ -26,8 +35,15 @@ body {
     padding: 0;
     min-height: 100vh;
     background-color: var(--background-color);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     font-family: var(--primary-font);
 }
@@ -59,6 +75,7 @@ p {
 a {
     color: var(--primary-font-color)
 }
+
 button {
     cursor: pointer;
     background: none;
@@ -70,14 +87,17 @@ button {
    LAYOUT
 ===================== */
 main {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
     max-width: 1440px;
     margin: auto;
-    width:100%;
+    width: 100%;
 }
-header{
-    width:100%;
-    max-width:1440px;
+
+header {
+    width: 100%;
+    max-width: 1440px;
 }
 
 /* =====================
@@ -105,8 +125,14 @@ nav {
     width: 100vw;
     max-width: 1440px;
     margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     padding: 20px;
     font-family: var(--heading-font);
@@ -114,12 +140,14 @@ nav {
     z-index: 80;
 }
 
-nav > a {
+nav>a {
     text-decoration: none;
 }
-#nav-logo:focus-visible{
+
+#nav-logo:focus-visible {
     background-color: rgb(77, 77, 77);
 }
+
 #navigation {
     width: 100%;
     position: absolute;
@@ -133,7 +161,7 @@ nav > a {
     display: block;
 }
 
-#navigation > ul {
+#navigation>ul {
     list-style: none;
     margin-bottom: 0;
 }
@@ -146,6 +174,7 @@ nav > a {
     font-size: 1rem;
     font-family: var(--heading-font);
     text-transform: uppercase;
+    -webkit-transition: 0.5s;
     transition: 0.5s;
 }
 
@@ -158,9 +187,11 @@ nav li:hover {
     background-color: rgba(255, 255, 255, 1);
     color: black;
 }
-nav a:focus-visible{
+
+nav a:focus-visible {
     background-color: rgb(77, 77, 77);
 }
+
 #mobile-nav-toggle {
     font-size: 200%;
 }
@@ -168,12 +199,14 @@ nav a:focus-visible{
 a.active-link::before {
     content: "> ";
 }
-nav h3{
+
+nav h3 {
     font-size: .6rem;
     letter-spacing: 9px;
     text-align: center;
     margin-top: -6px;
 }
+
 /* =====================
    BUTTONS
 ===================== */
@@ -189,6 +222,7 @@ nav h3{
     font-size: 1rem;
     font-family: var(--heading-font);
     margin: 20px;
+    -webkit-transition: 0.6s;
     transition: 0.6s;
 }
 
@@ -196,7 +230,8 @@ nav h3{
     color: var(--primary-font-color);
 }
 
-.button-class:hover, .button-class:focus-visible {
+.button-class:hover,
+.button-class:focus-visible {
     background-color: rgba(255, 255, 255, 1);
     color: black;
 }
@@ -234,20 +269,29 @@ footer li {
 }
 
 #footer-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
     flex-flow: row wrap;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin: 10px;
     gap: 10px;
 }
 
-#footer-content > div {
+#footer-content>div {
     width: 100%;
     font-size: 80%;
 }
 
-#footer-links > ul {
+#footer-links>ul {
     padding: 0;
 }
 
@@ -261,18 +305,22 @@ footer li {
     vertical-align: middle;
     margin: 0 5px;
 }
+
 #x-logo {
     width: 20px;
 }
-#instagram-logo{
-    width:30px;
+
+#instagram-logo {
+    width: 30px;
 }
+
 #copyright-holder {
     text-align: center;
     padding-right: 10px;
 }
-footer p{
-    color:rgb(152, 152, 152);
+
+footer p {
+    color: rgb(152, 152, 152);
     font-family: var(--heading-font);
 
 }
@@ -285,7 +333,7 @@ footer p{
         gap: 20px;
     }
 
-    #footer-content > div {
+    #footer-content>div {
         width: 30%;
     }
 
@@ -300,13 +348,19 @@ footer p{
 
 @media only screen and (min-width: 1024px) {
     nav {
+        -webkit-box-align: end;
+        -ms-flex-align: end;
         align-items: end;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
         padding: 0 20px;
     }
-    #nav-logo{
-        margin:10px 0;
+
+    #nav-logo {
+        margin: 10px 0;
     }
+
     #navigation {
         width: unset;
         position: static;
@@ -316,7 +370,7 @@ footer p{
         display: block;
     }
 
-    #navigation > ul {
+    #navigation>ul {
         list-style: none;
     }
 

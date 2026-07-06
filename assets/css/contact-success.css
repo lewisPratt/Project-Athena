@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.5.15,
+* Autoprefixer: v10.5.0
+* Browsers: last 4 version
+*/
+
 header {
   padding-top: 100px;
 
@@ -5,10 +12,18 @@ header {
 
 #header-title {
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-basis: 600px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-preferred-size: 600px;
+      flex-basis: 600px;
   padding: 10px;
 }
 
@@ -17,11 +32,21 @@ header {
 }
 
 #main-content-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 
@@ -29,13 +54,16 @@ header {
 
 @media (min-width:768px) {
   #main-content-container {
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
 @media (min-width:1024px) {
   #header-title {
-    flex-basis: 500px;
+    -ms-flex-preferred-size: 500px;
+        flex-basis: 500px;
     text-align: left;
    
   }
@@ -45,6 +73,7 @@ header {
   }
 
   #contact-form-section {
-    flex-basis: 450px;
+    -ms-flex-preferred-size: 450px;
+        flex-basis: 450px;
   }
 }

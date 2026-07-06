@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.5.15,
+* Autoprefixer: v10.5.0
+* Browsers: last 4 version
+*/
+
 header {
   padding-top: 100px;
 
@@ -5,10 +12,18 @@ header {
 
 #header-title {
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-basis: 600px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-preferred-size: 600px;
+      flex-basis: 600px;
   padding: 10px;
 }
 
@@ -17,28 +32,54 @@ header {
 }
 
 #main-content-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  flex-wrap: wrap;
-  flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 20px 0;
   gap: 20px;
   width: 80%;
 }
 
 #contact-form-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-basis: 800px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-preferred-size: 800px;
+      flex-basis: 800px;
 }
 
 #header-title>#error-text {
@@ -127,6 +168,7 @@ textarea {
   height: 50px;
   width: 100%;
   margin: 20px 0;
+  -webkit-transition: 0.4s;
   transition: 0.4s;
   color: black;
 }
@@ -154,6 +196,7 @@ input[type="submit"] {
   border: 1px solid white;
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: 0.6s;
   transition: 0.6s;
   text-align: center;
   font-size: 1rem;
@@ -176,16 +219,21 @@ input[type="submit"]:hover {
 
 @media (min-width:768px) {
   #main-content-container {
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
 @media (min-width:1024px) {
   #header-title {
-    flex-basis: 500px;
+    -ms-flex-preferred-size: 500px;
+        flex-basis: 500px;
     text-align: left;
     margin-bottom: 150px;
-    align-items: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 
   #header-title>h1 {
@@ -193,6 +241,7 @@ input[type="submit"]:hover {
   }
 
   #contact-form-section {
-    flex-basis: 450px;
+    -ms-flex-preferred-size: 450px;
+        flex-basis: 450px;
   }
 }

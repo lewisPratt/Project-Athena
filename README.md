@@ -43,6 +43,7 @@ Live site: [Athena Aerospace Home Page](https://lewispratt.github.io/Project-Ath
   - [Code Validation](#code-validation)
     - [CSS](#css)
     - [HTML](#html)
+    - [Javascript](#javascript-1)
   - [Compatibility](#compatibility)
   - [Testing](#testing)
   - [Credits](#credits)
@@ -814,6 +815,8 @@ To validate my Javascript code, i used jshint.com, which helped to identify unus
 ---
 
 ## Compatibility
+
+All CSS files have been passed through https://autoprefixer.github.io/ to ensure that all properties are as widely compatible as possible.
 
 ---
 
