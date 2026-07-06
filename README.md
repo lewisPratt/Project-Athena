@@ -37,6 +37,7 @@ Live site: [Athena Aerospace Home Page](https://lewispratt.github.io/Project-Ath
     - [Accessibility](#accessibility)
   - [Challenges \& Problem Solving](#challenges--problem-solving)
     - [Page Deployment](#page-deployment)
+    - [Image Hotspots](#background-image-vs-image-element)
     - [Form Validation and Security](#form-validation-and-security)
     - [Form accessibility](#form-accessibility)
     - [Full screen panels](#full-screen-panels)
@@ -659,7 +660,7 @@ When implementing this approach I soon realized that due to the responsive natur
 
 The alternative was to use `background-size:cover` to set the image i wanted as the background and ensure it covered the whole div regardless of screen size. This worked well, however made hotspot positioning more difficult as the background would scale somewhat unpredictably dependant on the viewport size.
 
-Implementing this design feature would require a compromise between design and functionality. There was an alternative that i found through my further reading, which identified that utilizing an SVG based approach would make this design reliable and effective, however due to the necessity of this design feature and my current limited experience using SVG based graphics, I chose to take an different route. I ended up implementing an image overlay that contains details of the image, triggered on user hover or on touch screen, tap. This provides the information I was wanting to convey at a fraction of the time cost.
+Implementing this design feature would require a compromise between design and functionality. There was an alternative that i found through my further reading, which identified that utilizing an SVG based approach would make this design reliable and effective, however due to the necessity of this design feature and my current limited experience using SVG based graphics, I chose to take an different route. I implemented an image overlay that contains details of the image, triggered on user hover or, on touch screen, tap. This provides the information I was wanting to convey at a fraction of the development/time cost.
 
 ![Image Overlay](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/image-overlay.png "Image Overlay")
 
