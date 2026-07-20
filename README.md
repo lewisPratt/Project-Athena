@@ -26,6 +26,7 @@ Live site: [Athena Aerospace Home Page](https://lewispratt.github.io/Project-Ath
     - [Styling](#styling)
     - [Fonts](#fonts)
     - [CSS Animations](#css-animations)
+    - [Favicon](#favicon)
   - [Key Features - Design \& content](#key-features---design--content)
     - [Pages](#pages)
   - [Technical Decisions](#technical-decisions)
@@ -569,6 +570,25 @@ Throughout the site there are a number of CSS animations that add some interest 
     ![browser support](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/animation-range.webp "missing browser support")
 
     For this reason, this property has not been used in a way that would impact on the sites core features, and during testing in Firefox, as the property is not supported, the elements that use it, simply appear as usual on the About.html page, with no evident negative impact.
+
+### Favicon
+I created the image for the Athena Aerospace favicon using Affinity Designer.
+
+![Favicon design](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/favicon-affinity.png "favicon design in Affinity Designer")
+
+I then uploaded to PNG file to [favicon.io](https://favicon.io/favicon-converter/) to produce a full package of favicon files that will meet the needs of the website. The package contains different sized icons that will display or be used on different devices and screen sizes. 
+
+![Favicon files](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/favicon-files.png "favicon files")
+
+The favicon files were placed in the root folder of the website then applied to each page using these link references:
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+
+the icon then was visible on all pages within the tab view
+
+![Favicon tab image](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/favicon-tab.png "favicon tab image")
 
   ### Media
 Any video media present on the site is triggered entirely via user interaction. Videos do not autoplay on page load and where they do autoplay on mouseover/tap (on the gallery page) there is an indicator to signal when this will start and they play muted. The video is only un-muted and played when the user clicks on a specific video.
