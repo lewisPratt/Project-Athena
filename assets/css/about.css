@@ -717,3 +717,27 @@ header {
     font-size: 3rem;
   }
 }
+
+/* =====================
+   ACCESSIBILITY MEDIA QUERIES
+===================== */
+/*Removes animations when users system settings are set to prefers reduced motion */
+@media screen and (prefers-reduced-motion: reduce) {
+  .timeline-container {
+    animation: none;
+  }
+
+  #portrait-one,
+  #portrait-two,
+  #portrait-three {
+    animation: none;
+  }
+
+  #founders-title {
+    animation: none;
+  }
+
+  #mission {
+    animation: none;
+  }
+}
