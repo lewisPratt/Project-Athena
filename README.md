@@ -660,7 +660,14 @@ Any video media present on the site is triggered entirely via user interaction. 
 
 ### Accessibility
 
-* The `prefers-reduced-motion` CSS media query has been used where animations are present, ensuring users with vestibular conditions can access and use the site comfortably.
+* The `prefers-reduced-motion` CSS media query has been used on the About page, ensuring users with vestibular conditions can access and use the site comfortably. All other areas of the site that have some element of movement are optional (such as the scroll buttons on the home page). The About page has a number of elements with animations attached, adding to the emphasis and personality of the site. To ensure that the information on the About page remains accessible to everyone who visits the site, the following rule was applied to a number of the elements on this page:
+  
+        @media screen and (prefers-reduced-motion: reduce) {
+            .timeline-container {
+                animation: none;
+        }
+
+    To test this rule, I changed my preference for reduced motion in the accessibility options of my Mac. When the setting was toggled on, all elements with this rule applied no longer showed any movement or animations. When toggled off, the animations played as norma.  
 
 * To adhere to accessibility conventions, a distinction was made between the types of links used on each page. These distinctions allow assistive technology to provide more context around the type of link that is being focussed.
   * Any link/clickable element that takes the user to a different page uses an `<a>` tag.
