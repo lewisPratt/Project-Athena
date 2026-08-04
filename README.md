@@ -50,7 +50,7 @@ Live site: [Athena Aerospace Home Page](https://lewispratt.github.io/Project-Ath
   - [Credits](#credits)
   - [Author](#author)
 
-
+![website mockups](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/mockup-all-devices-black.png "Athena Aerospace mockup")
 
 ## Deployment
 
