@@ -52,20 +52,6 @@ Live site: [Athena Aerospace Home Page](https://lewispratt.github.io/Project-Ath
 
 ![website mockups](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/mockup-all-devices-black.png "Athena Aerospace mockup")
 
-## Deployment
-
-This project was deployed using GitHub Pages. The steps taken were:
-
-1. Push all project files to a GitHub repository
-2. Navigate to the repository **Settings** tab
-3. Select **Pages** from the left hand menu
-4. Under **Branch**, select `main` and click **Save**
-5. GitHub Pages will publish the site and provide a live URL
-
-To run the project locally:
-
-1. Clone the repository: `git clone https://github.com/lewispratt/Project-Athena.git`
-2. Open `index.html` in your browser — no build step or dependencies required
 
 ## Pages Overview
 (Due to css driven animations that effect visibility dependant on scroll location, some elements are not fully visible in the following screenshots)
@@ -90,17 +76,6 @@ To run the project locally:
 * Google Fonts - `Aldrich`, `Montserrat`
 * Font Awesome Icons
 
-## Additional Reading References
-
-Whilst developing this site, additional reading was undertaken to learn and implement design features and interactivity that contribute to the business and developer goals. 
-
-* Javascript / CSS / HTML - https://www.w3schools.com. When searching online for additional details on html elements, css selectors and JS functions, w3schools was utilized to gain a high level understanding of the code. W3 provides very good, short descriptions and examples of how specific pieces of code can be used, as well as linking to additional reading that may contribute to fully understanding it's use.
-
-* Javascript / CSS / HTML - https://developer.mozilla.org/en-US/ For a more detailed understanding of particular concepts.
-
-* I did not use any structured tutorials (either written or video format) to design or implement any aspects of this project.
-
-* I utilized a LLM (Claude) to troubleshoot bugs that i was not able to solve through my additional reading. During my learning, I always ensure that my prompts are accompanied by a direction to not provide complete code to solve the issue i am facing. Instead I am clear to instruct the LLM to support my learning and help me to think out the problem i am facing and prioritize critical thinking in order to gain a deeper understanding of the problem i am trying to solve.
 
 ## UX Design
 
@@ -872,6 +847,36 @@ To validate my Javascript code, i used jshint.com, which helped to identify unus
 
 ---
 
+## Deployment
+
+This project was deployed using GitHub Pages. The steps taken were:
+
+1. Push all project files to a GitHub repository
+2. Navigate to the repository **Settings** tab
+3. Select **Pages** from the left hand menu
+4. Under **Branch**, select `main` and click **Save**
+5. GitHub Pages will publish the site and provide a live URL
+
+To run the project locally:
+
+1. Clone the repository: `git clone https://github.com/lewispratt/Project-Athena.git`
+2. Open `index.html` in your browser — no build step or dependencies required
+
+---
+
+## Additional Reading References
+
+Whilst developing this site, additional reading was undertaken to learn and implement design features and interactivity that contribute to the business and developer goals. 
+
+* Javascript / CSS / HTML - https://www.w3schools.com. When searching online for additional details on html elements, css selectors and JS functions, w3schools was utilized to gain a high level understanding of the code. W3 provides very good, short descriptions and examples of how specific pieces of code can be used, as well as linking to additional reading that may contribute to fully understanding it's use.
+
+* Javascript / CSS / HTML - https://developer.mozilla.org/en-US/ For a more detailed understanding of particular concepts.
+
+* I did not use any structured tutorials (either written or video format) to design or implement any aspects of this project.
+
+* I utilized a LLM (Claude) to troubleshoot bugs that i was not able to solve through my additional reading. During my learning, I always ensure that my prompts are accompanied by a direction to not provide complete code to solve the issue i am facing. Instead I am clear to instruct the LLM to support my learning and help me to think out the problem i am facing and prioritize critical thinking in order to gain a deeper understanding of the problem i am trying to solve.
+
+---
 ## Compatibility
 
 All CSS files have been passed through https://autoprefixer.github.io/ to ensure that all properties are as widely compatible as possible. Notable additions were the prefixes necessary for the FlexBox properties to work consistently across all browsers, and animation properties. After updating the prefixed CSS, no issues were found in subsequent testing.
