@@ -3,6 +3,10 @@
 
 ![Athena Aerospace](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/readme-header.webp "Athena Aerospace")
 
+# Project Summary
+
+The Athena Aerospace website is a static website project that demonstrates the combined use of HTML, CSS and Javascript to create an information hub for a fictional space agency. Undertaken as part of my Web Application Development course, this repository forms my first milestone project, completed in August 2026.
+
 Live site: [Athena Aerospace Home Page](https://lewispratt.github.io/Project-Athena/)
 
 ## Table of Contents
@@ -47,6 +51,7 @@ Live site: [Athena Aerospace Home Page](https://lewispratt.github.io/Project-Ath
     - [Javascript](#javascript-1)
   - [Compatibility](#compatibility)
   - [Testing](#testing)
+  - [Lighthouse Testing](#lighthouse-testing)
   - [Credits](#credits)
   - [Author](#author)
 
