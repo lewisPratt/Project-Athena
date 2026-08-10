@@ -882,6 +882,16 @@ Whilst developing this site, additional reading was undertaken to learn and impl
 All CSS files have been passed through https://autoprefixer.github.io/ to ensure that all properties are as widely compatible as possible. Notable additions were the prefixes necessary for the FlexBox properties to work consistently across all browsers, and animation properties. After updating the prefixed CSS, no issues were found in subsequent testing.
 
 ---
+## Lighthouse Testing
+
+All pages have been testing using Chrome Developer tools Lighthouse. No significant issues were identified. The lower performance value on the index page is likely due to the number of large high quality images being loaded on this page (despite image optimisations being made). Despite this performance score, there are no noticable performance impacts experienced in use. 
+
+![index.html lighthouse results](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/lighthouse-testing/lighthouse-index.png "lighthouse results for index.html")
+![about.html lighthouse results](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/lighthouse-testing/lighthouse-about.png "lighthouse results for about.html")
+![careers.html lighthouse results](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/lighthouse-testing/lighthouse-careers.png "lighthouse results for careers.html")
+![contact.html lighthouse results](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/lighthouse-testing/lighthouse-contact.png "lighthouse results for contact.html")
+![gallery.html lighthouse results](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/lighthouse-testing/lighthouse-gallery.png "lighthouse results for gallery.html")
+
 
 ## Testing
 
