@@ -556,19 +556,18 @@ I created the image for the Athena Aerospace favicon using Affinity Designer.
 
 ![Favicon design](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/favicon-affinity.png "favicon design in Affinity Designer")
 
-I then uploaded to PNG file to [favicon.io](https://favicon.io/favicon-converter/) to produce a full package of favicon files that will meet the needs of the website. The package contains different sized icons that will display or be used on different devices and screen sizes. 
+I then uploaded the PNG file to [favicon.io](https://favicon.io/favicon-converter/) to convert it to a .ico file to place in the root of my site. I could have also generated a package of files that would deliver different resolution versions of the favicon, however for this relatively simple project (static website delivering content unlikely to change regularly) I felt it would not be necessary. 
 
-![Favicon files](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/favicon-files.png "favicon files")
+The favicon file was placed in the root folder of the website then applied to each page using this link reference:
 
-The favicon files were placed in the root folder of the website then applied to each page using these link references:
 
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.ico">
 
 the icon then was visible on all pages within the tab view
 
 ![Favicon tab image](https://raw.githubusercontent.com/lewisPratt/Project-Athena/refs/heads/main/assets/images/readme/favicon-tab.png "favicon tab image")
+
+For future projects that may result in returning users and regularly updated content, I would look to include the package of favicon files as this would provide higher quality images for use on different device types, as well as when a user pins the website to their home screen on their phone. When this occurs, the provided package would ensure that the 'app' style icon that appears on the home page is of good quality. 
 
   ### Media
 Any video media present on the site is triggered entirely via user interaction. Videos do not autoplay on page load and where they do autoplay on mouseover/tap (on the gallery page) there is an indicator to signal when this will start and they play muted. The video is only un-muted and played when the user clicks on a specific video.
